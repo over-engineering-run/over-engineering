@@ -27,11 +27,11 @@ export const Option = {
     >,
 
   match:
-    <X, Y, F extends { none: Fn<A, X>; some: Fn<A, Y> }, A>(handle: F) =>
-    (option: Option<A>) =>
-      option.isNone()
+    <A, B>(handle: { none: Fn<A, void>; some: Fn<A, B> }) =>
+    (option: Option<A>): B =>
+      (option.isNone()
         ? handle.none(option.unwrap())
-        : handle.some(option.unwrap()),
+        : handle.some(option.unwrap())) as B,
 };
 
 export default Option;
