@@ -7,6 +7,11 @@ import * as R from "https://x.nest.land/rambda@7.1.4/mod.ts";
 import Option from "./option.ts";
 import { Fn } from "./types.ts";
 
+interface Selectable {
+  querySelectorAll: Element["querySelectorAll"];
+  querySelector: Element["querySelector"];
+}
+
 const DOM = {
   parse: (() => {
     const it = new DOMParser();
@@ -14,12 +19,12 @@ const DOM = {
   })(),
 
   selectAll:
-    <B extends Element, A extends Element | HTMLDocument>(selector: string) =>
+    <A extends Selectable, B extends Element>(selector: string) =>
     (el: A) =>
       Array.from(el.querySelectorAll(selector)) as B[],
 
   select:
-    <B extends Element, A extends Element | HTMLDocument>(selector: string) =>
+    <A extends Selectable, B extends Element>(selector: string) =>
     (el: A) =>
       el.querySelector(selector) as B,
   text: (el: Element) => el.textContent,

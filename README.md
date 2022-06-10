@@ -1,10 +1,23 @@
-## Day1
+## common
 
-- [ ] fetch one page
+- [ ] fetch page
+- [ ] handle exception: Option
 - [ ] deserialize result into DOM
-- [ ] select list item from document
-- [ ] handle null pointer
-- [ ] extract all title from list
-- [ ] transform list item into record list
-- [ ] data clean up
-- [ ] exam: get publish_at from list item
+- [ ] select item on document
+- [ ] extract information
+- [ ] apply to structural data
+
+## iterate
+
+- [ ] fetch on page
+- [ ] try to find next link on page
+
+## extract page on
+
+- [ ] fetch on page
+- [ ] extract page information
+
+## extract page list on
+
+- [ ] fetch on page
+- [ ] extract list information
