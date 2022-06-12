@@ -26,7 +26,7 @@ const DOM = {
   select:
     <A extends Selectable, B extends Element>(selector: string) =>
     (el: A) =>
-      el.querySelector(selector) as B,
+      R.defaultTo(undefined, el.querySelector(selector)) as B,
   text: (el: Element) => el.textContent,
   html: (el: Element) => el.innerHTML,
   href: (el: Element) => el.getAttribute("href"),

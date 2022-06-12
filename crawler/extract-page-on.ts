@@ -1,18 +1,22 @@
 import IO from "../lib/io.ts";
 import Option from "../lib/option.ts";
 import DOM, { Select } from "../lib/dom.ts";
+import Task from "../lib/task.ts";
 import * as R from "https://x.nest.land/rambda@7.1.4/mod.ts";
+
+const error = (msg: string) => () => new Error(msg);
 
 const TAG = "Extract Page";
 
-export const extractPageOn = (url: string) =>
-  Promise.resolve()
-    .then(IO.tag(`${TAG}: fetch on ${url}`))
-    .then(IO.fetch(url))
-    .then(IO.text)
+const extractPageOn = (url: string) =>
+  Task.of()
+    .map(IO.tag(`${TAG}: fetch on ${url}`))
+    .map(IO.fetch(url))
+    .map(IO.text)
+    .map(R.when(R.isEmpty, error("response with empty string")))
 
-    .then(IO.tag(`${TAG}: extract page information on ${url}`))
-    .then((text) =>
+    .map(IO.tag(`${TAG}: get information on ${url}`))
+    .map((text) =>
       Option.of(text)
         .map(DOM.parse)
         .map(
@@ -36,11 +40,12 @@ export const extractPageOn = (url: string) =>
             }),
           })
         )
+        .unwrap()
     )
 
-    .then(
-      Option.match({
-        some: IO.log(`${TAG}: success extract page information on ${url}`),
-        none: IO.log(`${TAG}: failed on ${url}`),
-      })
-    );
+    .fork({
+      ok: IO.log(`${TAG}: success extract page information on ${url}`),
+      err: IO.tag(`${TAG}: failed on ${url}`),
+    });
+
+export default extractPageOn;

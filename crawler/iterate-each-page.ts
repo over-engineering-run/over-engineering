@@ -1,14 +1,14 @@
 import DOM from "../lib/dom.ts";
 import IO from "../lib/io.ts";
 import Option from "../lib/option.ts";
-import Task from "../lib/task.ts";
 import MATH from "../lib/math.ts";
+
+const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 const TAG = "Iterate Each Page";
 
 const next = (page: number): Promise<number> =>
-  Task.wait(MATH.random(500, 700))
-
+  wait(MATH.random(500, 700))
     .then(IO.tag(`${TAG}: fetch on ${page}`))
     .then(
       IO.fetch({
@@ -24,13 +24,12 @@ const next = (page: number): Promise<number> =>
         //
         .map(DOM.parse)
         .map(DOM.select('a[rel="next"]'))
-    )
-
-    .then(
-      Option.match({
-        some: () => next(page + 1),
-        none: () => page,
-      })
+        .match({
+          some: () => next(page + 1),
+          none: () => page,
+        })
     );
 
-next(1).then(IO.log(`${TAG}: finished process at page `));
+next(1)
+  .then(IO.log(`${TAG}: finished process at page `))
+  .catch(IO.log(`${TAG}: error occured`));
