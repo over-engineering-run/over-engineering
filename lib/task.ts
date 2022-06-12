@@ -28,6 +28,6 @@ export const Task = <A>(taskFn: () => A | Promise<A>) => ({
       .catch(handler.err),
 });
 
-Task.of = <A>(x?: A) => Task(() => x);
+Task.of = <A>(x?: A) => Task(() => x as NonNullable<A>);
 
 export default Task;

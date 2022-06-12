@@ -4,7 +4,7 @@ interface Url {
   query: Record<string, number | string>;
 }
 
-const Url = {
+export const Url = {
   of: ({ pathname, hostname, query }: Url) => {
     const url = new URL(pathname, hostname);
 
@@ -52,4 +52,6 @@ export default {
    * response invoker for text method
    */
   text: (res: Response) => res.text(),
+
+  error: (msg: string) => () => new Error(msg),
 };

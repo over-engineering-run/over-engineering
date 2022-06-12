@@ -6,7 +6,7 @@ import * as R from "https://x.nest.land/rambda@7.1.4/mod.ts";
 
 const TAG = "Extract Page List";
 
-export const extractPageListOn = (url: string) =>
+const extractPageListOn = (url: string) =>
   Task.of()
     .map(IO.tag(`${TAG}: fetch on ${url}`))
     .map(IO.fetch(url))
@@ -29,13 +29,20 @@ export const extractPageListOn = (url: string) =>
                 Option.of(el)
                   .map(Select.text(".ir-list__info"))
                   .map(R.match(/\d{4}-\d{2}-\d{2}/))
-                  .map(R.head),
+                  .map(R.head)
+                  .unwrap(),
             })
           )
         )
+        .match({
+          some: R.identity,
+          none: IO.error(`failed on extract list information`),
+        })
     )
 
     .fork({
       ok: IO.log(`${TAG}: success extract list information on ${url}`),
       err: IO.log(`${TAG}: failed on ${url}`),
     });
+
+export default extractPageListOn;

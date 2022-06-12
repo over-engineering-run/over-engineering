@@ -4,8 +4,6 @@ import DOM, { Select } from "../lib/dom.ts";
 import Task from "../lib/task.ts";
 import * as R from "https://x.nest.land/rambda@7.1.4/mod.ts";
 
-const error = (msg: string) => () => new Error(msg);
-
 const TAG = "Extract Page";
 
 const extractPageOn = (url: string) =>
@@ -13,7 +11,7 @@ const extractPageOn = (url: string) =>
     .map(IO.tag(`${TAG}: fetch on ${url}`))
     .map(IO.fetch(url))
     .map(IO.text)
-    .map(R.when(R.isEmpty, error("response with empty string")))
+    .map(R.when(R.isEmpty, IO.error("response with empty string")))
 
     .map(IO.tag(`${TAG}: get information on ${url}`))
     .map((text) =>
