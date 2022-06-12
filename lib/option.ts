@@ -31,7 +31,7 @@ export const Option = <A>(value: A): Option<A> => ({
 });
 
 Option.isNone = isNone;
-Option.of = Option;
+Option.of = <A>(x: A) => Option(x as NonNullable<A>);
 Option.match =
   <A, B, C>(handler: OptionHandler<A, B, C>) =>
   (option: Option<A>) =>
