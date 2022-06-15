@@ -1,3 +1,7 @@
+## Architecture
+![architecture diagram](https://raw.githubusercontent.com/kayac-chang/it-ironman-renew/main/docs/architecture.png)
+
+
 ## common
 
 - [ ] fetch page
