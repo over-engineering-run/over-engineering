@@ -1,54 +1,48 @@
 import DOM from "../lib/dom.ts";
 import IO, { Url } from "../lib/io.ts";
-import Option from "../lib/option.ts";
 import MATH from "../lib/math.ts";
 import * as R from "https://x.nest.land/rambda@7.1.4/mod.ts";
 import extractPageListOn from "./extract-page-list-on.ts";
 import extractPageOn from "./extract-page-on.ts";
-import Task from "../lib/task.ts";
 
 const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 const forEachPage = (url: string) =>
-  Task.of(url)
-    .map(extractPageListOn)
-    .fork({
-      ok: R.map((item) =>
-        Option.of(item)
-          //
-          .map(R.prop("href"))
-          .map(extractPageOn)
-          .unwrap()
-      ),
-      err: Promise.reject,
-    });
+  extractPageListOn(url)
+    .then(R.map(extractPageOn))
+    .then(Promise.all.bind(Promise))
+    .then(console.log);
 
 const TAG = "Iterate Each Page";
 
-const next = (page: number): Promise<number> =>
-  Promise.resolve({
+const next = async (page: number): Promise<number> => {
+  console.log(`${TAG}: fetch on ${page}`);
+
+  const href = Url.of({
     pathname: "https://ithelp.ithome.com.tw/2021ironman",
     query: { page },
-  })
-    .then(IO.tag(`${TAG}: fetch on ${page}`))
-    .then(R.pipe(Url.of, String))
-    .then(R.tap(forEachPage))
-    .then(fetch)
-    .then(IO.text)
+  }).toString();
 
-    .then(IO.tag(`${TAG}: try to find next link on ${page}`))
-    .then((text) =>
-      Option.of(text)
-        .map(DOM.parse)
-        .map(DOM.select('a[rel="next"]'))
-        .match({
-          some: () =>
-            wait(MATH.random(500, 700))
-              //
-              .then(() => next(page + 1)),
-          none: () => page,
-        })
-    );
+  forEachPage(href);
+
+  const source = await fetch(href).then((res) => res.text());
+  if (!source) {
+    throw new Error(`${TAG}: response with empty string`);
+  }
+
+  console.log(`${TAG}: try to find next link on ${page}`);
+
+  const document = DOM.parse(source);
+  if (!document) {
+    throw new Error(`${TAG}: failed to parse source into dom`);
+  }
+
+  const link = DOM.select('a[rel="next"]')(document);
+  if (!link) return page;
+
+  await wait(MATH.random(500, 700));
+  return next(page);
+};
 
 next(1)
   .then(IO.log(`${TAG}: finish process`))

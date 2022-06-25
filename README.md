@@ -1,23 +1,39 @@
-## common
+## crawler
+
+### common
 
 - [ ] fetch page
-- [ ] handle exception: Option
+- [ ] handle null: Option
+- [ ] handle async: Task
 - [ ] deserialize result into DOM
 - [ ] select item on document
 - [ ] extract information
 - [ ] apply to structural data
 
-## iterate
+### iterate
 
 - [ ] fetch on page
 - [ ] try to find next link on page
 
-## extract page on
+### extract page on
 
 - [ ] fetch on page
 - [ ] extract page information
 
-## extract page list on
+### extract page list on
 
 - [ ] fetch on page
 - [ ] extract list information
+
+### save data
+
+- [ ] sqlite
+
+## sqlite
+
+### `.sqliterc`
+
+.mode table
+.width auto
+.headers on
+.nullvalue NULL
