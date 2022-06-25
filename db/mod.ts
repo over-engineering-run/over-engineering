@@ -1,5 +1,4 @@
 import { DB } from "https://deno.land/x/sqlite@v3.4.0/mod.ts";
-import extractPageOn from "../crawler/extract-page-on.ts";
 
 const db = new DB("test.db");
 
@@ -32,10 +31,10 @@ interface Article {
   genre: string;
   publish_at: string;
 }
-const insertIntoArticles = (record: Partial<Article>) =>
+export const insertIntoArticles = (record: Partial<Article>) =>
   db.query(
     `
-INSERT INTO articles 
+INSERT OR REPLACE INTO articles 
 ( href, title, series, series_no, content, tag,	genre, publish_at )
 VALUES 
 ( :href, :title, :series, :series_no, :content, :tag, :genre, :publish_at )
@@ -56,10 +55,10 @@ interface User {
   href: string;
   name: string;
 }
-const insertIntoUsers = (record: Partial<User>) =>
+export const insertIntoUsers = (record: Partial<User>) =>
   db.query(
     `
-INSERT INTO users 
+INSERT OR REPLACE INTO users 
 ( href, name )
 VALUES 
 ( :href, :name )
@@ -68,14 +67,4 @@ VALUES
       href: record.href,
       name: record.name,
     }
-  );
-
-extractPageOn("https://ithelp.ithome.com.tw/articles/10281700")
-  //
-  .then(({ article, user }) =>
-    Promise.all([
-      insertIntoUsers(user),
-      insertIntoArticles(article),
-      //
-    ])
   );

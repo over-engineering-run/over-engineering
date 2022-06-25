@@ -6,6 +6,10 @@ brew install deno
 
 ## Script
 
+- fetch information on ironman and save into database
+```sh
+deno run --allow-all crawler/iterate-each-page.ts
+```
 
 ## crawler
 

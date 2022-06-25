@@ -4,16 +4,27 @@ import MATH from "../lib/math.ts";
 import * as R from "https://x.nest.land/rambda@7.1.4/mod.ts";
 import extractPageListOn from "./extract-page-list-on.ts";
 import extractPageOn from "./extract-page-on.ts";
+import { insertIntoArticles, insertIntoUsers } from "../db/mod.ts";
+
+const TAG = "Iterate Each Page";
 
 const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 const forEachPage = (url: string) =>
   extractPageListOn(url)
-    .then(R.map(extractPageOn))
+    .then(
+      R.map((href) =>
+        extractPageOn(href).then(({ article, user }) =>
+          Promise.all([
+            insertIntoArticles(article),
+            insertIntoUsers(user),
+            //
+          ])
+        )
+      )
+    )
     .then(Promise.all.bind(Promise))
-    .then(console.log);
-
-const TAG = "Iterate Each Page";
+    .then(() => console.log(`${TAG}: successful save ${url} into database`));
 
 const next = async (page: number): Promise<number> => {
   console.log(`${TAG}: fetch on ${page}`);
@@ -41,7 +52,7 @@ const next = async (page: number): Promise<number> => {
   if (!link) return page;
 
   await wait(MATH.random(500, 700));
-  return next(page);
+  return next(page + 1);
 };
 
 next(1)
