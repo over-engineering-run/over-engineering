@@ -52,7 +52,7 @@ const next = async (page: number): Promise<number> => {
   if (!link) return page;
 
   await wait(MATH.random(500, 700));
-  return next(page);
+  return next(page + 1);
 };
 
 next(1)
