@@ -1,6 +1,10 @@
 ## crawler
 
-### common
+## Architecture
+![architecture diagram](https://raw.githubusercontent.com/kayac-chang/it-ironman-renew/main/docs/architecture.svg)
+
+
+## common
 
 - [ ] fetch page
 - [ ] handle null: Option
