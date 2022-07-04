@@ -30,3 +30,13 @@
 
 - Model for Shit Post Classification
 - Recommandation: related posts, series or articles
+
+## NLP Processing Pipeline
+### TODO
+[ ] new class for pipeline param
+[ ] extract text from HTML
+[ ] extract code from <pre><code>
+[ ] hashtag extraction
+[ ] word tokenization and segmentation
+[ ] stop word removal
+[ ] (optional) keyword extraction
