@@ -1,0 +1,65 @@
+@import "tailwindcss/base";
+@layer base {
+  :root {
+    --reach-menu-button: 1;
+    --reach-combobox: 1;
+  }
+
+  html,
+  body {
+    @apply h-full bg-black text-white;
+    @apply text-sm lg:text-base;
+  }
+
+  body {
+    font-family: "Noto Sans TC", sans-serif;
+  }
+
+  code {
+    font-family: "Menlo", "Courier New", "Courier", monospace;
+  }
+
+  input[type] {
+    @apply w-full border-none p-0 outline-none focus:ring-0;
+  }
+  ::-webkit-search-cancel-button {
+    @apply hidden;
+  }
+}
+
+@import "tailwindcss/components";
+@layer components {
+  .text-vertical-rl {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+
+  .decor-caret {
+    @apply relative;
+    @apply after:absolute after:bottom-[0.3rem] after:right-0 after:-mr-3;
+    @apply after:content-[''];
+    @apply after:block after:h-[60%] after:w-2;
+    @apply after:bg-current;
+    @apply after:animate-pulse;
+  }
+
+  .arrow {
+    @apply after:content-['_→'];
+  }
+  .button-underline {
+    @apply uppercase underline underline-offset-2;
+  }
+
+  .badge {
+    @apply rounded px-2;
+  }
+
+  [aria-expanded="true"] > svg:nth-of-type(1) {
+    @apply hidden;
+  }
+  [aria-expanded="false"] > svg:nth-of-type(2) {
+    @apply hidden;
+  }
+}
+
+@import "tailwindcss/utilities";
