@@ -7,17 +7,16 @@ brew install deno
 ## Script
 
 - fetch information on ironman and save into database
+
 ```sh
-deno run --allow-all crawler/iterate-each-page.ts
+deno run --allow-all main.ts
 ```
 
 ## crawler
 
-
-
 ## Architecture
-![architecture diagram](https://raw.githubusercontent.com/kayac-chang/it-ironman-renew/main/docs/architecture.svg)
 
+![architecture diagram](https://raw.githubusercontent.com/kayac-chang/it-ironman-renew/main/docs/architecture.svg)
 
 ## common
 
