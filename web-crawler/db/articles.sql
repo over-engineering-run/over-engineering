@@ -4,7 +4,7 @@ CREATE TABLE IF NOT EXISTS articles (
 	series 			TEXT,
 	series_no 	TEXT,
 	content 		TEXT,
-	tag 				TEXT,
+	tags 				TEXT,
 	genre 			TEXT,
 	publish_at 	TEXT
 );

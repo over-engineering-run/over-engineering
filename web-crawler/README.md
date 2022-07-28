@@ -9,7 +9,7 @@ brew install deno
 - fetch information on ironman and save into database
 
 ```sh
-deno run --allow-all main.ts
+deno run --allow-all main.ts --database <database-path>
 ```
 
 ## crawler
