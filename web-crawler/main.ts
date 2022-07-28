@@ -1,9 +1,9 @@
 import { HTMLDocument } from "https://deno.land/x/deno_dom@v0.1.21-alpha/deno-dom-wasm.ts";
 import * as R from "https://x.nest.land/rambda@7.1.4/mod.ts";
 import { DB } from "https://deno.land/x/sqlite@v3.4.0/mod.ts";
+import { parse } from "https://deno.land/std@0.149.0/flags/mod.ts";
+import * as path from "https://deno.land/std@0.145.0/path/mod.ts";
 import DOM from "./lib/dom.ts";
-
-const query = (db: DB) => (input: string) => db.query(input);
 
 const decode = (() => {
   const decoder = new TextDecoder("utf-8");
@@ -39,6 +39,13 @@ const fetchDOM = async (href: string) => {
 
 const selectText = (query: string) => (el: HTMLDocument) =>
   DOM(el).select(query)?.textContent || undefined;
+
+const selectAllText = (query: string) => (el: HTMLDocument) =>
+  DOM(el)
+    .selectAll(query)
+    .map((el) => el.textContent)
+    .filter(Boolean);
+
 const selectHTML = (query: string) => (el: HTMLDocument) =>
   DOM(el).select(query)?.innerHTML || undefined;
 const selectHref = (query: string) => (el: HTMLDocument) =>
@@ -50,7 +57,7 @@ interface Article {
   series: string;
   series_no: string;
   content: string;
-  tag: string;
+  tags: string[];
   genre: string;
   publish_at: string;
 }
@@ -59,6 +66,7 @@ const extractArticle = (href: string) =>
   R.applySpec({
     href: R.always(href),
     genre: selectText(".qa-header .group__badge"),
+    tags: selectAllText(".qa-header__tagGroup .tag"),
     title: selectText(".qa-header .qa-header__title"),
     publish_at: selectText(".qa-header .qa-header__info-time"),
     content: selectHTML(".qa-markdown .markdown"),
@@ -72,9 +80,9 @@ const insertArticle = (db: DB, record: Partial<Article>) =>
   db.query(
     `
 INSERT OR REPLACE INTO articles 
-( href, title, series, series_no, content, tag,	genre, publish_at )
+( href, title, series, series_no, content, tags, genre, publish_at )
 VALUES 
-( :href, :title, :series, :series_no, :content, :tag, :genre, :publish_at )
+( :href, :title, :series, :series_no, :content, :tags, :genre, :publish_at )
 `,
     {
       href: record.href,
@@ -82,7 +90,7 @@ VALUES
       series: record.series,
       series_no: record.series_no,
       content: record.content,
-      tag: record.tag,
+      tags: record.tags?.join(),
       genre: record.genre,
       publish_at: record.publish_at,
     }
@@ -122,6 +130,8 @@ const extract = (document: HTMLDocument) =>
       .map((href) => {
         if (!href) return;
 
+        console.log(`start extracting ${href}`);
+
         // extract page information
         return fetchDOM(href).then(
           R.applySpec({
@@ -140,6 +150,7 @@ async function* scan(href?: string): AsyncIterable<HTMLDocument> {
     // fetch by href
     const document = await fetchDOM(href);
 
+    // dispatch sub task with document
     yield document;
 
     // get next link
@@ -147,39 +158,57 @@ async function* scan(href?: string): AsyncIterable<HTMLDocument> {
       DOM(document).select('a[rel="next"]')?.getAttribute("href") || undefined;
 
     // cold down time to prevent block by service
-    await sleep(random(500, 700));
+    await sleep(random(300, 700));
   }
 }
 
-async function main() {
+interface Args {
+  /** target website href for crawling */
+  href: string;
+
+  /** database path to write */
+  database: string;
+}
+async function main({ database, href }: Args) {
   // init database
-  const db = new DB(Deno.cwd() + "/db/test.db");
+  const db = new DB(path.resolve(Deno.cwd(), database));
 
   // init tables
   const tables = ["articles", "users"];
+  const __dirname = path.dirname(path.fromFileUrl(import.meta.url));
+
   await Promise.all(
     tables.map((table) =>
-      Deno.readFile(Deno.cwd() + `/db/${table}.sql`)
+      Deno.readFile(path.resolve(__dirname, `./db/${table}.sql`))
         .then(decode)
-        .then(query(db))
+        .then((input) => db.query(input))
     )
   );
 
-  for await (const document of scan(
-    "https://ithelp.ithome.com.tw/articles?tab=ironman"
-  )) {
-    extract(document).then((results) => {
-      results.forEach((result) => {
-        if (!result) return;
+  // crawling href and get back document per page
+  for await (const document of scan(href)) {
+    // extract information from document
+    extract(document).then(
+      R.forEach((information) => {
+        if (!information) return;
 
-        // insert into database
+        console.log(`insert ${information.article.href} into database`);
+
+        // insert information into database
         return all([
-          insertArticle(db, result.article),
-          insertUser(db, result.user),
+          insertArticle(db, information.article),
+          insertUser(db, information.user),
         ]);
-      });
-    });
+      })
+    );
   }
 }
 
-main();
+main(
+  parse(Deno.args, {
+    default: {
+      href: "https://ithelp.ithome.com.tw/articles?tab=ironman",
+      database: "test.db",
+    },
+  })
+);
