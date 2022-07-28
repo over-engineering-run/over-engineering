@@ -1,5 +1,4 @@
 import type { LoaderFunction } from "@remix-run/server-runtime";
-import { db } from "~/utils/db.server";
 
 interface Result {
   href: string;
@@ -16,13 +15,6 @@ export interface SearchResult {
 }
 
 export const get: LoaderFunction = async () => {
-  const data = await db.article.findMany({
-    select: {
-      href: true,
-      title: true,
-    },
-  });
-
   return {
     results: [
       {
