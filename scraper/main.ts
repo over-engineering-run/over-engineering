@@ -1,9 +1,12 @@
-import { HTMLDocument } from "https://deno.land/x/deno_dom@v0.1.21-alpha/deno-dom-wasm.ts";
 import * as R from "https://x.nest.land/rambda@7.1.4/mod.ts";
 import { DB } from "https://deno.land/x/sqlite@v3.4.0/mod.ts";
 import { parse } from "https://deno.land/std@0.149.0/flags/mod.ts";
 import * as path from "https://deno.land/std@0.145.0/path/mod.ts";
-import DOM from "./lib/dom.ts";
+import {
+  HTMLDocument,
+  DOMParser,
+  Element,
+} from "https://deno.land/x/deno_dom@v0.1.21-alpha/deno-dom-wasm.ts";
 
 const decode = (() => {
   const decoder = new TextDecoder("utf-8");
@@ -21,6 +24,14 @@ function sleep(ms: number) {
 }
 const all = Promise.all.bind(Promise);
 
+const parseDOM = (() => {
+  const it = new DOMParser();
+
+  return (source: string) => {
+    return it.parseFromString(source, "text/html");
+  };
+})();
+
 const fetchDOM = async (href: string) => {
   // fetch by href
   const source = await fetch(href).then((res) => res.text());
@@ -29,13 +40,23 @@ const fetchDOM = async (href: string) => {
   }
 
   // parser source string into DOM
-  const document = DOM.parse(source);
+  const document = parseDOM(source);
   if (!document) {
     throw new Error(`failed to parse source into dom`);
   }
 
   return document;
 };
+
+type HasQuerySelector = HTMLDocument | Element;
+function DOM(el?: HasQuerySelector) {
+  return {
+    select: (query: string) => el?.querySelector(query) || undefined,
+
+    selectAll: (query: string) =>
+      Array.from(el?.querySelectorAll(query) || []) as Element[],
+  };
+}
 
 const selectText = (query: string) => (el: HTMLDocument) =>
   DOM(el).select(query)?.textContent || undefined;
@@ -163,7 +184,7 @@ async function* scan(href?: string): AsyncIterable<HTMLDocument> {
 }
 
 interface Args {
-  /** target website href for crawling */
+  /** target website href for scraping */
   href: string;
 
   /** database path to write */
@@ -185,7 +206,7 @@ async function main({ database, href }: Args) {
     )
   );
 
-  // crawling href and get back document per page
+  // start from href and get back document per page
   for await (const document of scan(href)) {
     // extract information from document
     extract(document).then(
