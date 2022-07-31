@@ -1,6 +1,7 @@
 import {
   HiOutlineMenuAlt4 as Menu,
   HiOutlineSearch as Search,
+  HiOutlineBookOpen as Book,
 } from "react-icons/hi";
 import { MdClose as Close } from "react-icons/md";
 
@@ -23,4 +24,5 @@ export default {
   Search,
   Close,
   Chevron,
+  Book,
 };

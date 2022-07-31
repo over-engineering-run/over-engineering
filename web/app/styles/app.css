@@ -1,4 +1,21 @@
 @import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer utilities {
+  .text-vertical-rl {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+
+  .solid-sm {
+    @apply px-2 py-1;
+  }
+  .solid-md {
+    @apply px-4 py-2;
+  }
+}
+
 @layer base {
   :root {
     --reach-menu-button: 1;
@@ -7,8 +24,7 @@
 
   html,
   body {
-    @apply h-full bg-black text-white;
-    @apply text-sm lg:text-base;
+    @apply h-full;
   }
 
   body {
@@ -25,18 +41,24 @@
   ::-webkit-search-cancel-button {
     @apply hidden;
   }
-}
 
-@import "tailwindcss/components";
-@layer components {
-  .text-vertical-rl {
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
+  svg {
+    @apply h-auto;
   }
 
+  kbd {
+    @apply solid-sm border border-secondary;
+  }
+
+  a {
+    @apply hocus:underline;
+  }
+}
+
+@layer components {
   .decor-caret {
     @apply relative;
-    @apply after:absolute after:bottom-[0.3rem] after:right-0 after:-mr-3;
+    @apply after:absolute after:bottom-[0.2rem] after:right-0 after:-mr-3;
     @apply after:content-[''];
     @apply after:block after:h-[60%] after:w-2;
     @apply after:bg-current;
@@ -54,12 +76,32 @@
     @apply rounded px-2;
   }
 
-  [aria-expanded="true"] > svg:nth-of-type(1) {
-    @apply hidden;
-  }
+  [aria-expanded="true"] > svg:nth-of-type(1),
   [aria-expanded="false"] > svg:nth-of-type(2) {
     @apply hidden;
   }
 }
 
-@import "tailwindcss/utilities";
+@layer base {
+  :root {
+    @apply bg-primary text-primary-1;
+  }
+  *,
+  ::before,
+  ::after {
+    border-color: var(--color-border-primary);
+  }
+}
+
+@layer base {
+  :root {
+    --color-text-primary-1: theme("colors.slate.50");
+    --color-text-primary-2: theme("colors.slate.300");
+
+    --color-background-primary: theme("colors.slate.900");
+    --color-background-form: theme("colors.slate.800");
+
+    --color-border-primary: theme("colors.slate.800");
+    --color-border-secondary: theme("colors.slate.500");
+  }
+}
