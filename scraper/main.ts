@@ -81,6 +81,7 @@ interface Article {
   tags: string[];
   genre: string;
   publish_at: string;
+  author_href: string;
 }
 
 const extractArticle = (href: string) =>
@@ -101,9 +102,9 @@ const insertArticle = (db: DB, record: Partial<Article>) =>
   db.query(
     `
 INSERT OR REPLACE INTO articles 
-( href, title, series, series_no, content, tags, genre, publish_at )
+( href, title, series, series_no, content, tags, genre, publish_at, author_href )
 VALUES 
-( :href, :title, :series, :series_no, :content, :tags, :genre, :publish_at )
+( :href, :title, :series, :series_no, :content, :tags, :genre, :publish_at, :author_href )
 `,
     {
       href: record.href,
@@ -114,6 +115,7 @@ VALUES
       tags: record.tags?.join(),
       genre: record.genre,
       publish_at: record.publish_at,
+      author_href: record.author_href,
     }
   );
 
@@ -125,13 +127,15 @@ const extractUser = R.applySpec({
   name: selectText(
     ".ir-article-info .ir-article-info__content .ir-article-info__name"
   ),
-  href: selectHref(".ir-article-info .ir-article-info__content a"),
+  href: selectHref(
+    ".ir-article-info .ir-article-info__content .ir-article-info__name"
+  ),
 });
 
 export const insertUser = (db: DB, record: Partial<User>) =>
   db.query(
     `
-INSERT OR REPLACE INTO users 
+INSERT OR IGNORE INTO users 
 ( href, name )
 VALUES 
 ( :href, :name )
@@ -195,31 +199,27 @@ async function main({ database, href }: Args) {
   const db = new DB(path.resolve(Deno.cwd(), database));
 
   // init tables
-  const tables = ["articles", "users"];
   const __dirname = path.dirname(path.fromFileUrl(import.meta.url));
 
-  await Promise.all(
-    tables.map((table) =>
-      Deno.readFile(path.resolve(__dirname, `./db/${table}.sql`))
-        .then(decode)
-        .then((input) => db.query(input))
-    )
-  );
+  await Deno.readFile(path.resolve(__dirname, `./init.sql`))
+    .then(decode)
+    .then((input) => db.query(input));
 
   // start from href and get back document per page
   for await (const document of scan(href)) {
     // extract information from document
     extract(document).then(
-      R.forEach((information) => {
+      R.forEach(async (information) => {
         if (!information) return;
 
         console.log(`insert ${information.article.href} into database`);
 
         // insert information into database
-        return all([
-          insertArticle(db, information.article),
-          insertUser(db, information.user),
-        ]);
+        await insertUser(db, information.user);
+        await insertArticle(db, {
+          ...information.article,
+          author_href: information.user.href,
+        });
       })
     );
   }
