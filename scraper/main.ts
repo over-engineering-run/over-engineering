@@ -75,13 +75,13 @@ const selectHref = (query: string) => (el: HTMLDocument) =>
 interface Article {
   href: string;
   title: string;
-  series: string;
-  series_no: string;
   content: string;
   tags: string[];
   genre: string;
   publish_at: string;
   author_href: string;
+  series_href: string;
+  series_no: string;
 }
 
 const extractArticle = (href: string) =>
@@ -92,7 +92,6 @@ const extractArticle = (href: string) =>
     title: selectText(".qa-header .qa-header__title"),
     publish_at: selectText(".qa-header .qa-header__info-time"),
     content: selectHTML(".qa-markdown .markdown"),
-    series: selectText(".qa-header .ir-article__topic > a"),
     series_no: selectText(
       ".qa-header .ir-article__topic > .ir-article__topic-count"
     ),
@@ -102,20 +101,44 @@ const insertArticle = (db: DB, record: Partial<Article>) =>
   db.query(
     `
 INSERT OR REPLACE INTO articles 
-( href, title, series, series_no, content, tags, genre, publish_at, author_href )
+( href, title, series_href, series_no, content, tags, genre, publish_at, author_href )
 VALUES 
-( :href, :title, :series, :series_no, :content, :tags, :genre, :publish_at, :author_href )
+( :href, :title, :series_href, :series_no, :content, :tags, :genre, :publish_at, :author_href )
 `,
     {
       href: record.href,
       title: record.title,
-      series: record.series,
-      series_no: record.series_no,
       content: record.content,
       tags: record.tags?.join(),
       genre: record.genre,
       publish_at: record.publish_at,
       author_href: record.author_href,
+      series_href: record.series_href,
+      series_no: record.series_no,
+    }
+  );
+
+interface Series {
+  href: string;
+  name: string;
+}
+
+const extractSeries = R.applySpec({
+  href: selectHref(".qa-header .ir-article__topic > a"),
+  name: selectText(".qa-header .ir-article__topic > a"),
+});
+
+const insertSeries = (db: DB, record: Partial<Series>) =>
+  db.query(
+    `
+INSERT OR REPLACE INTO series
+( href, name )
+VALUES 
+( :href, :name )
+`,
+    {
+      href: record.href,
+      name: record.name,
     }
   );
 
@@ -162,6 +185,7 @@ const extract = (document: HTMLDocument) =>
           R.applySpec({
             article: extractArticle(href),
             user: extractUser,
+            series: extractSeries,
           })
         );
       })
@@ -216,9 +240,11 @@ async function main({ database, href }: Args) {
 
         // insert information into database
         await insertUser(db, information.user);
-        await insertArticle(db, {
+        await insertSeries(db, information.series);
+        await await insertArticle(db, {
           ...information.article,
           author_href: information.user.href,
+          series_href: information.series.href,
         });
       })
     );
