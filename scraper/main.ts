@@ -75,12 +75,13 @@ const selectHref = (query: string) => (el: HTMLDocument) =>
 interface Article {
   href: string;
   title: string;
-  series: string;
-  series_no: string;
   content: string;
   tags: string[];
   genre: string;
   publish_at: string;
+  author_href: string;
+  series_href: string;
+  series_no: string;
 }
 
 const extractArticle = (href: string) =>
@@ -91,7 +92,6 @@ const extractArticle = (href: string) =>
     title: selectText(".qa-header .qa-header__title"),
     publish_at: selectText(".qa-header .qa-header__info-time"),
     content: selectHTML(".qa-markdown .markdown"),
-    series: selectText(".qa-header .ir-article__topic > a"),
     series_no: selectText(
       ".qa-header .ir-article__topic > .ir-article__topic-count"
     ),
@@ -100,20 +100,45 @@ const extractArticle = (href: string) =>
 const insertArticle = (db: DB, record: Partial<Article>) =>
   db.query(
     `
-INSERT OR REPLACE INTO articles 
-( href, title, series, series_no, content, tags, genre, publish_at )
-VALUES 
-( :href, :title, :series, :series_no, :content, :tags, :genre, :publish_at )
+INSERT OR REPLACE INTO articles
+( href, title, series_href, series_no, content, tags, genre, publish_at, author_href )
+VALUES
+( :href, :title, :series_href, :series_no, :content, :tags, :genre, :publish_at, :author_href )
 `,
     {
       href: record.href,
       title: record.title,
-      series: record.series,
-      series_no: record.series_no,
       content: record.content,
       tags: record.tags?.join(),
       genre: record.genre,
       publish_at: record.publish_at,
+      author_href: record.author_href,
+      series_href: record.series_href,
+      series_no: record.series_no,
+    }
+  );
+
+interface Series {
+  href: string;
+  name: string;
+}
+
+const extractSeries = R.applySpec({
+  href: selectHref(".qa-header .ir-article__topic > a"),
+  name: selectText(".qa-header .ir-article__topic > a"),
+});
+
+const insertSeries = (db: DB, record: Partial<Series>) =>
+  db.query(
+    `
+INSERT OR IGNORE INTO series
+( href, name )
+VALUES
+( :href, :name )
+`,
+    {
+      href: record.href,
+      name: record.name,
     }
   );
 
@@ -125,15 +150,17 @@ const extractUser = R.applySpec({
   name: selectText(
     ".ir-article-info .ir-article-info__content .ir-article-info__name"
   ),
-  href: selectHref(".ir-article-info .ir-article-info__content a"),
+  href: selectHref(
+    ".ir-article-info .ir-article-info__content .ir-article-info__name"
+  ),
 });
 
 export const insertUser = (db: DB, record: Partial<User>) =>
   db.query(
     `
-INSERT OR REPLACE INTO users 
+INSERT OR IGNORE INTO users
 ( href, name )
-VALUES 
+VALUES
 ( :href, :name )
 `,
     {
@@ -158,6 +185,7 @@ const extract = (document: HTMLDocument) =>
           R.applySpec({
             article: extractArticle(href),
             user: extractUser,
+            series: extractSeries,
           })
         );
       })
@@ -195,31 +223,29 @@ async function main({ database, href }: Args) {
   const db = new DB(path.resolve(Deno.cwd(), database));
 
   // init tables
-  const tables = ["articles", "users"];
   const __dirname = path.dirname(path.fromFileUrl(import.meta.url));
 
-  await Promise.all(
-    tables.map((table) =>
-      Deno.readFile(path.resolve(__dirname, `./db/${table}.sql`))
-        .then(decode)
-        .then((input) => db.query(input))
-    )
-  );
+  await Deno.readFile(path.resolve(__dirname, `./init.sql`))
+    .then(decode)
+    .then((input) => db.query(input));
 
   // start from href and get back document per page
   for await (const document of scan(href)) {
     // extract information from document
     extract(document).then(
-      R.forEach((information) => {
+      R.forEach(async (information) => {
         if (!information) return;
 
         console.log(`insert ${information.article.href} into database`);
 
         // insert information into database
-        return all([
-          insertArticle(db, information.article),
-          insertUser(db, information.user),
-        ]);
+        await insertUser(db, information.user);
+        await insertSeries(db, information.series);
+        await insertArticle(db, {
+          ...information.article,
+          author_href: information.user.href,
+          series_href: information.series.href,
+        });
       })
     );
   }

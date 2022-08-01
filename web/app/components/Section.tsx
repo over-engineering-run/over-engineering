@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import { isValidElement, Children } from "react";
 import type { ReactNode, ReactElement } from "react";
 import type { CommonProps } from "~/types";
@@ -22,7 +23,10 @@ function Section(props: SectionProps) {
   });
 
   return (
-    <section className="relative flex h-screen flex-col p-8" id={props.id}>
+    <section
+      className={clsx("relative flex flex-col p-8", props.className)}
+      id={props.id}
+    >
       {children}
     </section>
   );

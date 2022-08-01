@@ -1,5 +1,6 @@
 generator client {
-    provider = "prisma-client-js"
+    provider        = "prisma-client-js"
+    previewFeatures = ["fullTextSearch"]
 }
 
 datasource db {
@@ -8,15 +9,36 @@ datasource db {
 }
 
 model Article {
-    href       String  @id @unique
-    title      String
-    series     String
-    series_no  String
-    content    String
-    tag        String?
-    genre      String?
-    publish_at String
+    href  String @id @unique
+    title String
 
-    @@index([title, series])
+    content     String
+    tags        String?
+    genre       String?
+    publish_at  String
+    author_href String?
+    author      User?   @relation(fields: [author_href], references: [href])
+
+    series_href String
+    series      Series @relation(fields: [series_href], references: [href])
+    series_no   String
+
+    @@index([title])
     @@map("articles")
+}
+
+model Series {
+    href    String    @id @unique
+    name    String
+    Article Article[]
+
+    @@map("series")
+}
+
+model User {
+    href    String    @id @unique
+    name    String
+    Article Article[]
+
+    @@map("users")
 }
