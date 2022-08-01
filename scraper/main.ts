@@ -100,9 +100,9 @@ const extractArticle = (href: string) =>
 const insertArticle = (db: DB, record: Partial<Article>) =>
   db.query(
     `
-INSERT OR REPLACE INTO articles 
+INSERT OR REPLACE INTO articles
 ( href, title, series_href, series_no, content, tags, genre, publish_at, author_href )
-VALUES 
+VALUES
 ( :href, :title, :series_href, :series_no, :content, :tags, :genre, :publish_at, :author_href )
 `,
     {
@@ -131,9 +131,9 @@ const extractSeries = R.applySpec({
 const insertSeries = (db: DB, record: Partial<Series>) =>
   db.query(
     `
-INSERT OR REPLACE INTO series
+INSERT OR IGNORE INTO series
 ( href, name )
-VALUES 
+VALUES
 ( :href, :name )
 `,
     {
@@ -158,9 +158,9 @@ const extractUser = R.applySpec({
 export const insertUser = (db: DB, record: Partial<User>) =>
   db.query(
     `
-INSERT OR IGNORE INTO users 
+INSERT OR IGNORE INTO users
 ( href, name )
-VALUES 
+VALUES
 ( :href, :name )
 `,
     {
@@ -241,7 +241,7 @@ async function main({ database, href }: Args) {
         // insert information into database
         await insertUser(db, information.user);
         await insertSeries(db, information.series);
-        await await insertArticle(db, {
+        await insertArticle(db, {
           ...information.article,
           author_href: information.user.href,
           series_href: information.series.href,
