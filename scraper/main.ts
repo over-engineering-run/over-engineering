@@ -224,10 +224,12 @@ async function main({ database, href }: Args) {
 
   // init tables
   const __dirname = path.dirname(path.fromFileUrl(import.meta.url));
-
-  await Deno.readFile(path.resolve(__dirname, `./init.sql`))
-    .then(decode)
-    .then((input) => db.query(input));
+  const tables = await Deno.readTextFile(path.resolve(__dirname, `./init.sql`))
+    .then(R.split(";"))
+    .then(R.slice(0, -1));
+  for (const table of tables) {
+    await db.query(table + ";");
+  }
 
   // start from href and get back document per page
   for await (const document of scan(href)) {
