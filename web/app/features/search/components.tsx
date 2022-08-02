@@ -23,7 +23,9 @@ export const Result = (props: Props) => {
     >
       <div className="flex items-center justify-between">
         {/* Series */}
-        <span>{props.series}</span>
+        <a href={props.series.href} target="_blank" rel="noopener noreferrer">
+          {props.series.name}
+        </a>
 
         {/* Author */}
         {props.author && <span>{props.author.name}</span>}
