@@ -14,7 +14,10 @@ const deduplicate = <T>(list: T[]): T[] => Array.from(new Set(list));
 export interface SearchResult {
   href: string;
   title: string;
-  series: string;
+  series: {
+    href: string;
+    name: string;
+  };
   hashtags: string[];
   snippet: string;
   publish_at: string;
@@ -54,7 +57,10 @@ export const search = ({ query, skip, take }: SearchProps) =>
       map((result) => ({
         href: result.href.trim(),
         title: result.title.trim(),
-        series: result.series.trim(),
+        series: {
+          href: result.series.href.trim(),
+          name: result.series.name.trim(),
+        },
         hashtags: deduplicate(result.tags?.split(",") || []),
         publish_at: format_date(result.publish_at),
         snippet: parse_html(result.content).textContent.trim().slice(50),
