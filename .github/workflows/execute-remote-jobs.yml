@@ -16,8 +16,8 @@ jobs:
       - name: ⬇️ REST API with curl
         run: |
           curl -L \
-            -X POST "${{ secrets.SUPABASE_URL }}" \
-            -H "Content-Type: application/json" \
-            -H "Authorization: Bearer ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}" \
+            -X POST '${{ secrets.SUPABASE_URL }}' \
+            -H 'Content-Type: application/json' \
+            -H 'Authorization: Bearer ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}' \
             --data '{"job":"scrape_itman_articles"}'
 
