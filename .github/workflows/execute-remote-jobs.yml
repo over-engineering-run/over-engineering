@@ -14,11 +14,14 @@ jobs:
         uses: styfle/cancel-workflow-action@0.9.1
 
       - name: ⬇️ REST API with curl
-        run: >
-          curl 
-          --request POST 
-          --header 'Content-Type: application/json' 
-          --header 'Authorization: Bearer ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}' 
-          --data '{"job":"scrape_itman_articles"}' 
-          '${{ secrets.SUPABASE_URL }}'
+        with:
+          token: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          url: ${{ secrets.SUPABASE_URL }}
+        run: |
+          curl \
+          --request POST \
+          --header 'Content-Type: application/json' \
+          --header "Authorization: Bearer $token" \
+          --data '{"job":"scrape_itman_articles"}' \
+          $url
 
