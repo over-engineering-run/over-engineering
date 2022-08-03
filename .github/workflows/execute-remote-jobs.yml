@@ -1,0 +1,22 @@
+name: Execute Remote Jobs
+
+on:
+  schedule:
+    - cron:  '0 0 * * 0'
+
+jobs:
+  scrape-itman-articles:
+    name: 🚀 Execute Scrape Itman Articles
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🛑 Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.9.1
+
+      - name: ⬇️ REST API with curl
+        run: |
+          curl -L \
+            -X POST "${{ secrets.SUPABASE_URL }}" \
+            -H "Content-Type: application/json" \
+            -H "Authorization: Bearer ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}" \
+            --data '{"job":"scrape_itman_articles"}'
+

@@ -229,3 +229,7 @@ cython_debug/
 #.idea/
 
 .vim/
+
+# Supabase
+**/supabase/.branches
+**/supabase/.temp
