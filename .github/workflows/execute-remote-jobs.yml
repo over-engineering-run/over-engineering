@@ -5,6 +5,10 @@ on:
   schedule:
     - cron:  '0 0 * * 0'
 
+env:
+  token: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+  url: ${{ secrets.SUPABASE_URL }}
+
 jobs:
   scrape-itman-articles:
     name: 🚀 Execute Scrape Itman Articles
@@ -14,14 +18,11 @@ jobs:
         uses: styfle/cancel-workflow-action@0.9.1
 
       - name: ⬇️ REST API with curl
-        with:
-          token: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
-          url: ${{ secrets.SUPABASE_URL }}
         run: |
           curl \
           --request POST \
           --header 'Content-Type: application/json' \
-          --header "Authorization: Bearer $token" \
+          --header "Authorization: Bearer ${{ env.token }}" \
           --data '{"job":"scrape_itman_articles"}' \
-          $url
-          
+          ${{ env.url }}
+
