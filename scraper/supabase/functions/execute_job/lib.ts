@@ -1,18 +1,9 @@
 import * as R from "https://x.nest.land/rambda@7.1.4/mod.ts";
-import { DB } from "https://deno.land/x/sqlite@v3.4.0/mod.ts";
-import { parse } from "https://deno.land/std@0.149.0/flags/mod.ts";
-import * as path from "https://deno.land/std@0.145.0/path/mod.ts";
 import {
   HTMLDocument,
   DOMParser,
   Element,
 } from "https://deno.land/x/deno_dom@v0.1.21-alpha/deno-dom-wasm.ts";
-
-const decode = (() => {
-  const decoder = new TextDecoder("utf-8");
-
-  return (buffer: Uint8Array) => decoder.decode(buffer);
-})();
 
 function random(min: number, max: number) {
   min = Math.ceil(min);
@@ -72,7 +63,7 @@ const selectHTML = (query: string) => (el: HTMLDocument) =>
 const selectHref = (query: string) => (el: HTMLDocument) =>
   DOM(el).select(query)?.getAttribute("href") || undefined;
 
-interface Article {
+export interface Article {
   href: string;
   title: string;
   content: string;
@@ -83,7 +74,6 @@ interface Article {
   series_href: string;
   series_no: string;
 }
-
 const extractArticle = (href: string) =>
   R.applySpec({
     href: R.always(href),
@@ -97,52 +87,16 @@ const extractArticle = (href: string) =>
     ),
   });
 
-const insertArticle = (db: DB, record: Partial<Article>) =>
-  db.query(
-    `
-INSERT OR REPLACE INTO articles
-( href, title, series_href, series_no, content, tags, genre, publish_at, author_href )
-VALUES
-( :href, :title, :series_href, :series_no, :content, :tags, :genre, :publish_at, :author_href )
-`,
-    {
-      href: record.href,
-      title: record.title,
-      content: record.content,
-      tags: record.tags?.join(),
-      genre: record.genre,
-      publish_at: record.publish_at,
-      author_href: record.author_href,
-      series_href: record.series_href,
-      series_no: record.series_no,
-    }
-  );
-
-interface Series {
+export interface Series {
   href: string;
   name: string;
 }
-
 const extractSeries = R.applySpec({
   href: selectHref(".qa-header .ir-article__topic > a"),
   name: selectText(".qa-header .ir-article__topic > a"),
 });
 
-const insertSeries = (db: DB, record: Partial<Series>) =>
-  db.query(
-    `
-INSERT OR IGNORE INTO series
-( href, name )
-VALUES
-( :href, :name )
-`,
-    {
-      href: record.href,
-      name: record.name,
-    }
-  );
-
-interface User {
+export interface User {
   href: string;
   name: string;
 }
@@ -155,21 +109,12 @@ const extractUser = R.applySpec({
   ),
 });
 
-export const insertUser = (db: DB, record: Partial<User>) =>
-  db.query(
-    `
-INSERT OR IGNORE INTO users
-( href, name )
-VALUES
-( :href, :name )
-`,
-    {
-      href: record.href,
-      name: record.name,
-    }
-  );
-
-const extract = (document: HTMLDocument) =>
+type InsertProxy = {
+  user: (user: Partial<User>) => Promise<unknown>;
+  series: (series: Partial<Series>) => Promise<unknown>;
+  article: (article: Partial<Article>) => Promise<unknown>;
+};
+export const extract = (document: HTMLDocument, insert: InsertProxy) =>
   all(
     DOM(document)
       // get every href on list
@@ -177,8 +122,6 @@ const extract = (document: HTMLDocument) =>
       .map((el) => el.getAttribute("href"))
       .map((href) => {
         if (!href) return;
-
-        console.log(`start extracting ${href}`);
 
         // extract page information
         return fetchDOM(href).then(
@@ -189,13 +132,30 @@ const extract = (document: HTMLDocument) =>
           })
         );
       })
-  );
+  )
+    .then(
+      R.map(async (information) => {
+        if (!information) return;
 
-async function* scan(href?: string): AsyncIterable<HTMLDocument> {
+        // insert information into database
+        await insert.user(information.user);
+        await insert.series(information.series);
+        await insert.article({
+          ...information.article,
+          author_href: information.user.href,
+          series_href: information.series.href,
+        });
+
+        console.log(
+          `get information from ${information.article.href} successful...`
+        );
+      })
+    )
+    .then(all);
+
+export async function* scan(href?: string): AsyncIterable<HTMLDocument> {
   // if we don't found next link, then break the loop
   while (href) {
-    console.log(`start fetching ${href}`);
-
     // fetch by href
     const document = await fetchDOM(href);
 
@@ -210,54 +170,3 @@ async function* scan(href?: string): AsyncIterable<HTMLDocument> {
     await sleep(random(300, 700));
   }
 }
-
-interface Args {
-  /** target website href for scraping */
-  href: string;
-
-  /** database path to write */
-  database: string;
-}
-async function main({ database, href }: Args) {
-  // init database
-  const db = new DB(path.resolve(Deno.cwd(), database));
-
-  // init tables
-  const __dirname = path.dirname(path.fromFileUrl(import.meta.url));
-  const tables = await Deno.readTextFile(path.resolve(__dirname, `./init.sql`))
-    .then(R.split(";"))
-    .then(R.slice(0, -1));
-  for (const table of tables) {
-    await db.query(table + ";");
-  }
-
-  // start from href and get back document per page
-  for await (const document of scan(href)) {
-    // extract information from document
-    extract(document).then(
-      R.forEach(async (information) => {
-        if (!information) return;
-
-        console.log(`insert ${information.article.href} into database`);
-
-        // insert information into database
-        await insertUser(db, information.user);
-        await insertSeries(db, information.series);
-        await insertArticle(db, {
-          ...information.article,
-          author_href: information.user.href,
-          series_href: information.series.href,
-        });
-      })
-    );
-  }
-}
-
-main(
-  parse(Deno.args, {
-    default: {
-      href: "https://ithelp.ithome.com.tw/articles?tab=ironman",
-      database: "test.db",
-    },
-  })
-);
