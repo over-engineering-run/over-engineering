@@ -1,3 +1,13 @@
+CREATE TABLE IF NOT EXISTS "series" (
+    "href" TEXT NOT NULL PRIMARY KEY,
+    "name" TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS "users" (
+    "href" TEXT NOT NULL PRIMARY KEY,
+    "name" TEXT NOT NULL
+);
+
 CREATE TABLE IF NOT EXISTS "articles" (
     "href" TEXT NOT NULL PRIMARY KEY,
     "title" TEXT NOT NULL,
@@ -12,16 +22,6 @@ CREATE TABLE IF NOT EXISTS "articles" (
     SET
         NULL ON UPDATE CASCADE,
         CONSTRAINT "articles_series_href_fkey" FOREIGN KEY ("series_href") REFERENCES "series" ("href") ON DELETE RESTRICT ON UPDATE CASCADE
-);
-
-CREATE TABLE IF NOT EXISTS "series" (
-    "href" TEXT NOT NULL PRIMARY KEY,
-    "name" TEXT NOT NULL
-);
-
-CREATE TABLE IF NOT EXISTS "users" (
-    "href" TEXT NOT NULL PRIMARY KEY,
-    "name" TEXT NOT NULL
 );
 
 CREATE UNIQUE INDEX "articles_href_key" ON "articles"("href");
