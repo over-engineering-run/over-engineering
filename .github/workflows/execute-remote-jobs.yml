@@ -17,11 +17,11 @@ jobs:
         with:
           token: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
           url: ${{ secrets.SUPABASE_URL }}
-        run: >
-          curl
-          --request POST
-          --header 'Content-Type: application/json'
-          --header "Authorization: Bearer $token"
-          --data '{"job":"scrape_itman_articles"}'
+        run: |
+          curl \
+          --request POST \
+          --header 'Content-Type: application/json' \
+          --header "Authorization: Bearer $token" \
+          --data '{"job":"scrape_itman_articles"}' \
           $url
-
+          
