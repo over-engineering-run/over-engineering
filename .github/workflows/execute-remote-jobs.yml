@@ -24,4 +24,4 @@ jobs:
           --header "Authorization: Bearer $token" \
           --data '{"job":"scrape_itman_articles"}' \
           $url
-
+          
