@@ -43,6 +43,6 @@ jobs:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
         run: |
           deno run --allow-all scraper/job.ts \
-            --url="https://ithelp.ithome.com.tw/articles?tab=ironman" \
+            --href="https://ithelp.ithome.com.tw/articles?tab=ironman" \
             --from="${{ matrix.range.from }}" \
             --to="${{ matrix.range.to }}"
