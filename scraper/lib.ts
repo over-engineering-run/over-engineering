@@ -146,13 +146,13 @@ export const extract = (document: HTMLDocument, insert: InsertProxy) =>
             author_href: information.user.href,
             series_href: information.series.href,
           });
+
+          console.log(
+            `get information from ${information.article.href} successful...`
+          );
         } catch (error) {
           console.error(error);
         }
-
-        console.log(
-          `get information from ${information.article.href} successful...`
-        );
       })
     )
     .then(all);
