@@ -16,7 +16,10 @@ jobs:
       - name: ⬇️ Checkout repo
         uses: actions/checkout@v3
 
-      - uses: denoland/setup-deno@v1
+      - name: ⎔ Setup node
+        uses: denoland/setup-deno@v1
+
+      - name: 🚀 Execute
         env:
           SUPABASE_API_KEY: ${{ secrets.SUPABASE_API_KEY }}
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
