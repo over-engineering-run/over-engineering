@@ -10,10 +10,8 @@ const insert =
     const { data, error } = await db.from(table).upsert(record);
 
     if (error) {
-      console.error(error);
       throw error;
     }
-
     return data;
   };
 
