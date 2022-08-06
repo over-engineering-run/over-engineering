@@ -24,7 +24,7 @@ function Section(props: SectionProps) {
 
   return (
     <section
-      className={clsx("relative flex flex-col p-8", props.className)}
+      className={clsx("relative flex flex-col px-4 lg:p-8", props.className)}
       id={props.id}
     >
       {children}

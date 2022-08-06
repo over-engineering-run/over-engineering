@@ -10,15 +10,19 @@ const Header = (props: HeaderProps) => (
     <div className="relative flex items-center">
       <div
         className={clsx(
-          "py-6 px-0",
+          "p-4",
+          "lg:py-6 xl:px-0",
           "container mx-auto",
-          "items-center",
-          "hidden lg:flex"
+          "flex items-center"
         )}
       >
         <Link to="/" className="my-0.5">
           <Logo />
         </Link>
+
+        <div className="ml-auto text-base font-semibold">
+          <Link to="/trending">Trending</Link>
+        </div>
       </div>
     </div>
   </header>
