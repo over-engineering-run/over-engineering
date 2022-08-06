@@ -4,26 +4,23 @@ import {
   DOMParser,
   Element,
 } from "https://deno.land/x/deno_dom@v0.1.21-alpha/deno-dom-wasm.ts";
+export { delay } from "https://deno.land/std@0.136.0/async/mod.ts";
 
-function random(min: number, max: number) {
+export function random(min: number, max: number) {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.random() * (max - min) + min;
-}
-function sleep(ms: number) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
 }
 const all = Promise.all.bind(Promise);
 
 const parseDOM = (() => {
   const it = new DOMParser();
 
-  return (source: string) => {
-    return it.parseFromString(source, "text/html");
-  };
+  return (source: string): HTMLDocument | null =>
+    it.parseFromString(source, "text/html");
 })();
 
-const fetchDOM = async (href: string) => {
+export const fetchDOM = async (href: string) => {
   // fetch by href
   const source = await fetch(href).then((res) => res.text());
   if (!source) {
@@ -38,6 +35,15 @@ const fetchDOM = async (href: string) => {
 
   return document;
 };
+
+const hasAttribute = (attribute: string) => (el: Element) =>
+  el.hasAttribute(attribute);
+
+const getAttribute = (attribute: string) => (el: Element) =>
+  el.getAttribute(attribute);
+
+const getSearchParam = (href: string, key: string) =>
+  new URLSearchParams(href).get(key) || undefined;
 
 type HasQuerySelector = HTMLDocument | Element;
 function DOM(el?: HasQuerySelector) {
@@ -157,27 +163,15 @@ export const extract = (document: HTMLDocument, insert: InsertProxy) =>
     )
     .then(all);
 
-export async function* scan(href?: string): AsyncIterable<HTMLDocument> {
-  try {
-    // if we don't found next link, then break the loop
-    while (href) {
-      console.log(`start scan ${href}...`);
-
-      // fetch by href
-      const document = await fetchDOM(href);
-
-      // dispatch sub task with document
-      yield document;
-
-      // get next link
-      href =
-        DOM(document).select('a[rel="next"]')?.getAttribute("href") ||
-        undefined;
-
-      // cold down time to prevent block by service
-      await sleep(random(300, 700));
-    }
-  } catch (error) {
-    console.error(error);
-  }
-}
+export const getEndLink = (href: string) =>
+  fetchDOM(href).then((document) =>
+    DOM(document)
+      .selectAll(".pagination > li > *")
+      .filter(hasAttribute("href"))
+      .map(getAttribute("href"))
+      .map((href) => ({
+        href,
+        page: Number(getSearchParam(href!, "page")),
+      }))
+      .reduce((pre, cur) => (cur.page > pre.page ? cur : pre), { page: -1 })
+  );
