@@ -138,13 +138,17 @@ export const extract = (document: HTMLDocument, insert: InsertProxy) =>
         if (!information) return;
 
         // insert information into database
-        await insert.user(information.user);
-        await insert.series(information.series);
-        await insert.article({
-          ...information.article,
-          author_href: information.user.href,
-          series_href: information.series.href,
-        });
+        try {
+          await insert.user(information.user);
+          await insert.series(information.series);
+          await insert.article({
+            ...information.article,
+            author_href: information.user.href,
+            series_href: information.series.href,
+          });
+        } catch (error) {
+          console.error(error);
+        }
 
         console.log(
           `get information from ${information.article.href} successful...`
@@ -154,19 +158,26 @@ export const extract = (document: HTMLDocument, insert: InsertProxy) =>
     .then(all);
 
 export async function* scan(href?: string): AsyncIterable<HTMLDocument> {
-  // if we don't found next link, then break the loop
-  while (href) {
-    // fetch by href
-    const document = await fetchDOM(href);
+  try {
+    // if we don't found next link, then break the loop
+    while (href) {
+      console.log(`start scan ${href}...`);
 
-    // dispatch sub task with document
-    yield document;
+      // fetch by href
+      const document = await fetchDOM(href);
 
-    // get next link
-    href =
-      DOM(document).select('a[rel="next"]')?.getAttribute("href") || undefined;
+      // dispatch sub task with document
+      yield document;
 
-    // cold down time to prevent block by service
-    await sleep(random(300, 700));
+      // get next link
+      href =
+        DOM(document).select('a[rel="next"]')?.getAttribute("href") ||
+        undefined;
+
+      // cold down time to prevent block by service
+      await sleep(random(300, 700));
+    }
+  } catch (error) {
+    console.error(error);
   }
 }
