@@ -1,36 +1,36 @@
 import Section from "~/components/Section";
 import Search from "~/components/Search";
 import clsx from "clsx";
-import { Form } from "@remix-run/react";
 
 const Index = () => (
-  <Section className="mx-auto grid h-[80vh] max-w-screen-lg place-content-center">
+  <Section className="mx-auto grid h-[70vh] max-w-screen-md lg:max-w-screen-lg lg:place-content-center">
     <h1
       className={clsx(
-        "my-16 flex flex-col gap-2 text-5xl font-semibold",
+        "my-16 flex flex-col justify-center gap-2 text-5xl font-semibold",
         "lg:hidden"
       )}
     >
-      <span className="first-letter:text-red">Searching</span>
-      <span className="first-letter:text-orange">Made</span>
-      <span className="first-letter:text-sky">For</span>
-      <span className="first-letter:text-blue">Developers</span>
+      <span>Searching</span>
+      <span>Made</span>
+      <span>For</span>
+      <span>Developers</span>
     </h1>
 
     <h1
       className={clsx(
-        "my-16 flex flex-col justify-center gap-4 text-6xl"
+        "hidden lg:flex",
+        "my-16 flex-col justify-center gap-4 text-6xl"
         //
       )}
     >
       <div className="flex gap-4">
-        <span className="first-letter:text-red">Searching</span>
-        <span className="first-letter:text-orange">Made</span>
+        <span>Searching</span>
+        <span>Made</span>
       </div>
 
       <div className="flex gap-4">
-        <span className="first-letter:text-sky">For</span>
-        <span className="first-letter:text-blue">Developers</span>
+        <span>For</span>
+        <span>Developers</span>
       </div>
     </h1>
 

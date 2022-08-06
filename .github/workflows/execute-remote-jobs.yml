@@ -5,24 +5,20 @@ on:
   schedule:
     - cron:  '0 0 * * 0'
 
-env:
-  token: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
-  url: ${{ secrets.SUPABASE_URL }}
-
 jobs:
-  scrape-itman-articles:
-    name: 🚀 Execute Scrape Itman Articles
+  execute-job:
+    name: 🚀 Execute Scrape Articles
     runs-on: ubuntu-latest
     steps:
       - name: 🛑 Cancel Previous Runs
         uses: styfle/cancel-workflow-action@0.9.1
 
-      - name: ⬇️ REST API with curl
-        run: |
-          curl \
-          --request POST \
-          --header 'Content-Type: application/json' \
-          --header "Authorization: Bearer ${{ env.token }}" \
-          --data '{"job":"scrape_itman_articles"}' \
-          ${{ env.url }}
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v3
 
+      - uses: denoland/setup-deno@v1
+        env:
+          SUPABASE_API_KEY: ${{ secrets.SUPABASE_API_KEY }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+        run: |
+          deno run --allow-all scraper/main.ts
