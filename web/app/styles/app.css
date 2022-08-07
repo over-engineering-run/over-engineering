@@ -80,6 +80,17 @@
   [aria-expanded="false"] > svg:nth-of-type(2) {
     @apply hidden;
   }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-purple-400 to-pink-600;
+    @apply bg-clip-text text-8xl font-extrabold text-transparent;
+  }
+
+  .card-layer {
+    @apply rounded-lg;
+    @apply shadow-lg shadow-black hocus:shadow-xl hocus:shadow-black;
+    @apply transition-shadow duration-300;
+  }
 }
 
 @layer base {

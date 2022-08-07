@@ -6,7 +6,13 @@ import type { CommonProps } from "~/types";
 
 type HeaderProps = CommonProps;
 const Header = (props: HeaderProps) => (
-  <header className={clsx("border-b", props.className)}>
+  <header
+    className={clsx(
+      "border-b",
+      "fixed left-0 top-0 z-20 w-full bg-primary",
+      props.className
+    )}
+  >
     <div className="relative flex items-center">
       <div
         className={clsx(
@@ -21,7 +27,7 @@ const Header = (props: HeaderProps) => (
         </Link>
 
         <div className="ml-auto text-base font-semibold">
-          <Link to="/trending">Trending</Link>
+          <Link to="/trends">Trends</Link>
         </div>
       </div>
     </div>
