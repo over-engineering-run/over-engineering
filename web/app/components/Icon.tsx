@@ -19,10 +19,13 @@ const Chevron = {
   Right: HiOutlineChevronRight,
 };
 
+import { TailSpin as Loading } from "react-loading-icons";
+
 export default {
   Menu,
   Search,
   Close,
   Chevron,
   Book,
+  Loading,
 };

@@ -52,7 +52,6 @@ const Search = (props: Props) => {
         "z-10",
         "relative w-full",
         "brightness-95 hocus-within:brightness-100",
-        "hocus-within:shadow-lg",
         props.className
       )}
     >
@@ -60,7 +59,9 @@ const Search = (props: Props) => {
         className={clsx(
           "flex items-center p-3",
           "bg-form",
-          isOpen ? "rounded-t-3xl" : "rounded-3xl"
+          isOpen ? "rounded-t-3xl" : "rounded-3xl",
+          isOpen && "shadow-lg shadow-black",
+          "hocus:shadow-lg hocus:shadow-black"
         )}
         {..._props.getComboboxProps()}
       >
@@ -95,7 +96,8 @@ const Search = (props: Props) => {
         {..._props.getMenuProps()}
         className={clsx(
           "absolute w-full rounded-b-3xl bg-form pb-6",
-          !isOpen && "hidden"
+          !isOpen && "hidden",
+          "shadow-lg shadow-black"
         )}
       >
         <hr className="mb-4 border-secondary" />
