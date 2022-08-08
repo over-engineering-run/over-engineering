@@ -1,7 +1,13 @@
 name: Scrape Articles
 
 on:
-  workflow_dispatch: 
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to run scrape'
+        type: environment
+        required: true
+  workflow_call:
     inputs:
       environment:
         description: 'Environment to run scrape'
