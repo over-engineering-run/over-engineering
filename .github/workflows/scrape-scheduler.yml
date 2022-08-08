@@ -9,5 +9,5 @@ jobs:
     runs-on: ubuntu-latest
     environment: staging
     steps:
-      - uses: ./.github/workflows/scrape-articles.yml
+      - uses: over-engineering-run/over-engineering/.github/workflows/scrape-articles.yml
 
