@@ -1,19 +1,18 @@
 name: Scrape Articles
 
 on:
-  workflow_call:
-    secrets:
-      SUPABASE_API_KEY:
-        description: 'supabase api key'
-        required: true
-      SUPABASE_URL:
-        description: 'supabase url'
+  workflow_dispatch: 
+    inputs:
+      environment:
+        description: 'Environment to run scrape'
+        type: environment
         required: true
 
 jobs:
   execute:
     name: 🚀 Execute Scrape Articles Dev Environment
     runs-on: ubuntu-latest
+    environment: ${{ inputs.environment }}
     strategy:
       matrix:
         range:
