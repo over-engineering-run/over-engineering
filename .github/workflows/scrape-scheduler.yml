@@ -1,10 +1,13 @@
-name: Scrape Articles
+name: Scrape Scheduler
 
 on:
   workflow_dispatch: {}
 
 jobs:
   execute_staging:
-    uses: "./.github/workflows/scrape-articles.yml"
+    name: Pass input and secrets to action
+    runs-on: ubuntu-latest
     environment: staging
+    steps:
+      - uses: ./.github/workflows/scrape-articles
 
