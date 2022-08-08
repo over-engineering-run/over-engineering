@@ -1,12 +1,17 @@
 name: Scrape Articles
 
 on:
-  workflow_dispatch: {}
-  schedule:
-    - cron:  '0 0 * * 0'
+  workflow_call:
+    secrets:
+      SUPABASE_API_KEY:
+        description: 'supabase api key'
+        required: true
+      SUPABASE_URL:
+        description: 'supabase url'
+        required: true
 
 jobs:
-  dev:
+  execute:
     name: 🚀 Execute Scrape Articles Dev Environment
     runs-on: ubuntu-latest
     strategy:
@@ -39,8 +44,8 @@ jobs:
 
       - name: 🚀 Execute
         env:
-          SUPABASE_API_KEY: ${{ secrets.SUPABASE_DEV_API_KEY }}
-          SUPABASE_URL: ${{ secrets.SUPABASE_DEV_URL }}
+          SUPABASE_API_KEY: ${{ secrets.SUPABASE_API_KEY }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
         run: |
           deno run --allow-all scraper/job.ts \
             --href="https://ithelp.ithome.com.tw/articles?tab=ironman" \
