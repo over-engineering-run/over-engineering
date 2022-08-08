@@ -1,0 +1,10 @@
+name: Scrape Articles
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  execute_staging:
+    uses: "./.github/workflows/scrape-articles.yml"
+    environment: staging
+
