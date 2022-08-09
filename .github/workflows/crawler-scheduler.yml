@@ -1,4 +1,4 @@
-name: Scrape Schedule
+name: Crawler Scheduler
 
 on:
   schedule:
@@ -8,11 +8,11 @@ on:
 
 jobs:
   execute_staging:
-    uses: ./.github/workflows/scrape-articles.yml
+    uses: ./.github/workflows/extract-articles.yml
     with:
       environment: staging
 
   execute_production:
-    uses: ./.github/workflows/scrape-articles.yml
+    uses: ./.github/workflows/extract-articles.yml
     with:
       environment: production
