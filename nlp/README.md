@@ -1,32 +1,68 @@
 # NLP
 
-## Goal
 
-- Search Engine
-  - We want to build an search engine that provide basic search functionility
-    against posts.
-    - search keyword within author, title, content, and hashtag
-    - filtering by hashtag, gerne, is_shit_post?, author
-    - ordering by date, # of reply, and relevance
-    - auto fill
+## Goal: Search Engine
+
+- Features
+  - `Keyword Search`: **title**, **content**, **hashtag**
+  - `Filter`: **hashtag** (optional: **time** and **is_shit_post?**)
+  - `Auto Fill`: **hashtag** (optional: **extracted keywords** and **post title**)
+
+- Optional Features
+  - `Statistic`: to be discussed (maybe: **trending**, **programming
+    languages**, **hashtags**, **posts/series** or **keywords**)
+  - `Shit Post Detection`: to be discussed
+  - `Recommendation`: to be discussed (**related post**, **series** or **articles**)
+
+- Search Result
+  - series
+  - title
+  - snippets
+  - hashtag
+  - reading time or readability
+
+- Notes
+  - `Keyword Search`
+    - should not mix the search of **post**, **author** or **series**
+    - **author** or **series** can directly link to it-ironmain page
+  - `Filter`
+    - should keep simple, and should not have **author** or **series** filtering
+    - **author** or **series** filtering is quite trivial
+    - direct links to it-ironmain page should be enough
+  - `Auto Fill`
+    - **hashtags** are generally summary of the topic or general meaning of a post
+    - help users formulate their queries
+  - `Keyword Search` vs `Filter`
+    - example query: "learning `java` and `python`"
+    - `Keyword Search`: Intersection and then Union
+    - `Filter`: only Intersection
+
 
 ## Issues
 
-- search by keyword
-  - Chinese and English
+- `Keyword Search`
+
+  - multi-languages
+    - Chinese and English
+
   - code block processing
-    - <pre><code>
-    - [improvement]: include code comment
-  - ML -> search result should not have HTML
+    - \<pre\>\<code\>
+    - improvement: include code comment during search
 
-- statistic
-  - trending: hashtags, posts/series
-  - languages
-  - keywords
+  - search result grouping
+    - do we want to group the search result by series
 
-- group by section
+- `Filter`
 
-- [improvement]: search by question
+- `Auto Fill`
 
-- Model for Shit Post Classification
-- Recommandation: related posts, series or articles
+
+## Components
+
+- Processing
+
+- Indexing (Search Engine)
+
+- Backend Server
+
+- Search API
