@@ -1,0 +1,1169 @@
+{
+   "data":[
+      {
+         "id":2,
+         "title":"Ariel",
+         "overview":"Taisto Kasurinen is a Finnish coal miner whose father has just committed suicide and who is framed for a crime he did not commit. In jail, he starts to dream about leaving the country and starting a new life. He escapes from prison but things don't go as planned...",
+         "genres":[
+            "Drama",
+            "Crime",
+            "Comedy"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/ojDg0PGvs6R9xYFodRct2kdI6wC.jpg",
+         "release_date":593395200
+      },
+      {
+         "id":5,
+         "title":"Four Rooms",
+         "overview":"It's Ted the Bellhop's first night on the job...and the hotel's very unusual guests are about to place him in some outrageous predicaments. It seems that this evening's room service is serving up one unbelievable happening after another.",
+         "genres":[
+            "Crime",
+            "Comedy"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/75aHn1NOYXh4M7L5shoeQ6NGykP.jpg",
+         "release_date":818467200
+      },
+      {
+         "id":6,
+         "title":"Judgment Night",
+         "overview":"While racing to a boxing match, Frank, Mike, John and Rey get more than they bargained for. A wrong turn lands them directly in the path of Fallon, a vicious, wise-cracking drug lord. After accidentally witnessing Fallon murder a disloyal henchman, the four become his unwilling prey in a savage game of cat & mouse as they are mercilessly stalked through the urban jungle in this taut suspense drama",
+         "genres":[
+            "Action",
+            "Thriller",
+            "Crime"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/rYFAvSPlQUCebayLcxyK79yvtvV.jpg",
+         "release_date":750643200
+      },
+      {
+         "id":11,
+         "title":"Star Wars",
+         "overview":"Princess Leia is captured and held hostage by the evil Imperial forces in their effort to take over the galactic Empire. Venturesome Luke Skywalker and dashing captain Han Solo team together with the loveable robot duo R2-D2 and C-3PO to rescue the beautiful princess and restore peace and justice in the Empire.",
+         "genres":[
+            "Adventure",
+            "Action",
+            "Science Fiction"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/6FfCtAuVAW8XJjZ7eWeLibRLWTw.jpg",
+         "release_date":233366400
+      },
+      {
+         "id":12,
+         "title":"Finding Nemo",
+         "overview":"Nemo, an adventurous young clownfish, is unexpectedly taken from his Great Barrier Reef home to a dentist's office aquarium. It's up to his worrisome father Marlin and a friendly but forgetful fish Dory to bring Nemo home -- meeting vegetarian sharks, surfer dude turtles, hypnotic jellyfish, hungry seagulls, and more along the way.",
+         "genres":[
+            "Animation",
+            "Family"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/eHuGQ10FUzK1mdOY69wF5pGgEf5.jpg",
+         "release_date":1054252800
+      },
+      {
+         "id":13,
+         "title":"Forrest Gump",
+         "overview":"A man with a low IQ has accomplished great things in his life and been present during significant historic events—in each case, far exceeding what anyone imagined he could do. But despite all he has achieved, his one true love eludes him.",
+         "genres":[
+            "Comedy",
+            "Drama",
+            "Romance"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/h5J4W4veyxMXDMjeNxZI46TsHOb.jpg",
+         "release_date":773452800
+      },
+      {
+         "id":14,
+         "title":"American Beauty",
+         "overview":"Lester Burnham, a depressed suburban father in a mid-life crisis, decides to turn his hectic life around after developing an infatuation with his daughter's attractive friend.",
+         "genres":[
+            "Drama"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/wby9315QzVKdW9BonAefg8jGTTb.jpg",
+         "release_date":937353600
+      },
+      {
+         "id":15,
+         "title":"Citizen Kane",
+         "overview":"Newspaper magnate, Charles Foster Kane is taken from his mother as a boy and made the ward of a rich industrialist. As a result, every well-meaning, tyrannical or self-destructive move he makes for the rest of his life appears in some way to be a reaction to that deeply wounding event.",
+         "genres":[
+            "Mystery",
+            "Drama"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/zO5OI25cieQ6ncpvGOD4U72vi1o.jpg",
+         "release_date":-905990400
+      },
+      {
+         "id":16,
+         "title":"Dancer in the Dark",
+         "overview":"Selma, a Czech immigrant on the verge of blindness, struggles to make ends meet for herself and her son, who has inherited the same genetic disorder and will suffer the same fate without an expensive operation. When life gets too difficult, Selma learns to cope through her love of musicals, escaping life's troubles - even if just for a moment - by dreaming up little numbers to the rhythmic beats of her surroundings.",
+         "genres":[
+            "Drama",
+            "Crime"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/9rsivF4sWfmBzrNr4LPu6TNJhXX.jpg",
+         "release_date":958521600
+      },
+      {
+         "id":17,
+         "title":"The Dark",
+         "overview":"Adèle and her daughter Sarah are traveling on the Welsh coastline to see her husband James when Sarah disappears. A different but similar looking girl appears who says she died in a past time. Adèle tries to discover what happened to her daughter as she is tormented by Celtic mythology from the past.",
+         "genres":[
+            "Horror",
+            "Thriller",
+            "Mystery"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/wZeBHVnCvaS2bwkb8jFQ0PwZwXq.jpg",
+         "release_date":1127865600
+      },
+      {
+         "id":18,
+         "title":"The Fifth Element",
+         "overview":"In 2257, a taxi driver is unintentionally given the task of saving a young girl who is part of the key that will ensure the survival of humanity.",
+         "genres":[
+            "Adventure",
+            "Fantasy",
+            "Action",
+            "Thriller",
+            "Science Fiction"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/fPtlCO1yQtnoLHOwKtWz7db6RGU.jpg",
+         "release_date":862531200
+      },
+      {
+         "id":19,
+         "title":"Metropolis",
+         "overview":"In a futuristic city sharply divided between the working class and the city planners, the son of the city's mastermind falls in love with a working class prophet who predicts the coming of a savior to mediate their differences.",
+         "genres":[
+            "Drama",
+            "Science Fiction"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/hUK9rewffKGqtXynH5SW3v9hzcu.jpg",
+         "release_date":-1353888000
+      },
+      {
+         "id":20,
+         "title":"My Life Without Me",
+         "overview":"A fatally ill mother with only two months to live creates a list of things she wants to do before she dies without telling her family of her illness.",
+         "genres":[
+            "Drama",
+            "Romance"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/sFSkn5rrQqXJkRNa2rMWqzmEuhR.jpg",
+         "release_date":1046995200
+      },
+      {
+         "id":21,
+         "title":"The Endless Summer",
+         "overview":"Bruce Brown's The Endless Summer is one of the first and most influential surf movies of all time. The film documents American surfers Mike Hynson and Robert August as they travel the world during California’s winter (which, back in 1965 was off-season for surfing) in search of the perfect wave and ultimately, an endless summer.",
+         "genres":[
+            "Documentary"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/5W5uaqQ7NZTwoDMKO4AtdcahHex.jpg",
+         "release_date":-111974400
+      },
+      {
+         "id":22,
+         "title":"Pirates of the Caribbean: The Curse of the Black Pearl",
+         "overview":"Jack Sparrow, a freewheeling 18th-century pirate, quarrels with a rival pirate bent on pillaging Port Royal. When the governor's daughter is kidnapped, Sparrow decides to help the girl's love save her.",
+         "genres":[
+            "Adventure",
+            "Fantasy",
+            "Action"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/z8onk7LV9Mmw6zKz4hT6pzzvmvl.jpg",
+         "release_date":1057708800
+      },
+      {
+         "id":24,
+         "title":"Kill Bill: Vol. 1",
+         "overview":"An assassin is shot by her ruthless employer, Bill, and other members of their assassination circle – but she lives to plot her vengeance.",
+         "genres":[
+            "Action",
+            "Crime"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/v7TaX8kXMXs5yFFGR41guUDNcnB.jpg",
+         "release_date":1065744000
+      },
+      {
+         "id":25,
+         "title":"Jarhead",
+         "overview":"Jarhead is a film about a US Marine Anthony Swofford’s experience in the Gulf War. After putting up with an arduous boot camp, Swofford and his unit are sent to the Persian Gulf where they are eager to fight, but are forced to stay back from the action. Swofford struggles with the possibility of his girlfriend cheating on him, and as his mental state deteriorates, his desire to kill increases.",
+         "genres":[
+            "Drama",
+            "War"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/4rCzaZy5Qkvxh5xaVpHriXSLTgC.jpg",
+         "release_date":1131062400
+      },
+      {
+         "id":27,
+         "title":"9 Songs",
+         "overview":"Matt, a young glaciologist, soars across the vast, silent, icebound immensities of the South Pole as he recalls his love affair with Lisa. They meet at a mobbed rock concert in a vast music hall - London's Brixton Academy. They are in bed at night's end. Together, over a period of several months, they pursue a mutual sexual passion whose inevitable stages unfold in counterpoint to nine live-concert songs.",
+         "genres":[
+            "Drama",
+            "Music",
+            "Romance"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/91O7z0vo7MiNWd5xD2BoivwbQsb.jpg",
+         "release_date":1084665600
+      },
+      {
+         "id":28,
+         "title":"Apocalypse Now",
+         "overview":"At the height of the Vietnam war, Captain Benjamin Willard is sent on a dangerous mission that, officially, \"does not exist, nor will it ever exist.\" His goal is to locate - and eliminate - a mysterious Green Beret Colonel named Walter Kurtz, who has been leading his personal army on illegal guerrilla missions into enemy territory.",
+         "genres":[
+            "Drama",
+            "War"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/gQB8Y5RCMkv2zwzFHbUJX3kAhvA.jpg",
+         "release_date":303523200
+      },
+      {
+         "id":30,
+         "title":"Magnetic Rose",
+         "overview":"Koji Morimato’s animated science fiction short story about how the border between reality and illusion on a space station becomes blurry.",
+         "genres":[
+            "Animation",
+            "Science Fiction"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/gSuHDeWemA1menrwfMRChnSmMVN.jpg",
+         "release_date":819676800
+      },
+      {
+         "id":33,
+         "title":"Unforgiven",
+         "overview":"William Munny is a retired, once-ruthless killer turned gentle widower and hog farmer. To help support his two motherless children, he accepts one last bounty-hunter mission to find the men who brutalized a prostitute. Joined by his former partner and a cocky greenhorn, he takes on a corrupt sheriff.",
+         "genres":[
+            "Western"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/yKyLJmRAtyXEEYKOvPhKHXIcPq9.jpg",
+         "release_date":713145600
+      },
+      {
+         "id":35,
+         "title":"The Simpsons Movie",
+         "overview":"After Homer accidentally pollutes the town's water supply, Springfield is encased in a gigantic dome by the EPA and the Simpsons are declared fugitives.",
+         "genres":[
+            "Animation",
+            "Comedy",
+            "Family"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/s3b8TZWwmkYc2KoJ5zk77qB6PzY.jpg",
+         "release_date":1185321600
+      },
+      {
+         "id":38,
+         "title":"Eternal Sunshine of the Spotless Mind",
+         "overview":"Joel Barish, heartbroken that his girlfriend underwent a procedure to erase him from her memory, decides to do the same. However, as he watches his memories of her fade away, he realises that he still loves her, and may be too late to correct his mistake.",
+         "genres":[
+            "Science Fiction",
+            "Drama",
+            "Romance"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/xFuIVB1aPb29vq0G0X9E5p7LuhN.jpg",
+         "release_date":1079654400
+      },
+      {
+         "id":55,
+         "title":"Amores Perros",
+         "overview":"A fatalistic car crash in Mexico City sets off a chain of events in the lives of three persons: a young man aching to run off with his sister-in-law, a supermodel, and a homeless man. Their lives are catapulted into unforeseen circumstances instigated by the seemingly inconsequential destiny of a dog.",
+         "genres":[
+            "Drama",
+            "Thriller"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/n3QrQvLM7lZ9AGExvG89OREkCXW.jpg",
+         "release_date":961113600
+      },
+      {
+         "id":58,
+         "title":"Pirates of the Caribbean: Dead Man's Chest",
+         "overview":"Captain Jack Sparrow works his way out of a blood debt with the ghostly Davy Jones to avoid eternal damnation.",
+         "genres":[
+            "Adventure",
+            "Fantasy",
+            "Action"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/l3peI54mf6Z9EBSvS3hnRmOBbFT.jpg",
+         "release_date":1152144000
+      },
+      {
+         "id":59,
+         "title":"A History of Violence",
+         "overview":"An average family is thrust into the spotlight after the father commits a seemingly self-defense murder at his diner.",
+         "genres":[
+            "Drama",
+            "Thriller",
+            "Crime"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/rrc6GiAKHDrUjp8OmdVng9hRWBn.jpg",
+         "release_date":1127433600
+      },
+      {
+         "id":62,
+         "title":"2001: A Space Odyssey",
+         "overview":"Humanity finds a mysterious object buried beneath the lunar surface and sets off to find its origins with the help of HAL 9000, the world's most advanced super computer.",
+         "genres":[
+            "Science Fiction",
+            "Mystery",
+            "Adventure"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/ve72VxNqjGM69Uky4WTo2bK6rfq.jpg",
+         "release_date":-55209600
+      },
+      {
+         "id":63,
+         "title":"Twelve Monkeys",
+         "overview":"In the year 2035, convict James Cole reluctantly volunteers to be sent back in time to discover the origin of a deadly virus that wiped out nearly all of the earth's population and forced the survivors into underground communities. But when Cole is mistakenly sent to 1990 instead of 1996, he's arrested and locked up in a mental hospital. There he meets psychiatrist Dr. Kathryn Railly, and patient Jeffrey Goines, the son of a famous virus expert, who may hold the key to the mysterious rogue group, the Army of the 12 Monkeys, thought to be responsible for unleashing the killer disease.",
+         "genres":[
+            "Science Fiction",
+            "Thriller",
+            "Mystery"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/fCZnJSARoTbLefr9ThwWBSkJ7oR.jpg",
+         "release_date":820195200
+      },
+      {
+         "id":64,
+         "title":"Talk to Her",
+         "overview":"Two men share an odd friendship while they care for two women who are both in deep comas.",
+         "genres":[
+            "Drama",
+            "Romance"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/ePERgbqEI1sYTzSVIHDYD9MJ1IS.jpg",
+         "release_date":1016064000
+      },
+      {
+         "id":65,
+         "title":"8 Mile",
+         "overview":"The setting is Detroit in 1995. The city is divided by 8 Mile, a road that splits the town in half along racial lines. A young white rapper, Jimmy \"B-Rabbit\" Smith Jr. summons strength within himself to cross over these arbitrary boundaries to fulfill his dream of success in hip hop. With his pal Future and the three one third in place, all he has to do is not choke.",
+         "genres":[
+            "Music",
+            "Drama"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/7BmQj8qE1FLuLTf7Xjf9sdIHzoa.jpg",
+         "release_date":1036713600
+      },
+      {
+         "id":66,
+         "title":"Absolute Power",
+         "overview":"A master thief coincidentally is robbing a house where a murder—in which the President of The United States is involved—occurs in front of his eyes. He is forced to run, while holding evidence that could convict the President.",
+         "genres":[
+            "Crime",
+            "Drama",
+            "Action"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/xX9gmwtnTi0Y8WcTF7Jsg9Hdp6W.jpg",
+         "release_date":855878400
+      },
+      {
+         "id":67,
+         "title":"Paradise Now",
+         "overview":"Two childhood friends are recruited for a suicide bombing in Tel Aviv.",
+         "genres":[
+            "Thriller",
+            "Crime",
+            "Drama"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/qWZkYa8VdcDZk8uzRB2PfhpM9IL.jpg",
+         "release_date":1108339200
+      },
+      {
+         "id":68,
+         "title":"Brazil",
+         "overview":"Low-level bureaucrat Sam Lowry escapes the monotony of his day-to-day life through a recurring daydream of himself as a virtuous hero saving a beautiful damsel. Investigating a case that led to the wrongful arrest and eventual death of an innocent man instead of wanted terrorist Harry Tuttle, he meets the woman from his daydream, and in trying to help her gets caught in a web of mistaken identities, mindless bureaucracy and lies.",
+         "genres":[
+            "Comedy",
+            "Science Fiction"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/d0PibPzCK4fVikjoD1PqHovbvkt.jpg",
+         "release_date":477705600
+      },
+      {
+         "id":69,
+         "title":"Walk the Line",
+         "overview":"A chronicle of country music legend Johnny Cash's life, from his early days on an Arkansas cotton farm to his rise to fame with Sun Records in Memphis, where he recorded alongside Elvis Presley, Jerry Lee Lewis and Carl Perkins.",
+         "genres":[
+            "Drama",
+            "Music",
+            "Romance"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/zMkD6FVikyPNnigoupO7vD5ti9p.jpg",
+         "release_date":1126569600
+      },
+      {
+         "id":70,
+         "title":"Million Dollar Baby",
+         "overview":"Despondent over a painful estrangement from his daughter, trainer Frankie Dunn isn't prepared for boxer Maggie Fitzgerald to enter his life. But Maggie's determined to go pro and to convince Dunn and his cohort to help her.",
+         "genres":[
+            "Drama"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/jcfEqKdWF1zeyvECPqp3mkWLct2.jpg",
+         "release_date":1103068800
+      },
+      {
+         "id":71,
+         "title":"Billy Elliot",
+         "overview":"Set against the background of the 1984 Miners' Strike, 11-year-old Billy Elliot stumbles out of the boxing ring and onto the ballet floor. He faces many trials and triumphs as he strives to conquer his family's set ways, inner conflict, and standing on his toes.",
+         "genres":[
+            "Drama",
+            "Comedy",
+            "Music"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/yvvDDdxNy1aYzG5OPVEVTsfCqdq.jpg",
+         "release_date":958608000
+      },
+      {
+         "id":73,
+         "title":"American History X",
+         "overview":"Derek Vineyard is paroled after serving 3 years in prison for killing two African-American men. Through his brother, Danny Vineyard's narration, we learn that before going to prison, Derek was a skinhead and the leader of a violent white supremacist gang that committed acts of racial crime throughout L.A. and his actions greatly influenced Danny. Reformed and fresh out of prison, Derek severs contact with the gang and becomes determined to keep Danny from going down the same violent path as he did.",
+         "genres":[
+            "Drama"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/c2gsmSQ2Cqv8zosqKOCwRS0GFBS.jpg",
+         "release_date":909705600
+      },
+      {
+         "id":74,
+         "title":"War of the Worlds",
+         "overview":"Ray Ferrier is a divorced dockworker and less-than-perfect father. Soon after his ex-wife and her new husband drop off his teenage son and young daughter for a rare weekend visit, a strange and powerful lightning storm touches down.",
+         "genres":[
+            "Adventure",
+            "Thriller",
+            "Science Fiction"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/6Biy7R9LfumYshur3YKhpj56MpB.jpg",
+         "release_date":1119916800
+      },
+      {
+         "id":75,
+         "title":"Mars Attacks!",
+         "overview":"'We come in peace' is not what those green men from Mars mean when they invade our planet, armed with irresistible weapons and a cruel sense of humor.  This star studded cast must play victim to the alien’s fun and games in this comedy homage to science fiction films of the '50s and '60s.",
+         "genres":[
+            "Comedy",
+            "Fantasy",
+            "Science Fiction"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/hll4O5vSAfnZDb6JbnP06GPtz7b.jpg",
+         "release_date":850348800
+      },
+      {
+         "id":76,
+         "title":"Before Sunrise",
+         "overview":"On his way to Vienna, American Jesse meets Céline, a student returning to Paris. After long conversations forge a surprising connection between them, Jesse convinces Celine to get off the train with him in Vienna. Since his flight to the U.S. departs the next morning and he has no money for lodging, they wander the city together, taking in the experiences of Vienna and each other.",
+         "genres":[
+            "Drama",
+            "Romance"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/6KWnXYoV1htDT3TGYdFWucfTt6t.jpg",
+         "release_date":791164800
+      },
+      {
+         "id":77,
+         "title":"Memento",
+         "overview":"Leonard Shelby is tracking down the man who raped and murdered his wife. The difficulty of locating his wife's killer, however, is compounded by the fact that he suffers from a rare, untreatable form of short-term memory loss. Although he can recall details of life before his accident, Leonard cannot remember what happened fifteen minutes ago, where he's going, or why.",
+         "genres":[
+            "Mystery",
+            "Thriller"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/yuNs09hvpHVU1cBTCAk9zxsL2oW.jpg",
+         "release_date":971222400
+      },
+      {
+         "id":78,
+         "title":"Blade Runner",
+         "overview":"In the smog-choked dystopian Los Angeles of 2019, blade runner Rick Deckard is called out of retirement to terminate a quartet of replicants who have escaped to Earth seeking their creator for a way to extend their short life spans.",
+         "genres":[
+            "Science Fiction",
+            "Drama",
+            "Thriller"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/qLX91FhHWCVrxDVsw0g2UD5c3Zk.jpg",
+         "release_date":393811200
+      },
+      {
+         "id":79,
+         "title":"Hero",
+         "overview":"One man defeated three assassins who sought to murder the most powerful warlord in pre-unified China.",
+         "genres":[
+            "Drama",
+            "Adventure",
+            "Action",
+            "History"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/vxgZto2Cz7ILHAlmRXt50I2brB2.jpg",
+         "release_date":1027296000
+      },
+      {
+         "id":80,
+         "title":"Before Sunset",
+         "overview":"Nine years later, Jesse travels across Europe giving readings from a book he wrote about the night he spent in Vienna with Celine. After his reading in Paris, Celine finds him, and they spend part of the day together before Jesse has to again leave for a flight. They are both in relationships now, and Jesse has a son, but as their strong feelings for each other start to return, both confess a longing for more.",
+         "genres":[
+            "Drama",
+            "Romance"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/gycdE1ARByGQcK4fYR2mgpU6OO.jpg",
+         "release_date":1076371200
+      },
+      {
+         "id":81,
+         "title":"Nausicaä of the Valley of the Wind",
+         "overview":"After a global war, the seaside kingdom known as the Valley of the Wind remains one of the last strongholds on Earth untouched by a poisonous jungle and the powerful insects that guard it. Led by the courageous Princess Nausicaä, the people of the Valley engage in an epic struggle to restore the bond between humanity and Earth.",
+         "genres":[
+            "Adventure",
+            "Animation",
+            "Fantasy"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/sIpcATxMrKHRRUJAGI5UIUT7XMG.jpg",
+         "release_date":447811200
+      },
+      {
+         "id":82,
+         "title":"Miami Vice",
+         "overview":"A case involving drug lords and murder in South Florida takes a personal turn for undercover detectives Sonny Crockett and Ricardo Tubbs. Unorthodox Crockett gets involved romantically with the Chinese-Cuban wife of a trafficker of arms and drugs, while Tubbs deals with an assault on those he loves.",
+         "genres":[
+            "Action",
+            "Crime",
+            "Thriller"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/iJPSls4taB09EUKtLj6FjFSprb3.jpg",
+         "release_date":1153958400
+      },
+      {
+         "id":83,
+         "title":"Open Water",
+         "overview":"Two divers are left out at sea without a boat. There’s nothing but water for miles, unless they look at what’s underneath them...",
+         "genres":[
+            "Drama",
+            "Thriller",
+            "Horror"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/eGcdNjswlKwdJRyStR7zEMVAKWN.jpg",
+         "release_date":1091750400
+      },
+      {
+         "id":85,
+         "title":"Raiders of the Lost Ark",
+         "overview":"When Dr. Indiana Jones – the tweed-suited professor who just happens to be a celebrated archaeologist – is hired by the government to locate the legendary Ark of the Covenant, he finds himself up against the entire Nazi regime.",
+         "genres":[
+            "Adventure",
+            "Action"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/ceG9VzoRAVGwivFU403Wc3AHRys.jpg",
+         "release_date":361152000
+      },
+      {
+         "id":86,
+         "title":"The Elementary Particles",
+         "overview":"Based on Michel Houellebecq's controversial novel, Atomised (aka The Elementary Particles) focuses on Michael and Bruno, two very different half-brothers and their disturbed sexuality.  After a chaotic childhood with a hippie mother only caring for her affairs, Michael, a molecular biologist, is more interested in genes than women, while Bruno is obsessed with his sexual desires, but mostly finds his satisfaction with prostitutes.  But Bruno's life changes when he gets to know the experienced Christiane.  In the meantime, Michael meets Annabelle, the love of his youth, again.",
+         "genres":[
+            "Drama",
+            "Romance"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/wpGpR7GewyApPgqPvuWadBAfmFc.jpg",
+         "release_date":1139529600
+      },
+      {
+         "id":87,
+         "title":"Indiana Jones and the Temple of Doom",
+         "overview":"After arriving in India, Indiana Jones is asked by a desperate village to find a mystical stone. He agrees – and stumbles upon a secret cult plotting a terrible plan in the catacombs of an ancient palace.",
+         "genres":[
+            "Adventure",
+            "Action"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/wu0m7HiZyZr4pOp8IpnFHNvGkVV.jpg",
+         "release_date":454118400
+      },
+      {
+         "id":88,
+         "title":"Dirty Dancing",
+         "overview":"Expecting the usual tedium that accompanies a summer in the Catskills with her family, 17-year-old Frances 'Baby' Houseman is surprised to find herself stepping into the shoes of a professional hoofer—and unexpectedly falling in love.",
+         "genres":[
+            "Drama",
+            "Music",
+            "Romance"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/dvEggyDTTIBDvrUNjTEa9depT0f.jpg",
+         "release_date":556502400
+      },
+      {
+         "id":89,
+         "title":"Indiana Jones and the Last Crusade",
+         "overview":"When Dr. Henry Jones Sr. suddenly goes missing while pursuing the Holy Grail, eminent archaeologist Indiana must team up with Marcus Brody, Sallah and Elsa Schneider to follow in his father's footsteps and stop the Nazis from recovering the power of eternal life.",
+         "genres":[
+            "Adventure",
+            "Action"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/acgJPtbeXdBaKYAUVdfYLVwKzAC.jpg",
+         "release_date":611971200
+      },
+      {
+         "id":90,
+         "title":"Beverly Hills Cop",
+         "overview":"The heat is on in this fast paced action-comedy starring Eddie Murphy as Axel Foley, a street smart Detroit cop tracking down his best friend's killer in Beverly Hills. Axel quickly learns that his wild style doesn't fit in with the Beverly Hills Police Department, which assigns two officers (Judge Reinhold & John Ashton) to make sure things don't get out of hand. Dragging the stuffy detectives along for the ride, Axel smashes through a huge culture clash in his hilarious, high-speed pursuit of justice. Featuring cameos by Paul Reiser, Bronson Pinchot and Damon Wayans, Beverly Hills Cop is an exhilarating, sidesplitting adventure.",
+         "genres":[
+            "Action",
+            "Comedy",
+            "Crime"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/cCSqo23BEHDcnx7xgFyFqjBykOj.jpg",
+         "release_date":470620800
+      },
+      {
+         "id":93,
+         "title":"Anatomy of a Murder",
+         "overview":"Semi-retired Michigan lawyer Paul Biegler takes the case of Army Lt. Manion, who murdered a local innkeeper after his wife claimed that he raped her. Over the course of an extensive trial, Biegler parries with District Attorney Lodwick and out-of-town prosecutor Claude Dancer to set his client free, but his case rests on the victim's mysterious business partner, who's hiding a dark secret.",
+         "genres":[
+            "Crime",
+            "Drama",
+            "Mystery",
+            "Thriller"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/lMWWs7IskGldLfwwnVxHhffsVLw.jpg",
+         "release_date":-331516800
+      },
+      {
+         "id":95,
+         "title":"Armageddon",
+         "overview":"When an asteroid threatens to collide with Earth, NASA honcho Dan Truman determines the only way to stop it is to drill into its surface and detonate a nuclear bomb. This leads him to renowned driller Harry Stamper, who agrees to helm the dangerous space mission provided he can bring along his own hotshot crew. Among them is the cocksure A.J. who Harry thinks isn't good enough for his daughter, until the mission proves otherwise.",
+         "genres":[
+            "Action",
+            "Thriller",
+            "Science Fiction",
+            "Adventure"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/qcF8qt8toajvQllOMVRCUqZCxjV.jpg",
+         "release_date":899251200
+      },
+      {
+         "id":96,
+         "title":"Beverly Hills Cop II",
+         "overview":"Axel heads for the land of sunshine and palm trees to find out who shot police Captain Andrew Bogomil. Thanks to a couple of old friends, Axel's investigation uncovers a series of robberies masterminded by a heartless weapons kingpin—and the chase is on.",
+         "genres":[
+            "Action",
+            "Comedy",
+            "Crime"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/yPXAvRwhstvr8gSmAb8sfJTCORS.jpg",
+         "release_date":548294400
+      },
+      {
+         "id":97,
+         "title":"Tron",
+         "overview":"As Kevin Flynn searches for proof that he invented a hit video game, he is 'digitalized' by a laser and finds himself inside 'The Grid', where programs suffer under the tyrannical rule of the Master Control Program (MCP). With the help of a security program called 'TRON', Flynn seeks to free The Grid from the MCP.",
+         "genres":[
+            "Science Fiction",
+            "Action",
+            "Adventure"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/zwSFEczP7AzqugAHHIX3zHniT0t.jpg",
+         "release_date":395020800
+      },
+      {
+         "id":98,
+         "title":"Gladiator",
+         "overview":"In the year 180, the death of emperor Marcus Aurelius throws the Roman Empire into chaos.  Maximus is one of the Roman army's most capable and trusted generals and a key advisor to the emperor.  As Marcus' devious son Commodus ascends to the throne, Maximus is set to be executed.  He escapes, but is captured by slave traders.  Renamed Spaniard and forced to become a gladiator, Maximus must battle to the death with other men for the amusement of paying audiences.",
+         "genres":[
+            "Action",
+            "Drama",
+            "Adventure"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/ehGpN04mLJIrSnxcZBMvHeG0eDc.jpg",
+         "release_date":957139200
+      },
+      {
+         "id":99,
+         "title":"All About My Mother",
+         "overview":"A single mother in Madrid sees her only son die on his birthday as he runs to seek an actress' autograph. Beside herself with grief, she returns to Barcelona to tell the boy's father about the death of the son he never knew he had.",
+         "genres":[
+            "Comedy",
+            "Drama"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/hjQhzhkGYXPNM96k0mOgob6HMmn.jpg",
+         "release_date":924480000
+      },
+      {
+         "id":100,
+         "title":"Lock, Stock and Two Smoking Barrels",
+         "overview":"A card shark and his unwillingly-enlisted friends need to make a lot of cash quick after losing a sketchy poker match. To do this they decide to pull a heist on a small-time gang who happen to be operating out of the flat next door.",
+         "genres":[
+            "Comedy",
+            "Crime"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/8kSerJrhrJWKLk1LViesGcnrUPE.jpg",
+         "release_date":889056000
+      },
+      {
+         "id":101,
+         "title":"Léon: The Professional",
+         "overview":"Léon, the top hit man in New York, has earned a rep as an effective \"cleaner\". But when his next-door neighbors are wiped out by a loose-cannon DEA agent, he becomes the unwilling custodian of 12-year-old Mathilda. Before long, Mathilda's thoughts turn to revenge, and she considers following in Léon's footsteps.",
+         "genres":[
+            "Crime",
+            "Drama",
+            "Action"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/jtNOfwZu3zea5grnqpq4nyqXoID.jpg",
+         "release_date":779500800
+      },
+      {
+         "id":103,
+         "title":"Taxi Driver",
+         "overview":"A mentally unstable Vietnam War veteran works as a night-time taxi driver in New York City where the perceived decadence and sleaze feed his urge for violent action, attempting to save a preadolescent prostitute in the process.",
+         "genres":[
+            "Crime",
+            "Drama"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/ekstpH614fwDX8DUln1a2Opz0N8.jpg",
+         "release_date":192672000
+      },
+      {
+         "id":104,
+         "title":"Run Lola Run",
+         "overview":"Lola receives a phone call from her boyfriend Manni. He lost 100,000 DM in a subway train that belongs to a very bad guy. She has 20 minutes to raise this amount and meet Manni. Otherwise, he will rob a store to get the money. Three different alternatives may happen depending on some minor event along Lola's run.",
+         "genres":[
+            "Action",
+            "Drama",
+            "Thriller"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/v0giIi4bTILVhNhJajet3WWY3FA.jpg",
+         "release_date":888883200
+      },
+      {
+         "id":105,
+         "title":"Back to the Future",
+         "overview":"Eighties teenager Marty McFly is accidentally sent back in time to 1955, inadvertently disrupting his parents' first meeting and attracting his mother's romantic interest. Marty must repair the damage to history by rekindling his parents' romance and - with the help of his eccentric inventor friend Doc Brown - return to 1985.",
+         "genres":[
+            "Adventure",
+            "Comedy",
+            "Science Fiction",
+            "Family"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/xlBivetfrtF84Yx0zISShnNtHYe.jpg",
+         "release_date":489196800
+      },
+      {
+         "id":106,
+         "title":"Predator",
+         "overview":"Dutch and his group of commandos are hired by the CIA to rescue downed airmen from guerillas in a Central American jungle. The mission goes well but as they return they find that something is hunting them. Nearly invisible, it blends in with the forest, taking trophies from the bodies of its victims as it goes along. Occasionally seeing through its eyes, the audience sees it is an intelligent alien hunter, hunting them for sport, killing them off one at a time.",
+         "genres":[
+            "Science Fiction",
+            "Action",
+            "Adventure",
+            "Thriller"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/9XibNLfmUWCg0PPydmyoCl1KxvF.jpg",
+         "release_date":550454400
+      },
+      {
+         "id":107,
+         "title":"Snatch",
+         "overview":"Illegal boxing promoter Turkish convinces gangster Brick Top to offer bets on bare-knuckle boxer Mickey at his bookie business. When Mickey does not throw his first fight as agreed, an infuriated Brick Top demands another match. Meanwhile, gangster Frankie Four Fingers comes to place a bet for a friend with Brick Top's bookies, as multiple criminals converge on a stolen diamond that Frankie has come to London to sell.",
+         "genres":[
+            "Crime",
+            "Comedy"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/56mOJth6DJ6JhgoE2jtpilVqJO.jpg",
+         "release_date":967766400
+      },
+      {
+         "id":108,
+         "title":"Three Colors: Blue",
+         "overview":"Julie is haunted by her grief after living through a tragic auto wreck that claimed the life of her composer husband and young daughter. Her initial reaction is to withdraw from her relationships, lock herself in her apartment and suppress her pain. But avoiding human interactions on the bustling streets of Paris proves impossible, and she eventually meets up with Olivier, an old friend who harbors a secret love for her, and who could draw her back to reality.",
+         "genres":[
+            "Drama"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/teDQRqy5STEhSvLERfGERBX25Br.jpg",
+         "release_date":747446400
+      },
+      {
+         "id":109,
+         "title":"Three Colors: White",
+         "overview":"Polish immigrant Karol Karol finds himself out of a marriage, a job and a country when his French wife, Dominique, divorces him after six months due to his impotence. Forced to leave France after losing the business they jointly owned, Karol enlists fellow Polish expatriate Mikolah to smuggle him back to their homeland.",
+         "genres":[
+            "Comedy",
+            "Drama",
+            "Mystery"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/4jDSCLCWxHutCAZRve8Kkso2UfA.jpg",
+         "release_date":759542400
+      },
+      {
+         "id":110,
+         "title":"Three Colors: Red",
+         "overview":"Part-time model Valentine meets a retired judge who lives in her neighborhood after she runs over his dog. At first the judge gifts Valentine with the dog, but her possessive boyfriend won't allow her to keep it. When she returns with the dog to the judge's house, she discovers him listening in on his neighbors' phone conversations. At first Valentine is outraged, but her debates with the judge over his behavior soon leads them to form a strange bond.",
+         "genres":[
+            "Drama",
+            "Mystery",
+            "Romance"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/kMWQpGaVdcGf1NfTiwVKtSPaXmI.jpg",
+         "release_date":769996800
+      },
+      {
+         "id":111,
+         "title":"Scarface",
+         "overview":"After getting a green card in exchange for assassinating a Cuban government official, Tony Montana stakes a claim on the drug trade in Miami. Viciously murdering anyone who stands in his way, Tony eventually becomes the biggest drug lord in the state, controlling nearly all the cocaine that comes through Miami. But increased pressure from the police, wars with Colombian drug cartels and his own drug-fueled paranoia serve to fuel the flames of his eventual downfall.",
+         "genres":[
+            "Action",
+            "Crime",
+            "Drama",
+            "Thriller"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/iQ5ztdjvteGeboxtmRdXEChJOHh.jpg",
+         "release_date":439776000
+      },
+      {
+         "id":113,
+         "title":"Spring, Summer, Fall, Winter... and Spring",
+         "overview":"An isolated lake, where an old monk lives in a small floating temple. The monk has a young boy living with him, learning to become a monk. We watch as seasons and years pass by.",
+         "genres":[
+            "Drama"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/6SQQ5REuAz7k0FMQ9mSCT40T2LN.jpg",
+         "release_date":1063929600
+      },
+      {
+         "id":114,
+         "title":"Pretty Woman",
+         "overview":"When a millionaire wheeler-dealer enters a business contract with a Hollywood hooker Vivian Ward, he loses his heart in the bargain.",
+         "genres":[
+            "Romance",
+            "Comedy"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/hMVMMy1yDUvdufpTl8J8KKNYaZX.jpg",
+         "release_date":638150400
+      },
+      {
+         "id":115,
+         "title":"The Big Lebowski",
+         "overview":"Jeffrey 'The Dude' Lebowski, a Los Angeles slacker who only wants to bowl and drink White Russians, is mistaken for another Jeffrey Lebowski, a wheelchair-bound millionaire, and finds himself dragged into a strange series of events involving nihilists, adult film producers, ferrets, errant toes, and large sums of money.",
+         "genres":[
+            "Comedy",
+            "Crime"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/d4J7GotCjvDJBAYayZBTc5nLbbP.jpg",
+         "release_date":889142400
+      },
+      {
+         "id":116,
+         "title":"Match Point",
+         "overview":"Match Point is Woody Allen’s satire of the British High Society and the ambition of a young tennis instructor to enter into it. Yet when he must decide between two women - one assuring him his place in high society, and the other that would take him far from it - palms start to sweat and a dark psychological match in his head begins.",
+         "genres":[
+            "Drama",
+            "Thriller",
+            "Crime",
+            "Romance"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/vHjEVTD8ucuwKSFOZJeyAnTZYli.jpg",
+         "release_date":1130284800
+      },
+      {
+         "id":117,
+         "title":"The Untouchables",
+         "overview":"Young Treasury Agent Elliot Ness arrives in Chicago and is determined to take down Al Capone, but it's not going to be easy because Capone has the police in his pocket. Ness meets Jimmy Malone, a veteran patrolman and probably the most honorable one on the force. He asks Malone to help him get Capone, but Malone warns him that if he goes after Capone, he is going to war.",
+         "genres":[
+            "Crime",
+            "Drama",
+            "History",
+            "Thriller"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/iK4twY48a1nVCez0qXE5w4JFvXw.jpg",
+         "release_date":549676800
+      },
+      {
+         "id":118,
+         "title":"Charlie and the Chocolate Factory",
+         "overview":"A young boy wins a tour through the most magnificent chocolate factory in the world, led by the world's most unusual candy maker.",
+         "genres":[
+            "Adventure",
+            "Comedy",
+            "Family",
+            "Fantasy"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/wfGfxtBkhBzQfOZw4S8IQZgrH0a.jpg",
+         "release_date":1121212800
+      },
+      {
+         "id":120,
+         "title":"The Lord of the Rings: The Fellowship of the Ring",
+         "overview":"Young hobbit Frodo Baggins, after inheriting a mysterious ring from his uncle Bilbo, must leave his home in order to keep it from falling into the hands of its evil creator. Along the way, a fellowship is formed to protect the ringbearer and make sure that the ring arrives at its final destination: Mt. Doom, the only place where it can be destroyed.",
+         "genres":[
+            "Adventure",
+            "Fantasy",
+            "Action"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/6oom5QYQ2yQTMJIbnvbkBL9cHo6.jpg",
+         "release_date":1008633600
+      },
+      {
+         "id":121,
+         "title":"The Lord of the Rings: The Two Towers",
+         "overview":"Frodo and Sam are trekking to Mordor to destroy the One Ring of Power while Gimli, Legolas and Aragorn search for the orc-captured Merry and Pippin. All along, nefarious wizard Saruman awaits the Fellowship members at the Orthanc Tower in Isengard.",
+         "genres":[
+            "Adventure",
+            "Fantasy",
+            "Action"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/5VTN0pR8gcqV3EPUHHfMGnJYN9L.jpg",
+         "release_date":1040169600
+      },
+      {
+         "id":122,
+         "title":"The Lord of the Rings: The Return of the King",
+         "overview":"Aragorn is revealed as the heir to the ancient kings as he, Gandalf and the other members of the broken fellowship struggle to save Gondor from Sauron's forces. Meanwhile, Frodo and Sam take the ring closer to the heart of Mordor, the dark lord's realm.",
+         "genres":[
+            "Adventure",
+            "Fantasy",
+            "Action"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/rCzpDGLbOoPwLjy3OAm5NUPOTrC.jpg",
+         "release_date":1070236800
+      },
+      {
+         "id":123,
+         "title":"The Lord of the Rings",
+         "overview":"The Fellowship of the Ring embark on a journey to destroy the One Ring and end Sauron's reign over Middle-earth.",
+         "genres":[
+            "Adventure",
+            "Animation",
+            "Fantasy"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/4O3s0IGZJirPBecqEnP9qsjlTQw.jpg",
+         "release_date":279936000
+      },
+      {
+         "id":128,
+         "title":"Princess Mononoke",
+         "overview":"Ashitaka, a prince of the disappearing Emishi people, is cursed by a demonized boar god and must journey to the west to find a cure. Along the way, he encounters San, a young human woman fighting to protect the forest, and Lady Eboshi, who is trying to destroy it. Ashitaka must find a way to bring balance to this conflict.",
+         "genres":[
+            "Adventure",
+            "Fantasy",
+            "Animation"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/pdtzEreKvKAlqa2YEBaGwiA45V8.jpg",
+         "release_date":868665600
+      },
+      {
+         "id":129,
+         "title":"Spirited Away",
+         "overview":"A young girl, Chihiro, becomes trapped in a strange new world of spirits. When her parents undergo a mysterious transformation, she must call upon the courage she never knew she had to free her family.",
+         "genres":[
+            "Animation",
+            "Family",
+            "Fantasy"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/39wmItIWsg5sZMyRUHLkWBcuVCM.jpg",
+         "release_date":995587200
+      },
+      {
+         "id":132,
+         "title":"Gimme Shelter",
+         "overview":"The landmark documentary about the tragically ill-fated Rolling Stones free concert at Altamont Speedway on December 6, 1969. Only four months earlier, Woodstock defined the Love Generation; now it lay in ruins on a desolate racetrack six miles outside of San Francisco.",
+         "genres":[
+            "Documentary",
+            "Music"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/9cQ6TLG89Yv2EMKuxgLRvgLq5nK.jpg",
+         "release_date":29289600
+      },
+      {
+         "id":134,
+         "title":"O Brother, Where Art Thou?",
+         "overview":"In the deep south during the 1930s, three escaped convicts search for hidden treasure while a relentless lawman pursues them. On their journey they come across many comical characters and incredible situations. Based upon Homer's 'Odyssey'.",
+         "genres":[
+            "Adventure",
+            "Comedy",
+            "Crime"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/2YztYilviFCYcEtDAnrOstUWGie.jpg",
+         "release_date":967593600
+      },
+      {
+         "id":135,
+         "title":"Dont Look Back",
+         "overview":"In this wildly entertaining vision of one of the twentieth century’s greatest artists, Bob Dylan is surrounded by teen fans, gets into heated philosophical jousts with journalists, and kicks back with fellow musicians Joan Baez, Donovan, and Alan Price.",
+         "genres":[
+            "Documentary",
+            "Music"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/eE6LQ1EVkslBwku36564kk6rAOI.jpg",
+         "release_date":-82944000
+      },
+      {
+         "id":136,
+         "title":"Freaks",
+         "overview":"A circus' beautiful trapeze artist agrees to marry the leader of side-show performers, but his deformed friends discover she is only marrying him for his inheritance.",
+         "genres":[
+            "Drama",
+            "Horror"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/j2dwljljOrLTcnwfKeUBBeNB8t7.jpg",
+         "release_date":-1195603200
+      },
+      {
+         "id":137,
+         "title":"Groundhog Day",
+         "overview":"A narcissistic TV weatherman, along with his attractive-but-distant producer, and his mawkish cameraman, is sent to report on Groundhog Day in the small town of Punxsutawney, where he finds himself repeating the same day over and over.",
+         "genres":[
+            "Romance",
+            "Fantasy",
+            "Drama",
+            "Comedy"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/gCgt1WARPZaXnq523ySQEUKinCs.jpg",
+         "release_date":729388800
+      },
+      {
+         "id":138,
+         "title":"Dracula",
+         "overview":"A powerful and ruthless vampire named Count Dracula arrives in London to prey on young, socialite women. Standing in the vampire's way, is a group of concerned men and the enigmatic Dr. Abraham Van Helsing.",
+         "genres":[
+            "Horror",
+            "Drama",
+            "Fantasy"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/sqC71v6rK3r5gSJGS9eqdvUXS3f.jpg",
+         "release_date":-1227139200
+      },
+      {
+         "id":141,
+         "title":"Donnie Darko",
+         "overview":"After narrowly escaping a bizarre accident, a troubled teenager is plagued by visions of a large bunny rabbit that manipulates him to commit a series of crimes.",
+         "genres":[
+            "Fantasy",
+            "Drama",
+            "Mystery"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/fhQoQfejY1hUcwyuLgpBrYs6uFt.jpg",
+         "release_date":1004054400
+      },
+      {
+         "id":142,
+         "title":"Brokeback Mountain",
+         "overview":"Two modern-day cowboys meet on a shepherding job in the summer of '63, the two share a raw and powerful summer together that turns into a lifelong relationship conflict",
+         "genres":[
+            "Drama",
+            "Romance"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/1A2EU80gL5KXXjjcUZZt8UI4Zot.jpg",
+         "release_date":1126310400
+      },
+      {
+         "id":143,
+         "title":"All Quiet on the Western Front",
+         "overview":"A young soldier faces profound disillusionment in the soul-destroying horror of World War I. Together with several other young German soldiers, he experiences the horrors of war, such evil of which he had not conceived of when signing up to fight. They eventually become sad, tormented, and confused of their purpose.",
+         "genres":[
+            "Drama",
+            "War"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/yAU6jklJLUjZot3WyvyJrxVdLKb.jpg",
+         "release_date":-1252108800
+      },
+      {
+         "id":144,
+         "title":"Wings of Desire",
+         "overview":"Two angels, Damiel and Cassiel, glide through the streets of Berlin, observing the bustling population, providing invisible rays of hope to the distressed but never interacting with them. When Damiel falls in love with lonely trapeze artist Marion, the angel longs to experience life in the physical world, and finds -- with some words of wisdom from actor Peter Falk -- that it might be possible for him to take human form.",
+         "genres":[
+            "Drama",
+            "Fantasy",
+            "Romance"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/iZQs2vUeCzvS1KfZJ6uYNCGJBBV.jpg",
+         "release_date":548208000
+      },
+      {
+         "id":145,
+         "title":"Breaking the Waves",
+         "overview":"In a small and conservative Scottish village, a woman's paralytic husband convinces her to have extramarital intercourse so she can tell him about it and give him a reason for living.",
+         "genres":[
+            "Drama",
+            "Romance"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/dQWMcdHXUOSHtr7ypOCa5T79JMS.jpg",
+         "release_date":831945600
+      },
+      {
+         "id":146,
+         "title":"Crouching Tiger, Hidden Dragon",
+         "overview":"Two warriors in pursuit of a stolen sword and a notorious fugitive are led to an impetuous, physically-skilled, teenage nobleman's daughter, who is at a crossroads in her life.",
+         "genres":[
+            "Adventure",
+            "Drama",
+            "Action",
+            "Romance"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/iNDVBFNz4XyYzM9Lwip6atSTFqf.jpg",
+         "release_date":962841600
+      },
+      {
+         "id":147,
+         "title":"The 400 Blows",
+         "overview":"For young Parisian boy Antoine Doinel, life is one difficult situation after another. Surrounded by inconsiderate adults, including his neglectful parents, Antoine spends his days with his best friend, Rene, trying to plan for a better life. When one of their schemes goes awry, Antoine ends up in trouble with the law, leading to even more conflicts with unsympathetic authority figures.",
+         "genres":[
+            "Drama"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/12PuU23kkDLvTd0nb8hMlE3oShB.jpg",
+         "release_date":-333936000
+      },
+      {
+         "id":148,
+         "title":"The Secret Life of Words",
+         "overview":"A touching story of a deaf girl who is sent to an oil rig to take care of a man who has been blinded in a terrible accident. The girl has a special ability to communicate with the men on board and especially with her patient as they share intimate moments together that will change their lives forever.",
+         "genres":[
+            "Drama",
+            "Romance"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/5V7i63rodY56cGWmPATxumzj4xv.jpg",
+         "release_date":1134604800
+      },
+      {
+         "id":149,
+         "title":"Akira",
+         "overview":"A secret military project endangers Neo-Tokyo when it turns a biker gang member into a rampaging psychic psychopath that only two teenagers and a group of psychics can stop.",
+         "genres":[
+            "Animation",
+            "Science Fiction",
+            "Action"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/5KlRFKKSbyCiyYpZSS3A6G5bW0K.jpg",
+         "release_date":585014400
+      },
+      {
+         "id":150,
+         "title":"48 Hrs.",
+         "overview":"A hard-nosed cop reluctantly teams up with a wise-cracking criminal temporarily paroled to him, in order to track down a killer.",
+         "genres":[
+            "Thriller",
+            "Action",
+            "Comedy",
+            "Crime",
+            "Drama"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/wJwoOiZYsugoVaMTMEbFrar5yPS.jpg",
+         "release_date":408067200
+      },
+      {
+         "id":152,
+         "title":"Star Trek: The Motion Picture",
+         "overview":"When a destructive space entity is spotted approaching Earth, Admiral Kirk resumes command of the Starship Enterprise in order to intercept, examine, and hopefully stop it.",
+         "genres":[
+            "Science Fiction",
+            "Adventure",
+            "Mystery"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/ffo56udrkF28ICTv3Xx1S9X6Dw4.jpg",
+         "release_date":313372800
+      },
+      {
+         "id":153,
+         "title":"Lost in Translation",
+         "overview":"Two lost souls visiting Tokyo -- the young, neglected wife of a photographer and a washed-up movie star shooting a TV commercial -- find an odd solace and pensive freedom to be real in each other's company, away from their lives in America.",
+         "genres":[
+            "Drama",
+            "Romance",
+            "Comedy"
+         ],
+         "poster":"https://image.tmdb.org/t/p/w500/wkSzJs7oMf8MIr9CQVICsvRfwA7.jpg",
+         "release_date":1063843200
+      }
+   ]
+}
