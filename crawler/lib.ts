@@ -125,7 +125,7 @@ export const extract = (document: HTMLDocument, insert: InsertProxy) =>
     DOM(document)
       // get every href on list
       .selectAll(".qa-list__title-link")
-      .map((el) => el.getAttribute("href"))
+      .map(getAttribute("href"))
       .map((href) => {
         if (!href) return;
 
