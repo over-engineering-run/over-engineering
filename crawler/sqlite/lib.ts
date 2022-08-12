@@ -24,7 +24,7 @@ const parseDOM = (() => {
   };
 })();
 
-const fetchDOM = async (href: string) => {
+async function fetchDOM(href: string) {
   // fetch by href
   const source = await fetch(href).then((res) => res.text());
   if (!source) {
@@ -38,7 +38,7 @@ const fetchDOM = async (href: string) => {
   }
 
   return document;
-};
+}
 
 type HasQuerySelector = HTMLDocument | Element;
 function DOM(el?: HasQuerySelector) {
