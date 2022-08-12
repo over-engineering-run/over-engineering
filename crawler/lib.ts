@@ -20,7 +20,7 @@ const parseDOM = (() => {
     it.parseFromString(source, "text/html");
 })();
 
-export const fetchDOM = async (href: string) => {
+export async function fetchDOM(href: string) {
   // fetch by href
   const source = await fetch(href).then((res) => res.text());
   if (!source) {
@@ -34,7 +34,7 @@ export const fetchDOM = async (href: string) => {
   }
 
   return document;
-};
+}
 
 const hasAttribute = (attribute: string) => (el: Element) =>
   el.hasAttribute(attribute);
