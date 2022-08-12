@@ -5,6 +5,7 @@ import {
 import { config } from "https://deno.land/x/dotenv@v3.2.0/mod.ts";
 import { parse } from "https://deno.land/std@0.136.0/flags/mod.ts";
 import { extract, fetchDOM, random, delay } from "./lib.ts";
+import { url_string } from "./url.ts";
 
 config({ safe: true, export: true });
 
@@ -16,7 +17,7 @@ const db = createClient(
 );
 
 const insert =
-  (db: SupabaseClient, table: string) => async (record: Partial<any>) => {
+  (db: SupabaseClient, table: string) => async (record: Partial<unknown>) => {
     const { data, error } = await db.from(table).upsert(record);
 
     if (error) {
@@ -26,21 +27,17 @@ const insert =
   };
 
 interface Args {
-  from: string;
-  to: string;
+  from: number;
+  to: number;
   href: string;
 }
 async function main({ from, to, href }: Args) {
-  const _from = Number(from);
-  const _to = Number(to);
+  console.log(`start processing page from ${from} to ${to} ...`);
 
-  console.log(`start processing page from ${_from} to ${_to} ...`);
+  for (let page = from; page <= to; page++) {
+    const page_href = url_string({ pathname: href, search: { page } });
 
-  for (let page = _from; page <= _to; page++) {
-    const url_instance = new URL(href);
-    url_instance.searchParams.set("page", String(page));
-
-    const document = await fetchDOM(url_instance.href);
+    const document = await fetchDOM(page_href);
     await extract(document, {
       user: insert(db, "users"),
       series: insert(db, "series"),
@@ -50,8 +47,12 @@ async function main({ from, to, href }: Args) {
     await delay(random(300, 700));
   }
 
-  console.log(`finished processing page from ${_from} to ${_to} ...`);
+  console.log(`finished processing page from ${from} to ${to} ...`);
 }
 
-//@ts-ignore
-main(parse(Deno.args));
+const args = parse(Deno.args);
+main({
+  from: Number(args.from),
+  to: Number(args.to),
+  href: String(args.href),
+});
