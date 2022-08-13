@@ -2,8 +2,10 @@ import os
 import json
 import time
 import datetime
+import logging
 
 from flask import Flask, request, Response, abort
+from waitress import serve
 import meilisearch as ms
 
 
@@ -199,10 +201,16 @@ def calculte_reading_time():
 
 if __name__ == "__main__":
 
+    logging.basicConfig(encoding='utf-8', level=logging.INFO)
+
     ms_api_server = MeilisearchAPIServer(
         name="meilisearch_api",
         host=os.getenv("FLASK_HOST"),
         port=os.getenv("FLASK_PORT"),
-        debug=True
+        debug=False
     )
-    ms_api_server.run()
+    serve(
+        ms_api_server.app,
+        host=os.getenv("FLASK_HOST"),
+        port=os.getenv("FLASK_PORT"),
+    )
