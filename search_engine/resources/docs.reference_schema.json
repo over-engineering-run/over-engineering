@@ -1,0 +1,16 @@
+{
+    "raw_hl_content":             "string",
+    "word_seg_processed_content": "string",
+    "hashtags":                   ["string"],
+    "extracted_keywords":         ["string"],
+    "href":                       "string",
+    "title":                      "string",
+    "published_at":               "string",
+    "published_at_unix":          "int",
+    "author_href":                "string",
+    "author_name":                "string",
+    "series_href":                "string",
+    "series_name":                "string",
+    "series_num":                 "int",
+    "reading_time":               "int"
+}

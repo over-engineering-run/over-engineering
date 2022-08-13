@@ -1,0 +1,101 @@
+{
+    "Ada":[
+
+    ],
+    "Assembly":[
+
+    ],
+    "Bash":[
+
+    ],
+    "C":[
+
+    ],
+    "C#":[
+
+    ],
+    "C++":[
+
+    ],
+    "COBOL":[
+
+    ],
+    "Dart":[
+
+    ],
+    "Fortran":[
+
+    ],
+    "Golang":[
+        "Go"
+    ],
+    "Groovy":[
+
+    ],
+    "Haskell":[
+
+    ],
+    "Java":[
+
+    ],
+    "JavaScript":[
+        "JS"
+    ],
+    "Julia":[
+
+    ],
+    "Kotlin":[
+
+    ],
+    "Lisp":[
+
+    ],
+    "Lua":[
+
+    ],
+    "MATLAB":[
+
+    ],
+    "Objective C":[
+        "Objective-C"
+    ],
+    "PHP":[
+
+    ],
+    "Pascal":[
+
+    ],
+    "Perl":[
+
+    ],
+    "Prolog":[
+
+    ],
+    "Python":[
+
+    ],
+    "R":[
+
+    ],
+    "Ruby":[
+
+    ],
+    "Rust":[
+
+    ],
+    "SQL":[
+
+    ],
+    "Scala":[
+
+    ],
+    "Swift":[
+
+    ],
+    "TypeScript":[
+        "TS"
+    ],
+    "Visual Basic":[
+        "VB"
+    ]
+}

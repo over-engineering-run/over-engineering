@@ -1,0 +1,217 @@
+{
+    "displayedAttributes":[
+        "*"
+    ],
+    "distinctAttribute":null,
+    "faceting":{
+        "maxValuesPerFacet":100
+    },
+    "filterableAttributes":[
+
+    ],
+    "pagination":{
+        "maxTotalHits":1000
+    },
+    "rankingRules":[
+        "words",
+        "typo",
+        "proximity",
+        "attribute",
+        "sort",
+        "exactness"
+    ],
+    "searchableAttributes":[
+        "keywords"
+    ],
+    "sortableAttributes":[
+
+    ],
+    "typoTolerance":{
+        "enabled":true,
+        "minWordSizeForTypos":{
+            "oneTypo":5,
+            "twoTypos":9
+        },
+        "disableOnWords":[
+
+        ],
+        "disableOnAttributes":[
+
+        ]
+    },
+    "synonyms":{
+        "ada":[
+
+        ],
+        "assembly":[
+
+        ],
+        "bash":[
+
+        ],
+        "c":[
+
+        ],
+        "c#":[
+
+        ],
+        "c++":[
+
+        ],
+        "cobol":[
+
+        ],
+        "dart":[
+
+        ],
+        "fortran":[
+
+        ],
+        "golang":[
+            "go"
+        ],
+        "groovy":[
+
+        ],
+        "haskell":[
+
+        ],
+        "java":[
+
+        ],
+        "javascript":[
+            "js"
+        ],
+        "julia":[
+
+        ],
+        "kotlin":[
+
+        ],
+        "lisp":[
+
+        ],
+        "lua":[
+
+        ],
+        "matlab":[
+
+        ],
+        "objective c":[
+            "objective-c"
+        ],
+        "php":[
+
+        ],
+        "pascal":[
+
+        ],
+        "perl":[
+
+        ],
+        "prolog":[
+
+        ],
+        "python":[
+
+        ],
+        "r":[
+
+        ],
+        "ruby":[
+
+        ],
+        "rust":[
+
+        ],
+        "sql":[
+
+        ],
+        "scala":[
+
+        ],
+        "swift":[
+
+        ],
+        "typescript":[
+            "ts"
+        ],
+        "visual basic":[
+            "vb"
+        ]
+    },
+    "stopWords":[
+        "—",
+        "…",
+        "、",
+        "。",
+        "「",
+        "」",
+        "『",
+        "』",
+        "《",
+        "》",
+        "！",
+        "＂",
+        "＃",
+        "＄",
+        "％",
+        "＆",
+        "（",
+        "）",
+        "＊",
+        "＋",
+        "，",
+        "－",
+        "．",
+        "／",
+        "：",
+        "；",
+        "＜",
+        "＝",
+        "＞",
+        "？",
+        "＠",
+        "［",
+        "＼",
+        "］",
+        "＾",
+        "＿",
+        "｀",
+        "｛",
+        "｜",
+        "｝",
+        "～",
+        "!",
+        "\"",
+        "#",
+        "$",
+        "%",
+        "&",
+        "(",
+        ")",
+        "*",
+        "+",
+        ",",
+        "-",
+        ".",
+        "/",
+        ":",
+        ";",
+        "<",
+        "=",
+        ">",
+        "?",
+        "@",
+        "[",
+        "\\",
+        "]",
+        "^",
+        "_",
+        "`",
+        "{",
+        "|",
+        "}",
+        "~"
+    ]
+}
