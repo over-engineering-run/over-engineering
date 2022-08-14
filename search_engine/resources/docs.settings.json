@@ -21,10 +21,12 @@
         "exactness"
     ],
     "searchableAttributes":[
+        "title",
+        "raw_hl_content",
         "word_seg_processed_content",
         "hashtags",
-        "extracted_keywords",
-        "title",
+        "keywords",
+        "genre",
         "published_at_unix",
         "author_name",
         "series_name",
