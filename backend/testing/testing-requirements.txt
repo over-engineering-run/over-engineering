@@ -1,0 +1,5 @@
+flask
+ipywidgets
+jupyterlab
+meilisearch
+waitress

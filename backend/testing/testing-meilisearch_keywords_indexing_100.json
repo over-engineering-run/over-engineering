@@ -1,902 +1,2002 @@
 [
     {
-        "phrases": [
-            "2022 鐵人",
-            "我要 參賽",
-            "2022",
-            "參賽",
-            "不知不覺 2022"
-        ]
-    },
-    {
-        "phrases": [
-            "stm32 書籍",
-            "stm32 教學",
-            "stm32 開發",
-            "stm32 開發板",
-            "書籍 開發"
-        ]
-    },
-    {
-        "phrases": [
-            "xd 近期",
-            "實際上 內容",
-            "內容 實際上",
-            "地盤 發表",
-            "系列 發表"
-        ]
-    },
-    {
-        "phrases": [
-            "grid 實在話",
-            "grid 好像",
-            "複習 grid",
-            "去換 grid",
-            "搭配 grid"
-        ]
-    },
-    {
-        "phrases": [
-            "單元測試 產品開發",
-            "撰寫 單元測試",
-            "單元測試 影片",
-            "文章 學習效果",
-            "單元測試 框架"
-        ]
-    },
-    {
-        "phrases": [
-            "陰影 css3",
-            "shadow 屬性",
-            "box shadow",
-            "shadow react",
-            "卡牌 陰影"
-        ]
-    },
-    {
-        "phrases": [
-            "time conclusion",
-            "reference synchronization",
-            "事件 起因",
-            "觀察 合約",
-            "合約 宣告"
-        ]
-    },
-    {
-        "phrases": [
-            "pcb 淘寶",
-            "淘寶 pcb",
-            "分享 pcb",
-            "溝通 軟體",
-            "手機 淘寶"
-        ]
-    },
-    {
-        "phrases": [
-            "執行 uselayouteffect",
-            "uselayouteffect hook",
-            "uselayouteffect 也許",
-            "補充 uselayouteffect",
-            "useeffect uselayouteffect"
-        ]
-    },
-    {
-        "phrases": [
-            "數位 轉型",
-            "組織 面臨",
-            "面臨 數位",
-            "年老 系統",
-            "組織 溝通"
-        ]
-    },
-    {
-        "phrases": [
-            "tuf 散熱器",
-            "熱導管 搭配",
-            "導熱管 cpu",
-            "採用 導熱管",
-            "全銅 熱導管"
-        ]
-    },
-    {
-        "phrases": [
-            "目錄 前言",
-            "心得 近期",
-            "系列 文有",
-            "寫出",
-            "本文"
-        ]
-    },
-    {
-        "phrases": [
-            "requests commands",
-            "commands requests",
-            "requests 建立",
-            "request command",
-            "多個 request"
-        ]
-    },
-    {
-        "phrases": [
-            "測試環境 登入",
-            "環境 登入",
-            "測試環境 測試",
-            "測試環境",
-            "先前 測試環境"
-        ]
-    },
-    {
-        "phrases": [
-            "資料庫 版本控制",
-            "版本控制 資料庫",
-            "資料庫 語法",
-            "資料庫 型態",
-            "資料庫 定期"
-        ]
-    },
-    {
-        "phrases": [
-            "like 訂閱",
-            "開學 文章",
-            "心得 像是",
-            "快速 閱讀",
-            "學習心得 時間"
-        ]
-    },
-    {
-        "phrases": [
-            "stm32cubemx 經驗",
-            "開發 stm32cubemx",
-            "stm32cubemx 開發",
-            "開發 stm32",
-            "stm32cubemx 配置"
-        ]
-    },
-    {
-        "phrases": [
-            "透過 validator",
-            "validator 轉換",
-            "validator 功能",
-            "validator",
-            "playground validator"
-        ]
-    },
-    {
-        "phrases": [
-            "周五 機器人",
-            "一周 開啟",
-            "開啟 周五",
-            "機器人 改成",
-            "改成 一周"
-        ]
-    },
-    {
-        "phrases": [
-            "mock interface",
-            "mockgen 根目錄",
-            "interface 未來",
-            "未來 interface",
-            "搭配 mockgen"
-        ]
-    },
-    {
-        "phrases": [
-            "官網 測試",
-            "測試 範本",
-            "測試 request",
-            "實作 測試",
-            "頻繁 測試"
-        ]
-    },
-    {
-        "phrases": [
-            "apk 建立",
-            "apk 檔案",
-            "key 多久",
-            "apk 一步",
-            "apk apk"
-        ]
-    },
-    {
-        "phrases": [
-            "shell mini",
-            "透過 shell",
-            "shell 要用",
-            "unix like",
-            "mini shell"
-        ]
-    },
-    {
-        "phrases": [
-            "機器人 google",
-            "為例 google",
-            "google 回應",
-            "google 使用者",
-            "recaptcha google"
-        ]
-    },
-    {
-        "phrases": [
-            "填滿 drawpolygon",
-            "drawpolygon fillpolygon",
-            "fillpolygon 橢圓形",
-            "填滿 drawcircle",
-            "填滿 drawellipse"
-        ]
-    },
-    {
-        "phrases": [
-            "完賽 人數",
-            "開賽 統計",
-            "參加 開賽",
-            "統計 完賽",
-            "發現 完賽"
-        ]
-    },
-    {
-        "phrases": [
-            "擔心 grid",
-            "grid 多年",
-            "grid 到底",
-            "冷門 grid",
-            "畢竟 grid"
-        ]
-    },
-    {
-        "phrases": [
-            "刪除 html",
-            "html client",
-            "html 資料",
-            "edite html",
-            "http delete"
-        ]
-    },
-    {
-        "phrases": [
-            "html wwwroot",
-            "wwwroot 引入",
-            "wwwroot 自動",
-            "web 应用",
-            "net web"
-        ]
-    },
-    {
-        "phrases": [
-            "using net5efcorewebapiapp",
-            "net5efcorewebapiapp",
-            "net5 專案",
-            "aspnetcore 預設",
-            "專案 net5"
-        ]
-    },
-    {
-        "phrases": [
-            "validator 透過",
-            "放入 validator",
-            "validator 驗證",
-            "介紹 validator",
-            "同一個 validator"
-        ]
-    },
-    {
-        "phrases": [
-            "webapi 專案",
-            "預設 webapi",
-            "post 專案",
-            "postman 測試",
-            "json 測試"
-        ]
-    },
-    {
-        "phrases": [
-            "得獎者 xd",
-            "xd 得獎者",
-            "頒獎典禮 xd",
-            "xd 獎狀",
-            "獎牌 xd"
-        ]
-    },
-    {
-        "phrases": [
-            "主題 plugin",
-            "config 主題",
-            "安裝 themes",
-            "theme 資料夾",
-            "主題 安裝"
-        ]
-    },
-    {
-        "phrases": [
-            "新加坡 簽證",
-            "新加坡 入境",
-            "到期 新加坡",
-            "新加坡",
-            "新加坡 人力"
-        ]
-    },
-    {
-        "phrases": [
-            "pq schema",
-            "資料庫 內容",
-            "資料庫",
-            "schema",
-            "error 放入"
-        ]
-    },
-    {
-        "phrases": [
-            "submit 改成",
-            "form submit",
-            "submit",
-            "分享 template",
-            "form"
-        ]
-    },
-    {
-        "phrases": [
-            "grid optimizer",
-            "gridbot 更新",
-            "總資產 gridbot",
-            "optimizer 原本",
-            "00662 gridbot"
-        ]
-    },
-    {
-        "phrases": [
-            "方法 web",
-            "http method",
-            "swagger web",
-            "web api",
-            "web 介面"
-        ]
-    },
-    {
-        "phrases": [
-            "資料 重疊",
-            "數據 表格",
-            "查詢 機制",
-            "search action",
-            "表格 陳列"
-        ]
-    },
-    {
-        "phrases": [
-            "news edit",
-            "刪除 編輯",
-            "頁面 刪除",
-            "edit html",
-            "編輯 頁面"
-        ]
-    },
-    {
-        "phrases": [
-            "newstypename",
-            "替換成 newstypename",
-            "newsinfo model",
-            "newstypename 本篇",
-            "newscontroller 擴充"
-        ]
-    },
-    {
-        "phrases": [
-            "完善 newscontroller",
-            "newscontroller",
-            "newscontroller 新增",
-            "新建 newscontroller",
-            "newscontroller wwwroot"
-        ]
-    },
-    {
-        "phrases": [
-            "usecallback 範例",
-            "例子 useeffect",
-            "前言 usecallback",
-            "物件 useeffect",
-            "useeffect 當作"
-        ]
-    },
-    {
-        "phrases": [
-            "美股 大跌",
-            "大跌 跌幅",
-            "大盤 跌幅",
-            "理由 大跌",
-            "導致 大跌"
-        ]
-    },
-    {
-        "phrases": [
-            "軟體 發生",
-            "軟體 專案",
-            "software development",
-            "工作 軟體",
-            "跳進 software"
-        ]
-    },
-    {
-        "phrases": [
-            "機器人 現金",
-            "計算 機器人",
-            "機器人 money",
-            "機器人 總資產",
-            "機器人 交易"
-        ]
-    },
-    {
-        "phrases": [
-            "虛浮 去蕪存菁",
-            "津津樂道",
-            "去蕪存菁",
-            "golang 執行期",
-            "最末 宣告"
-        ]
-    },
-    {
-        "phrases": [
-            "技術 分類",
-            "法規 網路",
-            "分析 網路",
-            "技術人員 法規",
-            "網路 設備"
-        ]
-    },
-    {
-        "phrases": [
-            "cookie access",
-            "cookie set",
-            "content type",
-            "content encoding",
-            "set cookie"
-        ]
-    },
-    {
-        "phrases": [
-            "cache 多久",
-            "response cache",
-            "cache",
-            "cache control",
-            "hash cache"
-        ]
-    },
-    {
-        "phrases": [
-            "context cancel",
-            "cancel context",
-            "context 流程",
-            "context 常用",
-            "context 方法"
-        ]
-    },
-    {
-        "phrases": [
-            "週五 收盤價",
-            "週五 小跌",
-            "收盤價 站上",
-            "台股 盤勢",
-            "會齊漲 齊跌"
-        ]
-    },
-    {
-        "phrases": [
-            "github 紀錄",
-            "github 上傳",
-            "push github",
-            "上班 github",
-            "github"
-        ]
-    },
-    {
-        "phrases": [
-            "安全性 檢測",
-            "技術 門檻",
-            "滲透 測試",
-            "測試 技術",
-            "利用 漏洞"
-        ]
-    },
-    {
-        "phrases": [
-            "賽斷賽 出書",
-            "失敗 收場",
-            "出書 失敗",
-            "賽斷賽",
-            "失敗 打擊"
-        ]
-    },
-    {
-        "phrases": [
-            "機器人 money",
-            "timeout 10000",
-            "contracts timeout",
-            "機器人 交易",
-            "py contracts"
-        ]
-    },
-    {
-        "phrases": [
-            "文本 替换",
-            "路径 替换",
-            "路径 代码",
-            "替换 路径",
-            "匹配 文本"
-        ]
-    },
-    {
-        "phrases": [
-            "router v5",
-            "v6 router",
-            "修改 v6",
-            "路由 v5",
-            "v5"
-        ]
-    },
-    {
-        "phrases": [
-            "連續 跌破",
-            "盤勢 轉弱",
-            "加權 市場",
-            "跌破 加權",
-            "加權指數 櫃買"
-        ]
-    },
-    {
-        "phrases": [
-            "資金 控管",
-            "控管 資金",
-            "標的 賠錢",
-            "大跌 獲利",
-            "抱怨 績效"
-        ]
-    },
-    {
-        "phrases": [
-            "站上 devfest",
-            "devfest hsinchu",
-            "devfest",
-            "devfest 舞台",
-            "taichung 週六"
-        ]
-    },
-    {
-        "phrases": [
-            "測試 mrequest",
-            "資料庫 mock",
-            "mrequest 回傳",
-            "mrequest 單純",
-            "這句 sql"
-        ]
-    },
-    {
-        "phrases": [
-            "改成 targetcapital",
-            "targetcapital 變數",
-            "錢匯 測試",
-            "裡的 錢匯",
-            "帳戶 餘額"
-        ]
-    },
-    {
-        "phrases": [
-            "stm32 開發",
-            "開發 stm32cubeide",
-            "ide stm32cubeprogrammer",
-            "stm32cubeprogrammer",
-            "介紹 stm32cube"
-        ]
-    },
-    {
-        "phrases": [
-            "stm32 生態",
-            "stm32cubeide 開發",
-            "stm32cubeide 感想",
-            "stm32cubeide 包含",
-            "stm32cube"
-        ]
-    },
-    {
-        "phrases": [
-            "測試 框架",
-            "測試 程式",
-            "程式 測試",
-            "測試 套件",
-            "套件 測試"
-        ]
-    },
-    {
-        "phrases": [
-            "inference yolo",
-            "yolo 推估",
-            "yolo 辨識",
-            "yolo 模型",
-            "函數 yolo"
-        ]
-    },
-    {
-        "phrases": [
-            "建立 opencv",
-            "opencv layer",
-            "python opencv",
-            "opencv 影像",
-            "建立 opencv45"
-        ]
-    },
-    {
-        "phrases": [
-            "amazon sagemaker",
-            "sagemaker amazon",
-            "lambda amazon",
-            "執行 amazon",
-            "建立 amazon"
-        ]
-    },
-    {
-        "phrases": [
-            "amazon sagemaker",
-            "參考資料 amazon",
-            "35 amazon",
-            "體驗 amazon",
-            "提供 人工智慧"
-        ]
-    },
-    {
-        "phrases": [
-            "語言",
-            "公主 音樂",
-            "動漫 86",
-            "語言 障礙",
-            "礙於 語言"
-        ]
-    },
-    {
-        "phrases": [
-            "log 取代",
-            "文字 log",
-            "print 解決",
-            "取代 print",
-            "print"
-        ]
-    },
-    {
-        "phrases": [
-            "yolo 辨識",
-            "參考資料 yolo",
-            "編譯 yolov3",
-            "yolov3",
-            "函數 yolo"
-        ]
-    },
-    {
-        "phrases": [
-            "程式碼 這類",
-            "程式 連線",
-            "放進 程式碼",
-            "內容 資料庫",
-            "程式碼 並寫"
-        ]
-    },
-    {
-        "phrases": [
-            "app apple",
-            "id apple",
-            "apple id",
-            "本來 app",
-            "apple 官網"
-        ]
-    },
-    {
-        "phrases": [
-            "nano 腳位",
-            "腳位 程式",
-            "腳位 板子",
-            "d8 腳位",
-            "參考 腳位"
-        ]
-    },
-    {
-        "phrases": [
-            "app 當中",
-            "當中 app",
-            "應用程式 ios",
-            "app 開發",
-            "app maui"
-        ]
-    },
-    {
-        "phrases": [
-            "hexo server",
-            "hexo 發佈",
-            "hexo config",
-            "簡介 hexo",
-            "修改 hexo"
-        ]
-    },
-    {
-        "phrases": [
-            "訓練 yolov4",
-            "訓練樣本 數量",
-            "gpu 訓練",
-            "訓練 樣本數",
-            "訓練 訓練樣本"
-        ]
-    },
-    {
-        "phrases": [
-            "手機遊戲 build",
-            "unity 軟體",
-            "android build",
-            "安裝 unity",
-            "project mac"
-        ]
-    },
-    {
-        "phrases": [
-            "mac 雙系統",
-            "本來 mac",
-            "mac",
-            "先說 mac",
-            "mac os"
-        ]
-    },
-    {
-        "phrases": [
-            "list 順序",
-            "順序 preorder",
-            "preorder 順序",
-            "preorder inorder",
-            "順序 cout"
-        ]
-    },
-    {
-        "phrases": [
-            "夠不夠 所學",
-            "學習 麻煩",
-            "時間 期間",
-            "期間 懷疑",
-            "期間"
-        ]
-    },
-    {
-        "phrases": [
-            "接上 postgresql",
-            "postgresql 過程",
-            "內容 log",
-            "輸出 log",
-            "postgresql"
-        ]
-    },
-    {
-        "phrases": [
-            "agile 面臨",
-            "開發人員 腦補",
-            "規劃者 協作",
-            "流程 雷同",
-            "敏捷 開發"
-        ]
-    },
-    {
-        "phrases": [
-            "瀏覽器 關閉",
-            "阻止 瀏覽器",
-            "關閉 瀏覽器",
-            "瀏覽器 發出",
-            "瀏覽器"
-        ]
-    },
-    {
-        "phrases": [
-            "感覺 著樹",
-            "著樹 感覺",
-            "思路 反轉",
-            "著樹",
-            "preorder 這棵樹"
-        ]
-    },
-    {
-        "phrases": [
-            "作業系統 切換",
-            "作業系統 big",
-            "升級 作業系統",
-            "硬體",
-            "兩種 作業系統"
-        ]
-    },
-    {
-        "phrases": [
-            "交易 機器人",
-            "整合 機器人",
-            "機器人 記錄",
-            "機器人 機器人",
-            "機器人 兩支"
-        ]
-    },
-    {
-        "phrases": [
-            "會議 情境",
-            "情境 會議",
-            "會議 形式",
-            "會議 情況",
-            "會議 討論"
-        ]
-    },
-    {
-        "phrases": [
-            "網址 rss",
-            "rss 閱讀器",
-            "主題 程式碼",
-            "rss",
-            "實作 輸入"
-        ]
-    },
-    {
-        "phrases": [
-            "飲料 外帶",
-            "外帶 飲料",
-            "飲料 杯子",
-            "杯子 飲料",
-            "飲料"
-        ]
-    },
-    {
-        "phrases": [
-            "昨天 格式",
-            "尾聲 文章",
-            "表單 新增",
-            "格式 表單",
-            "格式 主題"
-        ]
-    },
-    {
-        "phrases": [
-            "直覺 hand",
-            "腦中 浮現",
-            "舞蹈 夫人",
-            "表現",
-            "警戒 節奏"
-        ]
-    },
-    {
-        "phrases": [
-            "新增 刪除",
-            "刪除 資料",
-            "尾聲 文章",
-            "刪除",
-            "程式碼 實測"
-        ]
-    },
-    {
-        "phrases": [
-            "安全性 檢測",
-            "技術人員 法規",
-            "防護 開發",
-            "防護 基準",
-            "誤判 技術人員"
-        ]
-    },
-    {
-        "phrases": [
-            "同步 請求",
-            "請求 上傳",
-            "主題 程式碼",
-            "上傳 進度條",
-            "上傳"
-        ]
-    },
-    {
-        "phrases": [
-            "滾動 網頁",
-            "網頁 自動隱藏",
-            "網頁",
-            "自動隱藏 導覽",
-            "主題 樣式"
-        ]
-    },
-    {
-        "phrases": [
-            "機會 體現",
-            "機會 願景",
-            "才能 機會",
-            "充斥 挑戰",
-            "想要 成果"
-        ]
+        "uuid": "103cb2a2-d384-43b1-9bfb-4aaf532633ab",
+        "phrase": "2022 鐵人"
+    },
+    {
+        "uuid": "f9127dd8-915d-49b8-8587-5751f93cd3f2",
+        "phrase": "我要 參賽"
+    },
+    {
+        "uuid": "0acad260-fb1c-4eed-ab8c-cd7956678502",
+        "phrase": "2022"
+    },
+    {
+        "uuid": "5f9e8c2c-5c0a-461d-93bc-131ddd7c4e70",
+        "phrase": "參賽"
+    },
+    {
+        "uuid": "fbd8a0ae-bfcc-4843-8f98-d4229e98b94c",
+        "phrase": "不知不覺 2022"
+    },
+    {
+        "uuid": "477397fd-0d0a-4856-b3eb-eabb92c91552",
+        "phrase": "stm32 書籍"
+    },
+    {
+        "uuid": "71583d24-bae5-480e-93bc-a4ebc5844a01",
+        "phrase": "stm32 教學"
+    },
+    {
+        "uuid": "7c3bf6a3-7339-4cb4-b432-a2efc4accbc4",
+        "phrase": "stm32 開發"
+    },
+    {
+        "uuid": "1b9a1073-d3d0-4af6-bc7e-76043008b7d0",
+        "phrase": "stm32 開發板"
+    },
+    {
+        "uuid": "edcf8659-b857-4489-be7e-15d209816de3",
+        "phrase": "書籍 開發"
+    },
+    {
+        "uuid": "4135bed2-2a53-40d9-b1e5-d55dd75a5511",
+        "phrase": "xd 近期"
+    },
+    {
+        "uuid": "7e740b86-6a15-475e-b4c6-b395670dea74",
+        "phrase": "實際上 內容"
+    },
+    {
+        "uuid": "4a9b5a74-11cb-4db6-aa17-e7a307345b37",
+        "phrase": "內容 實際上"
+    },
+    {
+        "uuid": "84a9bfe9-2602-4c22-982c-ccd21f4c95d2",
+        "phrase": "地盤 發表"
+    },
+    {
+        "uuid": "be9736cb-3852-4765-a319-48fbeff52be1",
+        "phrase": "系列 發表"
+    },
+    {
+        "uuid": "24896a59-fc28-46a8-b5cd-3bc2d4305aee",
+        "phrase": "grid 實在話"
+    },
+    {
+        "uuid": "cd1f9615-15d0-4d1a-bc38-6628ed0e69e3",
+        "phrase": "grid 好像"
+    },
+    {
+        "uuid": "aff9e9bc-06fd-4d27-b85e-baa8ce202ab6",
+        "phrase": "複習 grid"
+    },
+    {
+        "uuid": "2b3900a5-7139-40ad-866e-c604b8675c30",
+        "phrase": "去換 grid"
+    },
+    {
+        "uuid": "797e0778-7f6c-462b-86f0-17f8ca8413c5",
+        "phrase": "搭配 grid"
+    },
+    {
+        "uuid": "151a76a0-99b0-4306-a00e-32a6c0fc849a",
+        "phrase": "單元測試 產品開發"
+    },
+    {
+        "uuid": "9cfa6376-4c09-4fd5-a8c1-e11c1e069033",
+        "phrase": "撰寫 單元測試"
+    },
+    {
+        "uuid": "2c90c804-d3fc-4517-8608-fb628b8a88fe",
+        "phrase": "單元測試 影片"
+    },
+    {
+        "uuid": "8badd04f-2da9-4cd7-9d0b-4cab172cf5ff",
+        "phrase": "文章 學習效果"
+    },
+    {
+        "uuid": "46c2b816-e934-4aa9-8576-f5ca37c29139",
+        "phrase": "單元測試 框架"
+    },
+    {
+        "uuid": "451fcf39-0efb-44f1-9712-8603acf07c09",
+        "phrase": "陰影 css3"
+    },
+    {
+        "uuid": "332cb0c1-9fc5-4a60-8c7c-72762b40ab1c",
+        "phrase": "shadow 屬性"
+    },
+    {
+        "uuid": "d4286b91-38e6-478d-baa0-e04663ed615e",
+        "phrase": "box shadow"
+    },
+    {
+        "uuid": "7378175e-9c4b-4bca-88e6-d1565b1d953d",
+        "phrase": "shadow react"
+    },
+    {
+        "uuid": "3109763a-4b17-4bf1-8444-653538b9cb2e",
+        "phrase": "卡牌 陰影"
+    },
+    {
+        "uuid": "c2d3a373-b862-4786-8d26-0e9029050d93",
+        "phrase": "time conclusion"
+    },
+    {
+        "uuid": "6d46f435-c0b8-4498-b91d-591fbbe828be",
+        "phrase": "reference synchronization"
+    },
+    {
+        "uuid": "46b2c8f8-3291-4c52-86a3-4fca030ac656",
+        "phrase": "事件 起因"
+    },
+    {
+        "uuid": "dda5606e-853b-422e-8f3f-41c077418aca",
+        "phrase": "觀察 合約"
+    },
+    {
+        "uuid": "6c7846ed-9fc8-4c63-9154-4096fcdd37f0",
+        "phrase": "合約 宣告"
+    },
+    {
+        "uuid": "9560f8cb-54d1-4cc4-8f16-219585768fe3",
+        "phrase": "pcb 淘寶"
+    },
+    {
+        "uuid": "672275e6-336f-4919-b350-3239698e9b23",
+        "phrase": "淘寶 pcb"
+    },
+    {
+        "uuid": "883d2079-ddb2-46b0-9e55-092b05bd25b4",
+        "phrase": "分享 pcb"
+    },
+    {
+        "uuid": "23312163-37a6-46f6-b297-33162ca710a3",
+        "phrase": "溝通 軟體"
+    },
+    {
+        "uuid": "1f0839df-0c5c-43f4-abe8-455f36acd56d",
+        "phrase": "手機 淘寶"
+    },
+    {
+        "uuid": "05f16cad-a3ed-4736-b49c-eeed82dafe83",
+        "phrase": "執行 uselayouteffect"
+    },
+    {
+        "uuid": "565e0d0c-362a-49f8-a5c0-c00f956f1a03",
+        "phrase": "uselayouteffect hook"
+    },
+    {
+        "uuid": "8e9a8c70-fdf5-4857-9a05-e4f068b15cdf",
+        "phrase": "uselayouteffect 也許"
+    },
+    {
+        "uuid": "5c6d5b4d-796b-4ab4-8745-af7a6438b266",
+        "phrase": "補充 uselayouteffect"
+    },
+    {
+        "uuid": "bea11dd4-8fbb-4172-a4ea-117a3152fb4c",
+        "phrase": "useeffect uselayouteffect"
+    },
+    {
+        "uuid": "3a106ac6-e059-48d9-9602-b23d5a81118b",
+        "phrase": "數位 轉型"
+    },
+    {
+        "uuid": "89e50da1-ac3e-4b11-ba0d-508ef13b1bbd",
+        "phrase": "組織 面臨"
+    },
+    {
+        "uuid": "d6a37eda-87d6-4235-9f9f-ddb9d5d3119b",
+        "phrase": "面臨 數位"
+    },
+    {
+        "uuid": "5ff4c1c8-cd0f-4bf0-9d91-f3daeea4da43",
+        "phrase": "年老 系統"
+    },
+    {
+        "uuid": "b66742b2-ecff-48aa-8062-670c205b289d",
+        "phrase": "組織 溝通"
+    },
+    {
+        "uuid": "16d74c43-3e37-4ffc-9f53-c79a79f22793",
+        "phrase": "tuf 散熱器"
+    },
+    {
+        "uuid": "6cb8a717-c213-4c55-ae38-98aed727f1c3",
+        "phrase": "熱導管 搭配"
+    },
+    {
+        "uuid": "8bf839ea-7299-42f5-853b-25822331ff6c",
+        "phrase": "導熱管 cpu"
+    },
+    {
+        "uuid": "24293aa5-3089-431c-aef1-37e7c8e232b8",
+        "phrase": "採用 導熱管"
+    },
+    {
+        "uuid": "486c877f-eb85-41d8-83e0-17bf8ce2b37c",
+        "phrase": "全銅 熱導管"
+    },
+    {
+        "uuid": "f04de1e8-ac67-427f-95d7-e88a28cdc5b9",
+        "phrase": "目錄 前言"
+    },
+    {
+        "uuid": "87c53603-fed3-4789-ac1d-6b842a60ae7b",
+        "phrase": "心得 近期"
+    },
+    {
+        "uuid": "e9f15911-aca5-400b-abe1-e2a0a6f1807c",
+        "phrase": "系列 文有"
+    },
+    {
+        "uuid": "4e826b03-cb08-4539-8692-0a52f46bc711",
+        "phrase": "寫出"
+    },
+    {
+        "uuid": "066956eb-77a8-4a60-8b2c-d0767acc943e",
+        "phrase": "本文"
+    },
+    {
+        "uuid": "f8d80b78-01a3-43e0-a1c1-d4fd217229e6",
+        "phrase": "requests commands"
+    },
+    {
+        "uuid": "5e058af3-c47c-40ea-ae16-5f6f249ed408",
+        "phrase": "commands requests"
+    },
+    {
+        "uuid": "0322f3d7-0661-4d01-a318-00290b38bc44",
+        "phrase": "requests 建立"
+    },
+    {
+        "uuid": "e0740aa8-7a50-4eea-97b0-9f8bb8b708c9",
+        "phrase": "request command"
+    },
+    {
+        "uuid": "27100ff4-1143-433d-ab16-999518e104b6",
+        "phrase": "多個 request"
+    },
+    {
+        "uuid": "422aa526-5b6e-4b93-9096-e40d8ec10152",
+        "phrase": "測試環境 登入"
+    },
+    {
+        "uuid": "82740483-f441-4ebf-8984-da1ac292e010",
+        "phrase": "環境 登入"
+    },
+    {
+        "uuid": "3353c756-ccdb-409a-b057-1cca122ebd7d",
+        "phrase": "測試環境 測試"
+    },
+    {
+        "uuid": "c00a47f4-056c-4c96-91da-fde8a761f33a",
+        "phrase": "測試環境"
+    },
+    {
+        "uuid": "6ec61428-8899-4cff-abe5-3a609a56eb43",
+        "phrase": "先前 測試環境"
+    },
+    {
+        "uuid": "f5986b69-336f-4226-a77b-8be06d01ceff",
+        "phrase": "資料庫 版本控制"
+    },
+    {
+        "uuid": "70abbe63-ee38-4e03-aa94-202092a9bed8",
+        "phrase": "版本控制 資料庫"
+    },
+    {
+        "uuid": "acce3e53-e20d-4459-b285-91afab9de947",
+        "phrase": "資料庫 語法"
+    },
+    {
+        "uuid": "763a761f-3db7-4833-ab77-e0f996bc6044",
+        "phrase": "資料庫 型態"
+    },
+    {
+        "uuid": "924ebef0-3f15-44d3-8c90-ac2ad37d287c",
+        "phrase": "資料庫 定期"
+    },
+    {
+        "uuid": "ea5f5653-2e57-449e-82b1-58d7b4709b65",
+        "phrase": "like 訂閱"
+    },
+    {
+        "uuid": "d270beef-db95-440c-81c8-99eb68e54c6e",
+        "phrase": "開學 文章"
+    },
+    {
+        "uuid": "9b73e9d2-ce2c-4b69-8bca-81729071bcf9",
+        "phrase": "心得 像是"
+    },
+    {
+        "uuid": "46d25606-affc-454d-8179-586a7526e1fd",
+        "phrase": "快速 閱讀"
+    },
+    {
+        "uuid": "272fb4ea-29e7-4f8c-9e8f-e0afe7bdd992",
+        "phrase": "學習心得 時間"
+    },
+    {
+        "uuid": "7df2ce16-20a4-4767-a50a-6685a5d98cfe",
+        "phrase": "stm32cubemx 經驗"
+    },
+    {
+        "uuid": "93f6bc80-6c23-4ca7-8a7a-efd0e2002518",
+        "phrase": "開發 stm32cubemx"
+    },
+    {
+        "uuid": "8818ef60-3996-456f-a6fa-45224de3610b",
+        "phrase": "stm32cubemx 開發"
+    },
+    {
+        "uuid": "ac627aeb-3722-4dcf-8110-ff126371a5b0",
+        "phrase": "開發 stm32"
+    },
+    {
+        "uuid": "c79a2973-9ce6-4717-b10e-e96a7933fca7",
+        "phrase": "stm32cubemx 配置"
+    },
+    {
+        "uuid": "276da242-1267-4144-aed8-19241c0ae43b",
+        "phrase": "透過 validator"
+    },
+    {
+        "uuid": "36c827d9-13d0-4775-afb2-1e1c4ea524af",
+        "phrase": "validator 轉換"
+    },
+    {
+        "uuid": "dc953f95-3218-40b5-b4bd-aa573cb1656d",
+        "phrase": "validator 功能"
+    },
+    {
+        "uuid": "58e5b750-3ef1-458b-841a-fb3c90e9eb32",
+        "phrase": "validator"
+    },
+    {
+        "uuid": "81c7077b-2d47-47fb-a521-fb735c6aad58",
+        "phrase": "playground validator"
+    },
+    {
+        "uuid": "e07612c6-6a41-4d6a-8ea4-71952edfb69f",
+        "phrase": "周五 機器人"
+    },
+    {
+        "uuid": "cdba4b50-47f7-41ab-ba74-665e61cc9866",
+        "phrase": "一周 開啟"
+    },
+    {
+        "uuid": "5f18a618-d59b-4d7a-be4e-36313c6580f1",
+        "phrase": "開啟 周五"
+    },
+    {
+        "uuid": "251d1b3d-75a0-4f4a-94ef-472bd0d5cb46",
+        "phrase": "機器人 改成"
+    },
+    {
+        "uuid": "5d051346-d4f1-4b3a-bf30-f58ac63ef2f7",
+        "phrase": "改成 一周"
+    },
+    {
+        "uuid": "2ddc37ae-70b3-491f-aeec-3bd8da69509c",
+        "phrase": "mock interface"
+    },
+    {
+        "uuid": "fb43a9b7-bd1f-4b2d-ad67-7e6b026986be",
+        "phrase": "mockgen 根目錄"
+    },
+    {
+        "uuid": "c2b0c8cc-076e-4508-aa6f-e56b5e7e62e7",
+        "phrase": "interface 未來"
+    },
+    {
+        "uuid": "3fde2a05-d4a9-4f22-8c3d-60be8050e88a",
+        "phrase": "未來 interface"
+    },
+    {
+        "uuid": "93214c2c-9c9d-4933-bbf4-083093a3502b",
+        "phrase": "搭配 mockgen"
+    },
+    {
+        "uuid": "19c44a91-9974-4a51-bc8b-63d1dbefa662",
+        "phrase": "官網 測試"
+    },
+    {
+        "uuid": "b4574f0c-9735-4543-b65f-8bff8b59bd23",
+        "phrase": "測試 範本"
+    },
+    {
+        "uuid": "b7f7737e-6681-47d6-bfd3-da2063e91ed6",
+        "phrase": "測試 request"
+    },
+    {
+        "uuid": "6739944b-fbac-4b1f-85ed-8b8984b25969",
+        "phrase": "實作 測試"
+    },
+    {
+        "uuid": "c1b39d7c-cb24-45e9-aedc-d2504a46b8c8",
+        "phrase": "頻繁 測試"
+    },
+    {
+        "uuid": "f20b7783-6a04-4051-8da5-0b8426896d2c",
+        "phrase": "apk 建立"
+    },
+    {
+        "uuid": "35293fbf-6b8f-42a9-9bc0-0a7c10bc31a6",
+        "phrase": "apk 檔案"
+    },
+    {
+        "uuid": "b2121a52-279b-4373-ab3a-a028ed7593cc",
+        "phrase": "key 多久"
+    },
+    {
+        "uuid": "30959b4a-3967-44cc-bc3c-c9eca76edf28",
+        "phrase": "apk 一步"
+    },
+    {
+        "uuid": "be7e13e4-51c4-413c-9d0e-51e5aba66b93",
+        "phrase": "apk apk"
+    },
+    {
+        "uuid": "f73983fd-1977-4c18-88c6-e0aa3707e98a",
+        "phrase": "shell mini"
+    },
+    {
+        "uuid": "13f59437-9d89-47a9-8e7b-48ad86a541f7",
+        "phrase": "透過 shell"
+    },
+    {
+        "uuid": "15841a57-f3c7-4f80-b3ac-cf6edc4b60d8",
+        "phrase": "shell 要用"
+    },
+    {
+        "uuid": "242106a1-5547-4cd6-a7ec-3b2fd4a67f3b",
+        "phrase": "unix like"
+    },
+    {
+        "uuid": "d8dfa29a-09c7-421f-896f-7b49ae81004b",
+        "phrase": "mini shell"
+    },
+    {
+        "uuid": "913f57f2-b601-455b-9409-3e793076dcc1",
+        "phrase": "機器人 google"
+    },
+    {
+        "uuid": "cfef413a-500f-45c9-b904-d9d626de0d3e",
+        "phrase": "為例 google"
+    },
+    {
+        "uuid": "51f515ab-87c7-441f-86b2-ed130f2cfe07",
+        "phrase": "google 回應"
+    },
+    {
+        "uuid": "7091be36-85b1-4df8-bf65-d526b8467bbb",
+        "phrase": "google 使用者"
+    },
+    {
+        "uuid": "c2867350-b954-49ec-9aea-c4ac8781d886",
+        "phrase": "recaptcha google"
+    },
+    {
+        "uuid": "ccd4aa13-da13-4e1b-96fb-910c49d79957",
+        "phrase": "填滿 drawpolygon"
+    },
+    {
+        "uuid": "dbcaebd6-416a-496d-b42c-655795c24b87",
+        "phrase": "drawpolygon fillpolygon"
+    },
+    {
+        "uuid": "c8ea1e9f-2b99-4242-a6fd-531b1d43fd17",
+        "phrase": "fillpolygon 橢圓形"
+    },
+    {
+        "uuid": "a0443572-9646-4bec-b967-c28182bf4d67",
+        "phrase": "填滿 drawcircle"
+    },
+    {
+        "uuid": "9e778c4a-7fe0-42ec-a66a-b40a11324a59",
+        "phrase": "填滿 drawellipse"
+    },
+    {
+        "uuid": "9b6a99c1-8a09-4d7a-80d6-a1fb248b0fa9",
+        "phrase": "完賽 人數"
+    },
+    {
+        "uuid": "6cac858f-a19d-4498-92c6-492e1c76bea7",
+        "phrase": "開賽 統計"
+    },
+    {
+        "uuid": "feb884f7-f4b1-4c1f-8d4f-dbead8b752ee",
+        "phrase": "參加 開賽"
+    },
+    {
+        "uuid": "de51159f-96da-41b8-915e-b768dd84c283",
+        "phrase": "統計 完賽"
+    },
+    {
+        "uuid": "2381860e-4cd9-4c6d-a7bc-9dac7433f1aa",
+        "phrase": "發現 完賽"
+    },
+    {
+        "uuid": "f1abc907-9380-4a62-b075-289333696055",
+        "phrase": "擔心 grid"
+    },
+    {
+        "uuid": "93138f21-3a29-4296-bbdb-9c8a7989279b",
+        "phrase": "grid 多年"
+    },
+    {
+        "uuid": "3d935735-4801-41b2-a977-eaebe569de06",
+        "phrase": "grid 到底"
+    },
+    {
+        "uuid": "790d699b-4afd-49ca-afa3-71805c39f98d",
+        "phrase": "冷門 grid"
+    },
+    {
+        "uuid": "412ca16c-c178-4b45-ad58-7706e96676fd",
+        "phrase": "畢竟 grid"
+    },
+    {
+        "uuid": "c3ae6791-43cd-4fad-a54f-e3c14fd5d3cd",
+        "phrase": "刪除 html"
+    },
+    {
+        "uuid": "2f1d63ae-12d5-4c49-b603-588d567e6c6c",
+        "phrase": "html client"
+    },
+    {
+        "uuid": "0693adfd-f9ef-4204-abd3-4fccdc8e1db8",
+        "phrase": "html 資料"
+    },
+    {
+        "uuid": "708b4e2a-3c5a-4f1f-8a57-d7f3621599cf",
+        "phrase": "edite html"
+    },
+    {
+        "uuid": "9f0aa9eb-00f0-4178-b543-5a7fa6c33b2e",
+        "phrase": "http delete"
+    },
+    {
+        "uuid": "5c8d1f83-585d-4b3b-86e3-018334d851aa",
+        "phrase": "html wwwroot"
+    },
+    {
+        "uuid": "705318a1-e9b2-4606-a9d9-133ef1900825",
+        "phrase": "wwwroot 引入"
+    },
+    {
+        "uuid": "88035ce3-3cb0-40db-ae2e-b8c4f8e5fd4d",
+        "phrase": "wwwroot 自動"
+    },
+    {
+        "uuid": "2fcff0b1-c1bb-4c99-b1ea-886113b28f01",
+        "phrase": "web 应用"
+    },
+    {
+        "uuid": "919d36ab-5b30-40ee-b105-19f2421773eb",
+        "phrase": "net web"
+    },
+    {
+        "uuid": "5d6992ce-9c37-4d85-8064-fc12130ca48a",
+        "phrase": "using net5efcorewebapiapp"
+    },
+    {
+        "uuid": "eb7a7132-333e-49c9-9688-ea38263455d1",
+        "phrase": "net5efcorewebapiapp"
+    },
+    {
+        "uuid": "6333ca74-9251-4c1c-8fb4-76c4cced3280",
+        "phrase": "net5 專案"
+    },
+    {
+        "uuid": "7f65334b-41a3-4e43-857b-166f7dfd54e3",
+        "phrase": "aspnetcore 預設"
+    },
+    {
+        "uuid": "569f8a2f-6974-4d75-a341-fbb9eaca9cc6",
+        "phrase": "專案 net5"
+    },
+    {
+        "uuid": "3efeae92-d990-4738-8fee-9578a558745d",
+        "phrase": "validator 透過"
+    },
+    {
+        "uuid": "c14d4685-977a-44e4-a97b-3945948d7352",
+        "phrase": "放入 validator"
+    },
+    {
+        "uuid": "bac5f3f2-2903-402c-8a29-503651b2c20c",
+        "phrase": "validator 驗證"
+    },
+    {
+        "uuid": "a6f71ca1-ecdc-41b7-b8e4-1c36fe47088b",
+        "phrase": "介紹 validator"
+    },
+    {
+        "uuid": "1c08a0c8-d1c5-4e2b-8357-e1b40b840132",
+        "phrase": "同一個 validator"
+    },
+    {
+        "uuid": "58d1f211-ee4f-4815-b2d0-e2118349c3c3",
+        "phrase": "webapi 專案"
+    },
+    {
+        "uuid": "9761370f-f25f-4ebc-82ae-bf766df452b2",
+        "phrase": "預設 webapi"
+    },
+    {
+        "uuid": "f9be6c4b-e339-4cab-9431-5dbde1f0c452",
+        "phrase": "post 專案"
+    },
+    {
+        "uuid": "88e48f58-05f2-4e3b-b4d1-235833d04081",
+        "phrase": "postman 測試"
+    },
+    {
+        "uuid": "c82e38d5-ea00-484d-8906-9554ec7f8f03",
+        "phrase": "json 測試"
+    },
+    {
+        "uuid": "722eb561-9e81-4158-9f31-956c91e50f76",
+        "phrase": "得獎者 xd"
+    },
+    {
+        "uuid": "5e63c94e-edc0-42bf-be21-b09430a4dd98",
+        "phrase": "xd 得獎者"
+    },
+    {
+        "uuid": "5d810b35-ae08-4899-b799-bfb0b4633305",
+        "phrase": "頒獎典禮 xd"
+    },
+    {
+        "uuid": "fc7e4b7e-c1b7-4c7e-a7ab-f8d356d3e21a",
+        "phrase": "xd 獎狀"
+    },
+    {
+        "uuid": "173b916b-d39e-457e-92d8-bf460c1789a7",
+        "phrase": "獎牌 xd"
+    },
+    {
+        "uuid": "81f1098d-8b80-45f6-8b2e-9d5ca7a9e626",
+        "phrase": "主題 plugin"
+    },
+    {
+        "uuid": "b5b38900-fce0-418f-8e9a-81cee07090ec",
+        "phrase": "config 主題"
+    },
+    {
+        "uuid": "94162a61-abed-4c96-ae67-0ceb632a60ff",
+        "phrase": "安裝 themes"
+    },
+    {
+        "uuid": "8ab5f13b-563a-4313-8d58-66caf95ffff9",
+        "phrase": "theme 資料夾"
+    },
+    {
+        "uuid": "b3784ee5-fae6-4b92-9869-68a391b0bdc5",
+        "phrase": "主題 安裝"
+    },
+    {
+        "uuid": "c95b5a20-d639-48cf-9412-8b7a3394df32",
+        "phrase": "新加坡 簽證"
+    },
+    {
+        "uuid": "6747bc94-72c0-4a6a-8919-c8fda3dfe7d5",
+        "phrase": "新加坡 入境"
+    },
+    {
+        "uuid": "132701a9-7c93-434c-9915-23dbc24ed38b",
+        "phrase": "到期 新加坡"
+    },
+    {
+        "uuid": "474c4b34-4e5a-46d4-a3eb-b348ebc5cebc",
+        "phrase": "新加坡"
+    },
+    {
+        "uuid": "4bbdd21b-c07a-40b2-ae38-c56ebfb2d632",
+        "phrase": "新加坡 人力"
+    },
+    {
+        "uuid": "76fe1765-6527-437d-8a5a-b0f09f085c80",
+        "phrase": "pq schema"
+    },
+    {
+        "uuid": "c0a57798-855f-4394-8ae9-d8aec4bd78c3",
+        "phrase": "資料庫 內容"
+    },
+    {
+        "uuid": "edf51e31-51f9-406a-a23e-5e791c3befce",
+        "phrase": "資料庫"
+    },
+    {
+        "uuid": "fe79a51f-6878-44db-82bc-8993346e01d9",
+        "phrase": "schema"
+    },
+    {
+        "uuid": "9fd29f78-6132-47e4-a46d-0fbfc5bec683",
+        "phrase": "error 放入"
+    },
+    {
+        "uuid": "cde9ddb7-b197-480e-bd70-695442648fa9",
+        "phrase": "submit 改成"
+    },
+    {
+        "uuid": "becdf9d6-a0b4-446b-9098-952ab3a455cc",
+        "phrase": "form submit"
+    },
+    {
+        "uuid": "38d562d6-f2e3-48de-94b6-70d3cde690dd",
+        "phrase": "submit"
+    },
+    {
+        "uuid": "9d33e4b4-eaeb-4df1-9ae7-5a9420f4afd7",
+        "phrase": "分享 template"
+    },
+    {
+        "uuid": "1b53eb38-008f-458b-aa83-d0b9d0d51f2a",
+        "phrase": "form"
+    },
+    {
+        "uuid": "5485fc6e-824b-4297-89e9-7d7ae82c6774",
+        "phrase": "grid optimizer"
+    },
+    {
+        "uuid": "0245b516-789b-4e72-a1e7-c0935355f852",
+        "phrase": "gridbot 更新"
+    },
+    {
+        "uuid": "a4cf09d7-9ae3-4bc7-bbc7-7c51873114b7",
+        "phrase": "總資產 gridbot"
+    },
+    {
+        "uuid": "57783fc8-f902-4f69-ad0c-e5fc194f4b9f",
+        "phrase": "optimizer 原本"
+    },
+    {
+        "uuid": "1f0560e0-57d8-4ce2-95ef-b827eec6f639",
+        "phrase": "00662 gridbot"
+    },
+    {
+        "uuid": "74846267-ff32-4081-a528-e6b82391f8dc",
+        "phrase": "方法 web"
+    },
+    {
+        "uuid": "f98c8e04-dbc9-4c67-901d-4701b65b9243",
+        "phrase": "http method"
+    },
+    {
+        "uuid": "949676ea-2e51-4549-9d7f-67b4e1998476",
+        "phrase": "swagger web"
+    },
+    {
+        "uuid": "0f6b563f-f679-4fad-a2b3-14003a3fb9ac",
+        "phrase": "web api"
+    },
+    {
+        "uuid": "89da0206-00ec-40e5-8dd0-d077d8b57ed7",
+        "phrase": "web 介面"
+    },
+    {
+        "uuid": "4176a4b3-3247-4453-bd56-3b78905a147b",
+        "phrase": "資料 重疊"
+    },
+    {
+        "uuid": "7b536985-730a-411a-9641-06f39115a95c",
+        "phrase": "數據 表格"
+    },
+    {
+        "uuid": "fc45dfd8-31c2-4839-8611-4539d94ef02c",
+        "phrase": "查詢 機制"
+    },
+    {
+        "uuid": "52fbe63e-3bb5-46fa-b3f6-379dac8de43e",
+        "phrase": "search action"
+    },
+    {
+        "uuid": "c0ae9f52-537d-410f-b17e-64270425a0f7",
+        "phrase": "表格 陳列"
+    },
+    {
+        "uuid": "97437f36-17de-4d11-b4e8-2c638991cb22",
+        "phrase": "news edit"
+    },
+    {
+        "uuid": "b2dde2f3-fe77-4cba-acc2-e2fba03b776d",
+        "phrase": "刪除 編輯"
+    },
+    {
+        "uuid": "6cc3c172-75fc-4ef3-b32f-062242e11804",
+        "phrase": "頁面 刪除"
+    },
+    {
+        "uuid": "c950b00b-7ce2-4e9c-96e6-09de68e4d3e1",
+        "phrase": "edit html"
+    },
+    {
+        "uuid": "7c5f465c-8baa-4ed0-b9ce-cc28e1cc8080",
+        "phrase": "編輯 頁面"
+    },
+    {
+        "uuid": "45cd15d3-ceb5-41dc-a325-e6a1afe48e01",
+        "phrase": "newstypename"
+    },
+    {
+        "uuid": "856e1233-81cc-4851-8a1c-1b5cb330e25e",
+        "phrase": "替換成 newstypename"
+    },
+    {
+        "uuid": "d31ac672-adb6-46bc-81d3-78033bc11458",
+        "phrase": "newsinfo model"
+    },
+    {
+        "uuid": "fb306c72-c364-4511-8d62-325af0dbb2c1",
+        "phrase": "newstypename 本篇"
+    },
+    {
+        "uuid": "8dcc6459-6373-4f76-b856-7e9e2d1e5878",
+        "phrase": "newscontroller 擴充"
+    },
+    {
+        "uuid": "236fc716-558a-4869-b335-d2e306946a0d",
+        "phrase": "完善 newscontroller"
+    },
+    {
+        "uuid": "64160955-7088-4b86-a7d4-aa5f335ff177",
+        "phrase": "newscontroller"
+    },
+    {
+        "uuid": "4c430aeb-4ada-4b39-874f-dcef4a9b6a45",
+        "phrase": "newscontroller 新增"
+    },
+    {
+        "uuid": "bf952506-354b-4b64-9f4c-6a27000eb75d",
+        "phrase": "新建 newscontroller"
+    },
+    {
+        "uuid": "426973db-22ee-401b-a4c1-37f6347bd5e1",
+        "phrase": "newscontroller wwwroot"
+    },
+    {
+        "uuid": "74c95a2f-35b6-4ff9-bdf4-74ab5ba7765b",
+        "phrase": "usecallback 範例"
+    },
+    {
+        "uuid": "3b82752e-d896-4d4a-b470-e094d87e3e35",
+        "phrase": "例子 useeffect"
+    },
+    {
+        "uuid": "c387cd84-bf41-42e5-86f6-c1ff0944bb0b",
+        "phrase": "前言 usecallback"
+    },
+    {
+        "uuid": "e0475f02-91fa-4873-b339-0bad67a10562",
+        "phrase": "物件 useeffect"
+    },
+    {
+        "uuid": "e4b69a88-9036-4b1c-a6cd-aee94f563e9d",
+        "phrase": "useeffect 當作"
+    },
+    {
+        "uuid": "9fb02f02-12b3-43db-8c72-409a8853de9a",
+        "phrase": "美股 大跌"
+    },
+    {
+        "uuid": "ce344d1b-f2dc-4ebc-be95-0864507b4dbc",
+        "phrase": "大跌 跌幅"
+    },
+    {
+        "uuid": "d8e31ebd-33a3-4427-a4f0-69b0df4de580",
+        "phrase": "大盤 跌幅"
+    },
+    {
+        "uuid": "11d9ea1a-a285-49a0-b794-c1cb23d552db",
+        "phrase": "理由 大跌"
+    },
+    {
+        "uuid": "a3dfcb6f-e9dd-4c8c-a2d8-ac83bed1ba17",
+        "phrase": "導致 大跌"
+    },
+    {
+        "uuid": "15a2e8e6-0ebf-4b0f-ac7d-4459af13b56e",
+        "phrase": "軟體 發生"
+    },
+    {
+        "uuid": "fab1c1f7-499e-4215-8710-c1f15b9484fd",
+        "phrase": "軟體 專案"
+    },
+    {
+        "uuid": "97c75eab-8026-4cca-8ea6-29ed1bf24549",
+        "phrase": "software development"
+    },
+    {
+        "uuid": "309c182e-9078-4efc-b3b0-8e63c62110f4",
+        "phrase": "工作 軟體"
+    },
+    {
+        "uuid": "dbadb90a-e92f-4100-84f4-2184d82e1eb3",
+        "phrase": "跳進 software"
+    },
+    {
+        "uuid": "bc1a9b6d-7ba2-4a25-8917-9a4d2c7f3947",
+        "phrase": "機器人 現金"
+    },
+    {
+        "uuid": "b90f3f03-8dd1-4afd-8ab8-e431b0bee4c4",
+        "phrase": "計算 機器人"
+    },
+    {
+        "uuid": "c1021d94-dca6-4452-9745-d5948c51f1d1",
+        "phrase": "機器人 money"
+    },
+    {
+        "uuid": "f59793ee-64c6-4006-b54b-45e5dc0c4131",
+        "phrase": "機器人 總資產"
+    },
+    {
+        "uuid": "e6c299ff-d470-4a10-b98e-55d68272e47a",
+        "phrase": "機器人 交易"
+    },
+    {
+        "uuid": "b2c3d6c8-5f71-4df6-945e-bf4c005c0277",
+        "phrase": "虛浮 去蕪存菁"
+    },
+    {
+        "uuid": "f1dd5142-6dc6-4752-92c0-e59d06245ca2",
+        "phrase": "津津樂道"
+    },
+    {
+        "uuid": "bc746772-a9fb-4e11-a74a-613fa117fa93",
+        "phrase": "去蕪存菁"
+    },
+    {
+        "uuid": "19e159bc-43c7-4f02-bd43-1a7aa273d998",
+        "phrase": "golang 執行期"
+    },
+    {
+        "uuid": "3b428f26-94c9-4d72-b60a-7a3cd5f7cf14",
+        "phrase": "最末 宣告"
+    },
+    {
+        "uuid": "95347e12-f2ab-4e38-ba93-588e1e1d9db2",
+        "phrase": "技術 分類"
+    },
+    {
+        "uuid": "d2516fd6-f489-4d76-aef5-a71914530eb4",
+        "phrase": "法規 網路"
+    },
+    {
+        "uuid": "3e0b548a-d7e4-4669-ab5a-056770077fb4",
+        "phrase": "分析 網路"
+    },
+    {
+        "uuid": "a2d7016d-b93b-4893-8d43-82766d529a59",
+        "phrase": "技術人員 法規"
+    },
+    {
+        "uuid": "9dd08714-94c4-476b-b86f-bb14e07b6b77",
+        "phrase": "網路 設備"
+    },
+    {
+        "uuid": "6fabecff-60f7-4c27-90a7-9158af6cec1a",
+        "phrase": "cookie access"
+    },
+    {
+        "uuid": "226b5df4-9ed9-4f2e-b583-03b2896ce8ea",
+        "phrase": "cookie set"
+    },
+    {
+        "uuid": "209927d1-1503-4e4f-b55d-5adc0bea4d5e",
+        "phrase": "content type"
+    },
+    {
+        "uuid": "e374cf17-0439-45a6-b186-330aa17d8b94",
+        "phrase": "content encoding"
+    },
+    {
+        "uuid": "4b9f2890-fe7b-4f4b-94af-2aa40e7f6080",
+        "phrase": "set cookie"
+    },
+    {
+        "uuid": "97361009-c376-45c0-8b00-e8b5fafe89d0",
+        "phrase": "cache 多久"
+    },
+    {
+        "uuid": "d55aa726-99e2-4c5b-97b9-6124541690a9",
+        "phrase": "response cache"
+    },
+    {
+        "uuid": "33e1c379-cd8c-42d9-ab5c-e9642d074dee",
+        "phrase": "cache"
+    },
+    {
+        "uuid": "4e7e4fa5-7f6f-4bfe-b16c-0219a2b8a487",
+        "phrase": "cache control"
+    },
+    {
+        "uuid": "d246345a-9fa1-4034-8388-43381484338f",
+        "phrase": "hash cache"
+    },
+    {
+        "uuid": "932b204b-5dce-4bce-9f49-035d988b811f",
+        "phrase": "context cancel"
+    },
+    {
+        "uuid": "ce57a167-0f01-4393-b595-1d37ddb280c5",
+        "phrase": "cancel context"
+    },
+    {
+        "uuid": "4e6aa09f-a54a-44b5-b3dd-4b4c293af69a",
+        "phrase": "context 流程"
+    },
+    {
+        "uuid": "459c478c-25da-4916-be55-799d98124d3e",
+        "phrase": "context 常用"
+    },
+    {
+        "uuid": "1a3eca6c-d1d4-49ef-bae5-cd3358559fc5",
+        "phrase": "context 方法"
+    },
+    {
+        "uuid": "c816fe42-ce71-402a-8eba-c9edb4bc59c1",
+        "phrase": "週五 收盤價"
+    },
+    {
+        "uuid": "4831d35a-6a1b-470d-b688-b62a9b0dd379",
+        "phrase": "週五 小跌"
+    },
+    {
+        "uuid": "3af663b0-ec38-4c6b-bece-546b216e7004",
+        "phrase": "收盤價 站上"
+    },
+    {
+        "uuid": "4cafb0c7-2d0d-4f15-91b9-c4fc9b4ab886",
+        "phrase": "台股 盤勢"
+    },
+    {
+        "uuid": "996a1dc4-9bd4-42d1-97fe-6ca5401b616d",
+        "phrase": "會齊漲 齊跌"
+    },
+    {
+        "uuid": "345e3447-3153-41da-9752-0af1545fbef8",
+        "phrase": "github 紀錄"
+    },
+    {
+        "uuid": "1d945d33-2be0-4e17-aa24-745d7d19af0d",
+        "phrase": "github 上傳"
+    },
+    {
+        "uuid": "f5a834ab-be07-4357-b793-b5e3a72836e5",
+        "phrase": "push github"
+    },
+    {
+        "uuid": "ca97b68c-c340-4e4a-b7a4-d472a8d969a7",
+        "phrase": "上班 github"
+    },
+    {
+        "uuid": "937e2cfb-13de-442b-9810-6bf3e1a5f114",
+        "phrase": "github"
+    },
+    {
+        "uuid": "271e6e94-1c4d-42af-aa09-bf680b0f6c1d",
+        "phrase": "安全性 檢測"
+    },
+    {
+        "uuid": "a3959dd8-c156-4a50-8267-e0b4b29acd72",
+        "phrase": "技術 門檻"
+    },
+    {
+        "uuid": "34392b1c-b234-44ac-8319-e86cac392094",
+        "phrase": "滲透 測試"
+    },
+    {
+        "uuid": "523b0fa6-28a2-4e99-98bb-c02646498279",
+        "phrase": "測試 技術"
+    },
+    {
+        "uuid": "ddd399f3-a18d-4dfc-84fd-215f24e4f928",
+        "phrase": "利用 漏洞"
+    },
+    {
+        "uuid": "cfa26c1c-5072-43d0-b146-ee76ff397c0b",
+        "phrase": "賽斷賽 出書"
+    },
+    {
+        "uuid": "6e26cabb-4f76-4422-b914-6311cd171f93",
+        "phrase": "失敗 收場"
+    },
+    {
+        "uuid": "996cccc7-eca4-428d-ab0d-7c2e04f21fa0",
+        "phrase": "出書 失敗"
+    },
+    {
+        "uuid": "7b5b8adb-aac4-4cb5-8e30-5ab411aa64fd",
+        "phrase": "賽斷賽"
+    },
+    {
+        "uuid": "964a4e60-e297-4ae1-a5c9-5b9b53dcc066",
+        "phrase": "失敗 打擊"
+    },
+    {
+        "uuid": "daee0378-53af-46c7-a69e-3174d09c870a",
+        "phrase": "機器人 money"
+    },
+    {
+        "uuid": "3b9b070f-2fb7-41f3-88df-7186fd58dfe5",
+        "phrase": "timeout 10000"
+    },
+    {
+        "uuid": "a6a42ee3-c55b-4582-9f11-4297a6c0ed63",
+        "phrase": "contracts timeout"
+    },
+    {
+        "uuid": "09fea19b-74f3-4099-9cd6-326681af6d4a",
+        "phrase": "機器人 交易"
+    },
+    {
+        "uuid": "c58dde56-c5da-4ffa-aaf4-3415cdff442b",
+        "phrase": "py contracts"
+    },
+    {
+        "uuid": "e09c31e8-966f-4cb8-85e3-536b4eeb5711",
+        "phrase": "文本 替换"
+    },
+    {
+        "uuid": "96d4245b-ff57-4564-b3f6-bc0f9aeb6916",
+        "phrase": "路径 替换"
+    },
+    {
+        "uuid": "ed713e6b-621e-4f79-a852-68de98e5a3ee",
+        "phrase": "路径 代码"
+    },
+    {
+        "uuid": "75ad1cfd-81c3-44a1-ab09-cd7e47cb8586",
+        "phrase": "替换 路径"
+    },
+    {
+        "uuid": "c4a09830-64e3-4c98-882b-2ad00f0e4bf7",
+        "phrase": "匹配 文本"
+    },
+    {
+        "uuid": "7c88d941-1c7d-478a-bf1d-73586dd93a51",
+        "phrase": "router v5"
+    },
+    {
+        "uuid": "7f775305-8f29-42a9-ad83-06bb84ace4dd",
+        "phrase": "v6 router"
+    },
+    {
+        "uuid": "fb5530fe-eae6-4406-9f01-8264a49326fd",
+        "phrase": "修改 v6"
+    },
+    {
+        "uuid": "f0b0994e-a4d5-44e8-948c-83af6e23d391",
+        "phrase": "路由 v5"
+    },
+    {
+        "uuid": "ea0616d3-7ac4-4666-8d95-8d044cf2bc05",
+        "phrase": "v5"
+    },
+    {
+        "uuid": "fbb7c6cc-d017-4990-b347-effb97a5132a",
+        "phrase": "連續 跌破"
+    },
+    {
+        "uuid": "0a08ceda-36a0-4d74-96be-b341670d93d7",
+        "phrase": "盤勢 轉弱"
+    },
+    {
+        "uuid": "dfdcceb2-90d3-42fb-a0d7-9ebfdc50831d",
+        "phrase": "加權 市場"
+    },
+    {
+        "uuid": "fa613b06-95b5-47f5-8209-62e333320bb7",
+        "phrase": "跌破 加權"
+    },
+    {
+        "uuid": "08f2c1de-e18b-448c-ad1f-c3e2efac4eea",
+        "phrase": "加權指數 櫃買"
+    },
+    {
+        "uuid": "e86b03c9-c041-4517-90b9-75cff384a71f",
+        "phrase": "資金 控管"
+    },
+    {
+        "uuid": "accde666-cc76-42a3-980a-aebe146e681e",
+        "phrase": "控管 資金"
+    },
+    {
+        "uuid": "6f50dafb-f4ce-4003-bb2c-825db167e6b0",
+        "phrase": "標的 賠錢"
+    },
+    {
+        "uuid": "e5878735-979e-4dd4-8020-59b329167825",
+        "phrase": "大跌 獲利"
+    },
+    {
+        "uuid": "1b5a857a-957c-4494-b5d2-8f431b9b8a98",
+        "phrase": "抱怨 績效"
+    },
+    {
+        "uuid": "9d948980-b0ba-4b23-a77b-b2440060f9ce",
+        "phrase": "站上 devfest"
+    },
+    {
+        "uuid": "0c546719-6841-4723-9f9c-ea6f2e5231d4",
+        "phrase": "devfest hsinchu"
+    },
+    {
+        "uuid": "ca27ad27-22a3-48c5-9191-7c9f24faa8c5",
+        "phrase": "devfest"
+    },
+    {
+        "uuid": "517bf3e8-372a-42e0-b260-bbf069df2008",
+        "phrase": "devfest 舞台"
+    },
+    {
+        "uuid": "41d5d383-2990-46af-9ebb-a3fac0a9b57c",
+        "phrase": "taichung 週六"
+    },
+    {
+        "uuid": "4b5e97fc-7500-4414-a304-d2d05d64b738",
+        "phrase": "測試 mrequest"
+    },
+    {
+        "uuid": "cbc3ad3e-6f13-4769-b73d-a6510cac479f",
+        "phrase": "資料庫 mock"
+    },
+    {
+        "uuid": "2e3960fb-0279-4415-a0cf-a4784b93adaa",
+        "phrase": "mrequest 回傳"
+    },
+    {
+        "uuid": "713c9ab0-1f28-410b-a1f0-8235961d59cb",
+        "phrase": "mrequest 單純"
+    },
+    {
+        "uuid": "f62e6968-ff2e-4b10-812e-3fbd1991199f",
+        "phrase": "這句 sql"
+    },
+    {
+        "uuid": "76849904-9370-47c3-877f-79d85661c3dc",
+        "phrase": "改成 targetcapital"
+    },
+    {
+        "uuid": "1fe2ba52-864b-4c4e-838e-c3f10e8c8e54",
+        "phrase": "targetcapital 變數"
+    },
+    {
+        "uuid": "90bd5807-6e07-4337-8918-08f6a94eb721",
+        "phrase": "錢匯 測試"
+    },
+    {
+        "uuid": "4c1e6150-0dcc-4f6b-863d-7043cbc7dcab",
+        "phrase": "裡的 錢匯"
+    },
+    {
+        "uuid": "c5eebaf8-11e3-4ee5-9987-9c9d61b84a8d",
+        "phrase": "帳戶 餘額"
+    },
+    {
+        "uuid": "4e358a53-7a92-4c17-853b-fe3da237b38a",
+        "phrase": "stm32 開發"
+    },
+    {
+        "uuid": "0369f50b-4523-43ba-a36d-d1893a765fdb",
+        "phrase": "開發 stm32cubeide"
+    },
+    {
+        "uuid": "e7a40089-d7f3-49b1-9955-d0fd21c4f52b",
+        "phrase": "ide stm32cubeprogrammer"
+    },
+    {
+        "uuid": "318a588b-e0de-44ac-aae4-82c594764290",
+        "phrase": "stm32cubeprogrammer"
+    },
+    {
+        "uuid": "9168810b-d5f4-4674-86dc-5e8dc94a2ad8",
+        "phrase": "介紹 stm32cube"
+    },
+    {
+        "uuid": "3b4e8923-e4ee-4e56-bb49-a6f0c9838622",
+        "phrase": "stm32 生態"
+    },
+    {
+        "uuid": "23a2bd50-92dc-4c51-80b1-841e5b1c7353",
+        "phrase": "stm32cubeide 開發"
+    },
+    {
+        "uuid": "a75434ae-fc7e-4abf-981a-85268e7cdd7a",
+        "phrase": "stm32cubeide 感想"
+    },
+    {
+        "uuid": "031bbc03-caca-4e22-b1ed-c4816c8ff5bb",
+        "phrase": "stm32cubeide 包含"
+    },
+    {
+        "uuid": "0102c4d0-d4b4-4ffc-9d6f-0c9a786c8a66",
+        "phrase": "stm32cube"
+    },
+    {
+        "uuid": "28fae34b-f006-4c09-a5ba-216c47c51321",
+        "phrase": "測試 框架"
+    },
+    {
+        "uuid": "3bad931d-15f0-43e3-bd65-69260f5784a2",
+        "phrase": "測試 程式"
+    },
+    {
+        "uuid": "60cf14c4-a1be-4dec-8fa0-dc4c5e62c21e",
+        "phrase": "程式 測試"
+    },
+    {
+        "uuid": "4eb7c67a-af15-4f02-9508-fe8247eafa65",
+        "phrase": "測試 套件"
+    },
+    {
+        "uuid": "cbf204e1-53a8-4054-a659-74f7edc48d70",
+        "phrase": "套件 測試"
+    },
+    {
+        "uuid": "bc2a5d95-2c4f-42dc-9d0e-4ad1ca223103",
+        "phrase": "inference yolo"
+    },
+    {
+        "uuid": "b82e11ff-73b2-41cc-ac01-09cc20395aaf",
+        "phrase": "yolo 推估"
+    },
+    {
+        "uuid": "2f96156f-a069-44b9-8f68-61efe897d463",
+        "phrase": "yolo 辨識"
+    },
+    {
+        "uuid": "65f5b9f7-137a-4a45-9d8b-20b937effba2",
+        "phrase": "yolo 模型"
+    },
+    {
+        "uuid": "c41abfa4-bae0-42ce-8bb9-445f68cea399",
+        "phrase": "函數 yolo"
+    },
+    {
+        "uuid": "c096387c-efb7-4a9e-a3f1-3283ac1a1b38",
+        "phrase": "建立 opencv"
+    },
+    {
+        "uuid": "8b7512a8-2853-48e0-b6a3-388d3577fbbe",
+        "phrase": "opencv layer"
+    },
+    {
+        "uuid": "25eb8640-6de2-43a8-9dc8-bdd1d4e1f729",
+        "phrase": "python opencv"
+    },
+    {
+        "uuid": "4916871c-73ad-4540-9e51-63ef9920541e",
+        "phrase": "opencv 影像"
+    },
+    {
+        "uuid": "ec0a2cfe-7f77-45c2-aa29-11632c0dd6f0",
+        "phrase": "建立 opencv45"
+    },
+    {
+        "uuid": "1d777ca0-e718-4c78-8757-7ee0a6418e49",
+        "phrase": "amazon sagemaker"
+    },
+    {
+        "uuid": "ad582c7c-61bc-4d29-81b2-529021c88347",
+        "phrase": "sagemaker amazon"
+    },
+    {
+        "uuid": "b28afef3-1f57-41cb-bb91-e3f2f92aad60",
+        "phrase": "lambda amazon"
+    },
+    {
+        "uuid": "9b3f39cc-f30d-40a1-b91e-971d1c8a76b0",
+        "phrase": "執行 amazon"
+    },
+    {
+        "uuid": "a6ceb406-0b4e-4d9a-9c85-52427bd709f7",
+        "phrase": "建立 amazon"
+    },
+    {
+        "uuid": "c76eb962-b638-45db-af2a-6663daa6a673",
+        "phrase": "amazon sagemaker"
+    },
+    {
+        "uuid": "29efb2df-72aa-4ecd-9a78-bee45d885dff",
+        "phrase": "參考資料 amazon"
+    },
+    {
+        "uuid": "e905d6c6-5a35-41dc-83f0-a804aec58e86",
+        "phrase": "35 amazon"
+    },
+    {
+        "uuid": "65a65cbc-db3c-43e6-957f-5885722ddc24",
+        "phrase": "體驗 amazon"
+    },
+    {
+        "uuid": "e85b7716-6c79-4aed-b162-3a8ccba341b8",
+        "phrase": "提供 人工智慧"
+    },
+    {
+        "uuid": "d1f5caa7-0fb9-4733-a098-da30a360391d",
+        "phrase": "語言"
+    },
+    {
+        "uuid": "4aad950c-0b61-4fa1-9cf9-a1203019d517",
+        "phrase": "公主 音樂"
+    },
+    {
+        "uuid": "db0015c2-d54b-409d-96e7-3c9bb844c597",
+        "phrase": "動漫 86"
+    },
+    {
+        "uuid": "6b9dbf95-50e8-42bb-bb94-4e1da11bf6b0",
+        "phrase": "語言 障礙"
+    },
+    {
+        "uuid": "115079e7-cba5-4cb9-8d23-b7f40a4e5ca6",
+        "phrase": "礙於 語言"
+    },
+    {
+        "uuid": "7ce4a389-7dc0-4062-b26d-bd8eedef35c6",
+        "phrase": "log 取代"
+    },
+    {
+        "uuid": "e317a2d7-fbee-4b03-b715-014f125607eb",
+        "phrase": "文字 log"
+    },
+    {
+        "uuid": "8b95fbf6-641b-40f2-95c1-1c7955f184a5",
+        "phrase": "print 解決"
+    },
+    {
+        "uuid": "1fc60589-88b0-46d1-b051-d14aac2aa726",
+        "phrase": "取代 print"
+    },
+    {
+        "uuid": "9fcc8781-fa15-469b-9d22-8bd648bf86d5",
+        "phrase": "print"
+    },
+    {
+        "uuid": "6b2cab27-eadb-4ece-9be5-37041725ea2c",
+        "phrase": "yolo 辨識"
+    },
+    {
+        "uuid": "e432362b-bce6-434f-b4cd-3d58dfdc8610",
+        "phrase": "參考資料 yolo"
+    },
+    {
+        "uuid": "5eea16b5-a34f-44b8-815a-4ee40c76ff3b",
+        "phrase": "編譯 yolov3"
+    },
+    {
+        "uuid": "307cade8-350f-4281-991a-40594e17457f",
+        "phrase": "yolov3"
+    },
+    {
+        "uuid": "398e5071-0fb7-4500-aa66-a42680d77b98",
+        "phrase": "函數 yolo"
+    },
+    {
+        "uuid": "23c2dd30-77d8-4301-894c-f01aad30dc91",
+        "phrase": "程式碼 這類"
+    },
+    {
+        "uuid": "5be1ec27-63d3-4a02-8993-5c293f3e4b25",
+        "phrase": "程式 連線"
+    },
+    {
+        "uuid": "c16ef775-ae87-486d-8829-5ba7399fc7d2",
+        "phrase": "放進 程式碼"
+    },
+    {
+        "uuid": "26fa8c17-3d73-47fc-84d6-6e5e8a488a59",
+        "phrase": "內容 資料庫"
+    },
+    {
+        "uuid": "52e00f7b-15c4-4f75-9611-a34045a86b17",
+        "phrase": "程式碼 並寫"
+    },
+    {
+        "uuid": "fb8211af-0b76-401d-b356-1bae4f37dfda",
+        "phrase": "app apple"
+    },
+    {
+        "uuid": "4ee89007-0142-4c23-ae5a-016eace2d5de",
+        "phrase": "id apple"
+    },
+    {
+        "uuid": "e8cfed3e-a625-451e-a30f-852743b35e79",
+        "phrase": "apple id"
+    },
+    {
+        "uuid": "75804e9a-522a-41ef-ab48-f3f2b8a98633",
+        "phrase": "本來 app"
+    },
+    {
+        "uuid": "af8a8793-99bf-4b01-9076-ce16d7315c38",
+        "phrase": "apple 官網"
+    },
+    {
+        "uuid": "6aa81ff0-51d6-425d-b664-651c444db508",
+        "phrase": "nano 腳位"
+    },
+    {
+        "uuid": "2be061e4-a1d8-4837-9076-5fe877aac1b2",
+        "phrase": "腳位 程式"
+    },
+    {
+        "uuid": "67a28542-521f-4dfc-80cd-6221570590b9",
+        "phrase": "腳位 板子"
+    },
+    {
+        "uuid": "082008d7-7fa4-49f9-97a8-74f168b3fe46",
+        "phrase": "d8 腳位"
+    },
+    {
+        "uuid": "3c8598a7-f34e-4a02-85cf-76cf1ca13a5a",
+        "phrase": "參考 腳位"
+    },
+    {
+        "uuid": "ae58c4e2-08d1-40c4-860d-0660e50871d7",
+        "phrase": "app 當中"
+    },
+    {
+        "uuid": "f9f39764-068e-44e6-9238-1c214e2129f6",
+        "phrase": "當中 app"
+    },
+    {
+        "uuid": "e761facb-e26f-4cad-9aab-e105952ae94d",
+        "phrase": "應用程式 ios"
+    },
+    {
+        "uuid": "e92fcdc4-cb5f-41eb-80da-bb3a38e37a41",
+        "phrase": "app 開發"
+    },
+    {
+        "uuid": "863d1e15-1f1a-42da-b8bd-e4803957a73c",
+        "phrase": "app maui"
+    },
+    {
+        "uuid": "10d123ac-743f-4e0c-9c76-3feb62acdc89",
+        "phrase": "hexo server"
+    },
+    {
+        "uuid": "9ed0b18e-4a64-4535-be19-4826ddda8341",
+        "phrase": "hexo 發佈"
+    },
+    {
+        "uuid": "991f5088-5f5c-4f9a-be3c-608480b0f111",
+        "phrase": "hexo config"
+    },
+    {
+        "uuid": "626ed221-0824-4e30-90f7-1a5f4f9db598",
+        "phrase": "簡介 hexo"
+    },
+    {
+        "uuid": "361034e8-9bc7-4fec-91e3-6409bb3489e3",
+        "phrase": "修改 hexo"
+    },
+    {
+        "uuid": "63689bf4-5ac6-4862-94bc-d42988c2fee6",
+        "phrase": "訓練 yolov4"
+    },
+    {
+        "uuid": "363c22ca-75f2-48e2-8a9a-9e52b02ac634",
+        "phrase": "訓練樣本 數量"
+    },
+    {
+        "uuid": "cd6af72f-c420-42e0-b9bc-c30af267e1b7",
+        "phrase": "gpu 訓練"
+    },
+    {
+        "uuid": "2764fdeb-4b06-4c85-985d-bb5e158c7be7",
+        "phrase": "訓練 樣本數"
+    },
+    {
+        "uuid": "16d5eff0-a7aa-4bb5-8ce0-bdc53b88317c",
+        "phrase": "訓練 訓練樣本"
+    },
+    {
+        "uuid": "8aa40779-710f-4522-acc1-4f0baa577241",
+        "phrase": "手機遊戲 build"
+    },
+    {
+        "uuid": "2486dc51-fda2-4c32-ba8b-37361dbb37fd",
+        "phrase": "unity 軟體"
+    },
+    {
+        "uuid": "60c39c61-e2b9-4fc7-8498-2c280a1af714",
+        "phrase": "android build"
+    },
+    {
+        "uuid": "35f47504-b1f5-4f42-989a-c40b61f744f4",
+        "phrase": "安裝 unity"
+    },
+    {
+        "uuid": "727ac499-7eac-447e-b093-c2072e2c63b0",
+        "phrase": "project mac"
+    },
+    {
+        "uuid": "fa0faac3-c2a9-493e-96d1-1925ad6f6b0d",
+        "phrase": "mac 雙系統"
+    },
+    {
+        "uuid": "0334fc33-8088-42bd-9d36-4aefd466f4f3",
+        "phrase": "本來 mac"
+    },
+    {
+        "uuid": "66d35a8c-a364-45ec-b7f0-51508de975a2",
+        "phrase": "mac"
+    },
+    {
+        "uuid": "c35a77e9-65c3-4ac5-9270-f5b046fc6854",
+        "phrase": "先說 mac"
+    },
+    {
+        "uuid": "8cf027ed-e686-4664-b870-002b866be2a4",
+        "phrase": "mac os"
+    },
+    {
+        "uuid": "c0f05a27-9a85-438e-aa3d-e6133b11e395",
+        "phrase": "list 順序"
+    },
+    {
+        "uuid": "5744f9cb-1bcd-4925-93e1-7cdc433c73f6",
+        "phrase": "順序 preorder"
+    },
+    {
+        "uuid": "e018f8cb-bc7e-491b-9882-9a53f23fc262",
+        "phrase": "preorder 順序"
+    },
+    {
+        "uuid": "de4c7cdd-4c37-448e-8ab7-cd3d70e41e17",
+        "phrase": "preorder inorder"
+    },
+    {
+        "uuid": "7133c2ae-1419-4e6d-b59b-889c14ccbe0f",
+        "phrase": "順序 cout"
+    },
+    {
+        "uuid": "514b1ce7-bcd4-4d7d-aa9e-af25fe32733b",
+        "phrase": "夠不夠 所學"
+    },
+    {
+        "uuid": "5e48236a-41c7-42d3-af45-9439dcf796b7",
+        "phrase": "學習 麻煩"
+    },
+    {
+        "uuid": "e375492a-aae8-4833-b574-8a33c40415da",
+        "phrase": "時間 期間"
+    },
+    {
+        "uuid": "af8c2a63-ff5e-45f3-ae29-85f13cb76834",
+        "phrase": "期間 懷疑"
+    },
+    {
+        "uuid": "a138f7de-de7f-49fa-9ac0-8440d5a95db9",
+        "phrase": "期間"
+    },
+    {
+        "uuid": "eb2fcded-649c-41e1-b355-591e8bd87339",
+        "phrase": "接上 postgresql"
+    },
+    {
+        "uuid": "8d2f8236-b531-471d-adcf-57307706d8d8",
+        "phrase": "postgresql 過程"
+    },
+    {
+        "uuid": "ef1aadcd-0e1e-4a1b-9766-f6b77fdd7706",
+        "phrase": "內容 log"
+    },
+    {
+        "uuid": "3637ce7b-1c65-4485-a8a6-f5e4e5310675",
+        "phrase": "輸出 log"
+    },
+    {
+        "uuid": "7199a783-fbb7-4676-b903-7c1473a9521c",
+        "phrase": "postgresql"
+    },
+    {
+        "uuid": "8e47471a-1310-496e-a3d4-136bbb2e1cef",
+        "phrase": "agile 面臨"
+    },
+    {
+        "uuid": "f3589a44-8b95-4994-940b-8ca97a27c4fc",
+        "phrase": "開發人員 腦補"
+    },
+    {
+        "uuid": "d820365b-eefd-4997-8712-80c78a493269",
+        "phrase": "規劃者 協作"
+    },
+    {
+        "uuid": "f0192dfc-cef5-4c6c-b483-86584d08b5d9",
+        "phrase": "流程 雷同"
+    },
+    {
+        "uuid": "19530139-25ed-4be3-8bc2-236c25e33b42",
+        "phrase": "敏捷 開發"
+    },
+    {
+        "uuid": "b264fa84-3e32-41d4-8946-ddf8c2846f5e",
+        "phrase": "瀏覽器 關閉"
+    },
+    {
+        "uuid": "48a2cd97-432a-4388-9eab-aab9cb21c1a8",
+        "phrase": "阻止 瀏覽器"
+    },
+    {
+        "uuid": "5fbfad01-81bb-417b-ba8d-4c1530c5a22d",
+        "phrase": "關閉 瀏覽器"
+    },
+    {
+        "uuid": "271eb0bc-8cfe-4d2a-98e7-7c450684aed7",
+        "phrase": "瀏覽器 發出"
+    },
+    {
+        "uuid": "ec73fc09-d1f7-4377-8d78-57b1cda7ecad",
+        "phrase": "瀏覽器"
+    },
+    {
+        "uuid": "30f74976-6111-4926-ae9f-5385f80db8dc",
+        "phrase": "感覺 著樹"
+    },
+    {
+        "uuid": "4be67104-c101-4c26-b8d9-b54bd1672ad5",
+        "phrase": "著樹 感覺"
+    },
+    {
+        "uuid": "cfd69e85-8098-4346-9912-cac3cbcc2d3b",
+        "phrase": "思路 反轉"
+    },
+    {
+        "uuid": "8b76b010-59a6-46c5-bfbc-cff99aef7faa",
+        "phrase": "著樹"
+    },
+    {
+        "uuid": "e0c3dc29-2d23-4953-b1e6-8f1d0b8f3e00",
+        "phrase": "preorder 這棵樹"
+    },
+    {
+        "uuid": "051179fb-81ff-44ac-b81e-d3ebf2414f70",
+        "phrase": "作業系統 切換"
+    },
+    {
+        "uuid": "5d1cb4f3-29e4-4700-9cd3-e50d35a2c881",
+        "phrase": "作業系統 big"
+    },
+    {
+        "uuid": "ddc14345-3775-4a5d-8ef5-7b98fa4a3602",
+        "phrase": "升級 作業系統"
+    },
+    {
+        "uuid": "9d0184ca-ff6f-4dca-97b6-653421ad47bb",
+        "phrase": "硬體"
+    },
+    {
+        "uuid": "4381d6bc-c281-47a3-8f76-95f217b36ae4",
+        "phrase": "兩種 作業系統"
+    },
+    {
+        "uuid": "7cf88ee0-fc0a-4ee9-941e-4b66ab32ea61",
+        "phrase": "交易 機器人"
+    },
+    {
+        "uuid": "a50be129-776a-4806-b513-45fd5e5c3b48",
+        "phrase": "整合 機器人"
+    },
+    {
+        "uuid": "57a3541f-b9ba-4e95-b0e6-7d78fe1c44bb",
+        "phrase": "機器人 記錄"
+    },
+    {
+        "uuid": "3985e09f-98bb-473b-a599-ed623ba629d5",
+        "phrase": "機器人 機器人"
+    },
+    {
+        "uuid": "2ed77d2a-7706-4733-847f-a9b8a2023ebf",
+        "phrase": "機器人 兩支"
+    },
+    {
+        "uuid": "bd3c309a-c247-4eb4-9ef9-fd5ffc61692b",
+        "phrase": "會議 情境"
+    },
+    {
+        "uuid": "024c1f99-83f0-4719-b2f9-d20246337a46",
+        "phrase": "情境 會議"
+    },
+    {
+        "uuid": "17c65000-166a-4e8e-9423-6342c5f7530f",
+        "phrase": "會議 形式"
+    },
+    {
+        "uuid": "f5d44b29-142c-4be0-b1e6-3f13864bd6a4",
+        "phrase": "會議 情況"
+    },
+    {
+        "uuid": "93fe15a3-15cc-4208-8729-6a4307869373",
+        "phrase": "會議 討論"
+    },
+    {
+        "uuid": "5c76569f-dea7-4f46-a260-0c171a7a4fe1",
+        "phrase": "網址 rss"
+    },
+    {
+        "uuid": "fdbcddda-2138-4b29-a5ad-f12254c32a21",
+        "phrase": "rss 閱讀器"
+    },
+    {
+        "uuid": "0195f93f-1705-49ba-8704-227dd86471df",
+        "phrase": "主題 程式碼"
+    },
+    {
+        "uuid": "52c06e8b-6b48-4d4e-a29e-10a1435cba3f",
+        "phrase": "rss"
+    },
+    {
+        "uuid": "ae3831af-e458-47e8-a9d5-eeb4d06e0343",
+        "phrase": "實作 輸入"
+    },
+    {
+        "uuid": "94b48a0e-eec2-41a4-9429-a32901862341",
+        "phrase": "飲料 外帶"
+    },
+    {
+        "uuid": "11eb375c-328d-487c-8e4b-c9e1efbbf115",
+        "phrase": "外帶 飲料"
+    },
+    {
+        "uuid": "60dfadcf-3057-4a00-ab66-c1980288e30d",
+        "phrase": "飲料 杯子"
+    },
+    {
+        "uuid": "645908dc-c418-4c82-b815-96890e12e411",
+        "phrase": "杯子 飲料"
+    },
+    {
+        "uuid": "f54316d2-aa41-45fc-a0dd-7519c70b13b9",
+        "phrase": "飲料"
+    },
+    {
+        "uuid": "b414d142-a6f1-405c-8d7c-ac840bb2b206",
+        "phrase": "昨天 格式"
+    },
+    {
+        "uuid": "35f19719-5b50-4874-a58d-2e100a8f61bf",
+        "phrase": "尾聲 文章"
+    },
+    {
+        "uuid": "c5f0fe00-ce35-4359-93c3-59c487c7e17a",
+        "phrase": "表單 新增"
+    },
+    {
+        "uuid": "32cc2480-b9d6-4e8f-a077-fd8fb95be738",
+        "phrase": "格式 表單"
+    },
+    {
+        "uuid": "37296d66-eb66-4d92-b93f-e12bff47e33c",
+        "phrase": "格式 主題"
+    },
+    {
+        "uuid": "93ccf653-8afb-47e3-a53e-b4fc1e337ada",
+        "phrase": "直覺 hand"
+    },
+    {
+        "uuid": "6ee5575b-fb97-442d-9ddb-4c7bb1f0ad5f",
+        "phrase": "腦中 浮現"
+    },
+    {
+        "uuid": "73260302-e5d3-4656-8e86-67b8b2c9d108",
+        "phrase": "舞蹈 夫人"
+    },
+    {
+        "uuid": "7f89295e-cf37-4616-9631-c1fc5662d2dc",
+        "phrase": "表現"
+    },
+    {
+        "uuid": "3e819177-920d-4736-ae61-7e794517b8e8",
+        "phrase": "警戒 節奏"
+    },
+    {
+        "uuid": "c6edc381-5392-4644-8ac5-b12d58577641",
+        "phrase": "新增 刪除"
+    },
+    {
+        "uuid": "45b1b938-c7bc-4c78-a41f-4005d09c8fc1",
+        "phrase": "刪除 資料"
+    },
+    {
+        "uuid": "1f56f375-4de7-497c-b8af-907f74921b80",
+        "phrase": "尾聲 文章"
+    },
+    {
+        "uuid": "ace9c049-fe09-4837-ade4-c9e857d65908",
+        "phrase": "刪除"
+    },
+    {
+        "uuid": "5e277113-3346-44f9-86f6-9dfdc0d0dda0",
+        "phrase": "程式碼 實測"
+    },
+    {
+        "uuid": "a2214427-a4aa-4844-99c2-c97b3c8ee783",
+        "phrase": "安全性 檢測"
+    },
+    {
+        "uuid": "66ab441d-d508-4fd0-a5cd-96e0de0fb7b0",
+        "phrase": "技術人員 法規"
+    },
+    {
+        "uuid": "d84b3d4e-2797-4a38-801c-c6d1677883bf",
+        "phrase": "防護 開發"
+    },
+    {
+        "uuid": "af88d2b9-26ea-4458-b24d-901b12e21aa6",
+        "phrase": "防護 基準"
+    },
+    {
+        "uuid": "f90057bb-163e-48ba-a214-bdfd5d1c162c",
+        "phrase": "誤判 技術人員"
+    },
+    {
+        "uuid": "caa9ae7a-8fa9-4cfe-9337-5656685aff8c",
+        "phrase": "同步 請求"
+    },
+    {
+        "uuid": "5b57bfee-a3b5-4a44-8145-a15019e97476",
+        "phrase": "請求 上傳"
+    },
+    {
+        "uuid": "6ce90e23-5848-4a3b-bc85-d5e98bf0b05b",
+        "phrase": "主題 程式碼"
+    },
+    {
+        "uuid": "370e9d2c-3c85-485c-8b8e-2c882e823d45",
+        "phrase": "上傳 進度條"
+    },
+    {
+        "uuid": "eba6b686-b57c-4ccb-9f8f-9d0c8ccab8be",
+        "phrase": "上傳"
+    },
+    {
+        "uuid": "efa9eadc-738b-4ff0-b1c9-a4f1630c7c8b",
+        "phrase": "滾動 網頁"
+    },
+    {
+        "uuid": "fb70611b-f302-4ec8-9d82-ca5e8ab6aefe",
+        "phrase": "網頁 自動隱藏"
+    },
+    {
+        "uuid": "b592817c-d89e-48d3-ba0f-fd254beae95a",
+        "phrase": "網頁"
+    },
+    {
+        "uuid": "2ef62db7-e653-4f9f-b367-cc57d0050e3f",
+        "phrase": "自動隱藏 導覽"
+    },
+    {
+        "uuid": "cde47dd3-03b5-4af9-9778-0df03480cb13",
+        "phrase": "主題 樣式"
+    },
+    {
+        "uuid": "714fcfc9-faaf-4739-aee2-f82e3a5ce2db",
+        "phrase": "機會 體現"
+    },
+    {
+        "uuid": "0c04bd97-8023-4619-a1ff-b8a36694d673",
+        "phrase": "機會 願景"
+    },
+    {
+        "uuid": "1a71930e-7955-48c5-b779-106bbe7c4642",
+        "phrase": "才能 機會"
+    },
+    {
+        "uuid": "ea1fb9c4-d3bc-4830-8ba6-a0253a1ca70f",
+        "phrase": "充斥 挑戰"
+    },
+    {
+        "uuid": "d6f749a7-26d9-484e-97a0-b5c514140d90",
+        "phrase": "想要 成果"
     }
 ]
