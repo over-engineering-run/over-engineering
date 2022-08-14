@@ -237,3 +237,6 @@ cython_debug/
 # Meilisearch
 **/meilisearch
 **/data.ms
+
+## NLP
+!nlp/testing/*.db
