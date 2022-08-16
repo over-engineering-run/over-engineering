@@ -4,6 +4,8 @@ import time
 import datetime
 import logging
 
+import argparse
+
 from flask import Flask, request, Response, abort
 from waitress import serve
 import meilisearch as ms
@@ -69,20 +71,20 @@ class MeilisearchAPIServer():
             handler_params={"index": self.ms_docs_index},
             req_methods=["GET"]
         )
-        # self.add_endpoint(
-        #     endpoint="/v1/index/auto-complete",
-        #     endpoint_name="index_keywords",
-        #     handler=self.index,
-        #     handler_params={"index": self.ms_keywords_index},
-        #     req_methods=["POST"]
-        # )
-        # self.add_endpoint(
-        #     endpoint="/v1/search/auto-complete",
-        #     endpoint_name="search_keywords",
-        #     handler=self.search_keywords,
-        #     handler_params={"index": self.ms_keywords_index},
-        #     req_methods=["GET"]
-        # )
+        self.add_endpoint(
+            endpoint="/v1/index/auto-complete",
+            endpoint_name="index_keywords",
+            handler=self.index,
+            handler_params={"index": self.ms_keywords_index},
+            req_methods=["POST"]
+        )
+        self.add_endpoint(
+            endpoint="/v1/search/auto-complete",
+            endpoint_name="search_keywords",
+            handler=self.search_keywords,
+            handler_params={"index": self.ms_keywords_index},
+            req_methods=["GET"]
+        )
 
     def run(self):
         self.app.run(debug=self.debug, port=self.port, host=self.host)
@@ -93,22 +95,25 @@ class MeilisearchAPIServer():
     def index(self, params: dict):
 
         # parse and check request
-        req_data = request.get_json().get("data")
+        req_json = request.get_json()
+        req_data = req_json.get("data")
         if not req_data:
             self.app.logger.error("Missing index request data.")
             return Response(status=500, headers={})
 
         # run index
-        ms_index = params.get('index', None)
+        ms_index = params.get('index') or req_json.get('index')
         if not ms_index:
             return Response(status=500, headers={})
 
         resp = self.ms_client.index(ms_index).add_documents(req_data)
+
         return Response(
             response=json.dumps(resp),
             status=200,
             headers={"Content-Type": "application/json"}
         )
+
 
     def search_docs(self, params: dict):
 
@@ -165,7 +170,7 @@ class MeilisearchAPIServer():
                 'position': i,
                 'title':    raw_hit['title'],
                 'link':     raw_hit['href'],
-                'lastmod':  str_to_unix_time(raw_hit['published_at'], "%Y-%m-%d %H:%M:%S"),
+                'lastmod':  raw_hit['published_at_unix'],
 
                 'about_this_result': {
 
@@ -192,25 +197,100 @@ class MeilisearchAPIServer():
         )
 
 
-def str_to_unix_time(time_str:str, format_str: str):
-    return int(time.mktime(datetime.datetime.strptime(time_str, format_str).timetuple()))
+    def search_keywords(self, params: dict):
 
-def calculte_reading_time():
-    pass
+        # parse and check request
+        req_args_key_set = set(request.args.keys())
+        req_must_key_set = {'q'}
+
+        if (req_must_key_set - req_args_key_set) != set():
+            self.app.logger.error("Missing params {} in keywords search request.".format(
+                req_must_key_set - req_args_key_set
+            ))
+            return Response(status=400, headers={})
+
+        query = request.args.get('q', type=str)
+        _max = request.args.get('max', type=int)
+
+        # meilisearch sdk request
+        ms_request = {
+            'offset': 0,
+            'limit':  _max
+        }
+
+        # run search
+        ms_index = params.get('index', None)
+        if not ms_index:
+            return Response(status=500, headers={})
+
+        raw_resp = self.ms_client.index(ms_index).search(
+            query,
+            opt_params=ms_request
+        )
+        if not raw_resp:
+            self.app.logger.error("Failed to run keywords search request on Meilisearch.")
+            return Response(status=500, headers={})
+
+        # parse raw search response
+        resp = {
+            'query': raw_resp['query'],
+            'result': []
+        }
+
+        mem_set = set()
+        for i, raw_hit in enumerate(raw_resp['hits']):
+
+            k_name = raw_hit['phrase']
+            if k_name in mem_set:
+                continue
+            else:
+                mem_set.add(k_name)
+
+            hit = {
+                "name": k_name,
+                "type": "keywords"
+            }
+            resp['result'].append(hit)
+
+        return Response(
+            response=json.dumps(resp),
+            status=200,
+            headers={"Content-Type": "application/json"}
+        )
 
 
 if __name__ == "__main__":
 
-    logging.basicConfig(encoding='utf-8', level=logging.INFO)
+    # parse args
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--debug', type=bool, default=False)
+    args = parser.parse_args()
 
-    ms_api_server = MeilisearchAPIServer(
-        name="meilisearch_api",
-        host=os.getenv("FLASK_HOST"),
-        port=os.getenv("FLASK_PORT"),
-        debug=False
-    )
-    serve(
-        ms_api_server.app,
-        host=os.getenv("FLASK_HOST"),
-        port=os.getenv("FLASK_PORT"),
-    )
+    # server
+    if args.debug is False:  # production
+
+        logging.basicConfig(encoding='utf-8', level=logging.INFO)
+
+        ms_api_server = MeilisearchAPIServer(
+            name="meilisearch_api",
+            host=os.getenv("FLASK_HOST"),
+            port=os.getenv("FLASK_PORT"),
+            debug=False
+        )
+        serve(
+            ms_api_server.app,
+            host=os.getenv("FLASK_HOST"),
+            port=os.getenv("FLASK_PORT"),
+        )
+
+    else:  # debug
+
+        logging.basicConfig(encoding='utf-8', level=logging.DEBUG)
+
+        ms_api_server = MeilisearchAPIServer(
+            name="meilisearch_api",
+            host=os.getenv("FLASK_HOST"),
+            port=os.getenv("FLASK_PORT"),
+            debug=True
+        )
+        ms_api_server.run()
