@@ -14,7 +14,7 @@ curl -XPOST "$MEILISEARCH_URL/indexes" \
      -H 'Content-Type: application/json' \
      --data-binary '{
          "uid": "'$MEILISEARCH_DOCUMENTS_INDEX'",
-         "primaryKey": "href"
+         "primaryKey": "uuid"
      }'
 
 
@@ -22,7 +22,7 @@ curl -XPOST "$MEILISEARCH_URL/indexes" \
      -H 'Content-Type: application/json' \
      --data-binary '{
          "uid": "'$MEILISEARCH_KEYWORDS_INDEX'",
-         "primaryKey": "keywords"
+         "primaryKey": "uuid"
      }'
 
 

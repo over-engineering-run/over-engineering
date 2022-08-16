@@ -1,5 +1,6 @@
 import os
 import json
+import uuid
 
 import jieba
 from keybert import KeyBERT
@@ -109,6 +110,7 @@ if __name__ == '__main__':
 
         # docs
         doc_search_res_dict = {
+            'uuid':                       str(uuid.uuid4()),
             'href':                       info_dict[k]['href'],
             'title':                      info_dict[k]['title'],
             'raw_hl_content':             info_dict[k]['content_text'],
@@ -134,10 +136,12 @@ if __name__ == '__main__':
         doc_search_res_dict_list.append(doc_search_res_dict)
 
         # keyword phrases
-        keyword_search_res_dict = {
-            'phrases': info_dict[k]['extracted_keywords_phrases'],
-        }
-        keyword_search_res_dict_list.append(keyword_search_res_dict)
+        for kp in info_dict[k]['extracted_keywords_phrases']:
+            keyword_search_res_dict = {
+                'uuid':    str(uuid.uuid4()),
+                'phrase': kp,
+            }
+            keyword_search_res_dict_list.append(keyword_search_res_dict)
 
     # ----- output
 
