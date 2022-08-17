@@ -1,4 +1,4 @@
-FROM debian:stable-slim
+FROM --platform=linux/amd64 debian:stable-slim
 LABEL maintainer="tainvecs@gmail.com"
 
 
@@ -17,9 +17,10 @@ ENV MEILISEARCH_KEYWORDS_INDEX="og_keywords_search"
 # init
 WORKDIR $MEILISEARCH_ROOT
 
+
+# install prerequisite apt apps
 RUN apt-get update && \
-    apt-get install --no-install-recommends -y \
-    wget ca-certificates
+    apt-get install --no-install-recommends -y wget ca-certificates
 
 
 # download meilisearch binary
@@ -27,10 +28,11 @@ RUN wget -O meilisearch "https://github.com/meilisearch/meilisearch/releases/dow
     chmod +x meilisearch
 
 
+# expose port for meilisearch
 expose 7700
 
 
-ENTRYPOINT ["/bin/bash"]
+ENTRYPOINT ["/search_engine/meilisearch"]
 
 
 # Reference
