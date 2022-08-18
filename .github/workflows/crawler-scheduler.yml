@@ -4,15 +4,15 @@ on:
   schedule:
     - cron: '0 0 * * 0'
 
-  workflow_dispatch: 
-    inputs:
-      environment:
-        description: 'Environment to run tests against'
-        type: environment
-        required: true
+  workflow_dispatch: {}
 
 jobs:
-  execute:
-    uses: over-engineering-run/over-engineering/.github/workflows/extract-articles.yml@main
-    secrets: inherit
+  execute-staging:
+    runs-on: ubuntu-latest
+    environment: staging
+    steps:
+      - uses: over-engineering-run/over-engineering/.github/workflows/extract-articles.yml@main
+        env:
+          SUPABASE_API_KEY: ${{ secrets.SUPABASE_API_KEY }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
       
