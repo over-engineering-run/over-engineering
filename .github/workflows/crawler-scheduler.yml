@@ -9,10 +9,10 @@ on:
 jobs:
   execute_staging:
     uses: ./.github/workflows/extract-articles.yml
-    with:
-      environment: staging
+    environment: staging
+    secrets: inherit
 
   execute_production:
     uses: ./.github/workflows/extract-articles.yml
-    with:
-      environment: production
+    environment: production
+    secrets: inherit
