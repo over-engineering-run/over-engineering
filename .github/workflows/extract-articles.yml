@@ -2,12 +2,11 @@ name: Extract Articles
 
 on:
   workflow_call:
-    inputs:
-      secrets:
-        SUPABASE_API_KEY:
-          required: true
-        SUPABASE_URL:
-          required: true
+    secrets:
+      SUPABASE_API_KEY:
+        required: true
+      SUPABASE_URL:
+        required: true
 
 jobs:
   execute:
