@@ -49,6 +49,14 @@ jobs:
 
       - name: 🚀 Execute
         env:
+          FLASK_HOST: ${{ secrets.FLASK_HOST }}
+          FLASK_PORT: ${{ secrets.FLASK_PORT }}
+          FLASK_URL: ${{ secrets.FLASK_URL }}
+          MEILISEARCH_DOCUMENTS_INDEX: ${{ secrets.MEILISEARCH_DOCUMENTS_INDEX }}
+          MEILISEARCH_HOST: ${{ secrets.MEILISEARCH_HOST }}
+          MEILISEARCH_KEYWORDS_INDEX: ${{ secrets.MEILISEARCH_KEYWORDS_INDEX }}
+          MEILISEARCH_PORT: ${{ secrets.MEILISEARCH_PORT }}
+          MEILISEARCH_URL: ${{ secrets.MEILISEARCH_URL }}
           SUPABASE_API_KEY: ${{ secrets.SUPABASE_API_KEY }}
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
         run: |
