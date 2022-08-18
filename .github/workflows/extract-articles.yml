@@ -1,12 +1,7 @@
 name: Extract Articles
 
 on:
-  workflow_call:
-    secrets:
-      SUPABASE_API_KEY:
-        required: true
-      SUPABASE_URL:
-        required: true
+  workflow_call: {}
 
 jobs:
   execute:
@@ -42,8 +37,8 @@ jobs:
 
       - name: 🚀 Execute
         env:
-          SUPABASE_API_KEY: ${{ secrets.SUPABASE_API_KEY }}
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_API_KEY: ${{ env.SUPABASE_API_KEY }}
+          SUPABASE_URL: ${{ env.SUPABASE_URL }}
         run: |
           deno run --allow-all crawler/job.ts \
             --href="https://ithelp.ithome.com.tw/articles?tab=ironman" \
