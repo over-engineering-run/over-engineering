@@ -1,4 +1,4 @@
-name: 🕷️ Extract Action
+name:  Extract Action
 
 runs:
   using: "composite"
