@@ -1,0 +1,24 @@
+name:  Extract Action
+
+runs:
+  using: "composite"
+  steps:
+    - name: 🛑 Cancel Previous Runs
+      uses: styfle/cancel-workflow-action@0.9.1
+
+    - name: ⬇️ Checkout repo
+      uses: actions/checkout@v3
+
+    - name: ⎔ Setup node
+      uses: denoland/setup-deno@v1
+
+    - name: 🚀 Execute
+      env:
+        SUPABASE_API_KEY: ${{ env.SUPABASE_API_KEY }}
+        SUPABASE_URL: ${{ env.SUPABASE_URL }}
+      run: |
+        deno run --allow-all crawler/job.ts \
+          --href="https://ithelp.ithome.com.tw/articles?tab=ironman" \
+          --from="${{ matrix.range.from }}" \
+          --to="${{ matrix.range.to }}"
+
