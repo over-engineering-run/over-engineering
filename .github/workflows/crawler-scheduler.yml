@@ -8,11 +8,14 @@ on:
 
 jobs:
   execute_staging:
-    uses: ./.github/workflows/extract-articles.yml
+    runs-on: ubuntu-latest
     environment: staging
-    secrets: inherit
-
+    steps:
+      - uses: ./.github/workflows/extract-articles.yml
+        
   execute_production:
-    uses: ./.github/workflows/extract-articles.yml
+    runs-on: ubuntu-latest
     environment: production
-    secrets: inherit
+    steps:
+      - uses: ./.github/workflows/extract-articles.yml
+       
