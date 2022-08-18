@@ -32,7 +32,7 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v3
 
-      - uses: ./.github/actions/extract-action
+      - uses: actions/extract-action
         env:
           SUPABASE_API_KEY: ${{ secrets.SUPABASE_API_KEY }}
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
