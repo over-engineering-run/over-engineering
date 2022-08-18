@@ -11,11 +11,23 @@ jobs:
     runs-on: ubuntu-latest
     environment: staging
     steps:
+      - name: 🛑 Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.9.1
+
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v3
+        
       - uses: ./.github/workflows/extract-articles.yml
         
   execute_production:
     runs-on: ubuntu-latest
     environment: production
     steps:
+      - name: 🛑 Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.9.1
+
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v3
+        
       - uses: ./.github/workflows/extract-articles.yml
        
