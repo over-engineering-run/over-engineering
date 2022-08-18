@@ -16,6 +16,7 @@ runs:
       env:
         SUPABASE_API_KEY: ${{ env.SUPABASE_API_KEY }}
         SUPABASE_URL: ${{ env.SUPABASE_URL }}
+      shell: bash
       run: |
         deno run --allow-all crawler/job.ts \
           --href="https://ithelp.ithome.com.tw/articles?tab=ironman" \
