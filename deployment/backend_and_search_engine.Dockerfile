@@ -47,9 +47,11 @@ RUN wget -O meilisearch "https://github.com/meilisearch/meilisearch/releases/dow
     chmod +x meilisearch
 
 
-# expose port for meilisearch
-expose 5000 7700
-# expose 5000
+# expose port for both meilisearch and flask
+# expose 5000 7700
+
+# expose port for flask
+expose 5000
 
 
 # add entrypoint script
