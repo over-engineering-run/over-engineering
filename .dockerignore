@@ -1,0 +1,9 @@
+# ignore everything
+**
+
+!backend/*.py
+!backend/requirements.txt
+
+!search_engine/resources/
+
+!deployment/backend_and_search_engine.entrypoint.sh
