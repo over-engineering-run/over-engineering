@@ -7,7 +7,7 @@ import { parse } from "https://deno.land/std@0.136.0/flags/mod.ts";
 import { extract, fetchDOM, random, delay } from "./lib.ts";
 import { url_string } from "./url.ts";
 
-config({ safe: true, export: true });
+config({ export: true });
 
 const db = createClient(
   // Supabase API URL - env var exported by default when deployed.
