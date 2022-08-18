@@ -1,4 +1,4 @@
-name:  Extract Action
+name: 'extract-action'
 
 runs:
   using: "composite"
