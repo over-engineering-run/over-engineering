@@ -5,13 +5,13 @@ on:
     inputs:
       environment:
         description: 'Environment to run scrape'
-        type: environment
+        type: string
         required: true
   workflow_call:
     inputs:
       environment:
         description: 'Environment to run scrape'
-        type: environment
+        type: string
         required: true
 
 jobs:
