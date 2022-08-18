@@ -10,9 +10,27 @@ jobs:
   execute-staging:
     runs-on: ubuntu-latest
     environment: staging
+    strategy:
+      matrix:
+        range:
+          - { from: 0,    to: 200  }
+          - { from: 200,  to: 400  }
+          - { from: 400,  to: 600  }
+          - { from: 600,  to: 800  }
+          - { from: 800,  to: 1000 }
+          - { from: 1000, to: 1200 }
+          - { from: 1200, to: 1400 }
+          - { from: 1400, to: 1600 }
+          - { from: 1600, to: 1800 }
+          - { from: 1800, to: 2000 }
+          - { from: 2000, to: 2200 }
+          - { from: 2200, to: 2400 }
+          - { from: 2400, to: 2600 }
+          - { from: 2600, to: 2800 }
+          - { from: 2800, to: 2859 }
     steps:
-      - uses: over-engineering-run/over-engineering/.github/workflows/extract-articles.yml@main
+      - uses: ./.github/actions/extract-action.yml@main
         env:
           SUPABASE_API_KEY: ${{ secrets.SUPABASE_API_KEY }}
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-      
+
