@@ -135,7 +135,24 @@ class MeilisearchAPIServer():
         # meilisearch sdk request
         ms_request = {
             'offset': page * limit,
-            'limit':  limit
+            'limit':  limit,
+            'attributesToRetrieve': [
+                'title',
+                'href',
+                'published_at_unix',
+                'author_name',
+                'author_href',
+                'series_name',
+                'series_href',
+                'hashtags',
+                'keywords',
+                'reading_time'
+            ],
+            'attributesToHighlight': ['raw_hl_content'],
+            'highlightPreTag': '<mark>',
+            'highlightPostTag': '</mark>',
+            'attributesToCrop': ['raw_hl_content:100'],
+            'cropMarker': ''
         }
 
         raw_filter = []
@@ -170,6 +187,7 @@ class MeilisearchAPIServer():
                 'position': i,
                 'title':    raw_hit['title'],
                 'link':     raw_hit['href'],
+                'snippet':  raw_hit['_formatted']['raw_hl_content'],
                 'lastmod':  raw_hit['published_at_unix'],
 
                 'about_this_result': {
