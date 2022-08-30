@@ -1,7 +1,7 @@
 app = "over-engineering-backend"
 
 [build]
-  image = "tainvecs/over_engineering-backend:v0.0.1"
+  image = "tainvecs/over_engineering-backend:v0.0.3"
 
 kill_signal = "SIGINT"
 kill_timeout = 5
@@ -18,10 +18,14 @@ processes = []
 
   [[services.ports]]
     handlers = ["http"]
-    port = 5000
+    port = 80
 
   [[services.tcp_checks]]
     grace_period = "1s"
     interval = "15s"
     restart_limit = 0
     timeout = "2s"
+
+# [mounts]
+#   source="ms_data"
+#   destination="/search_engine/data"
