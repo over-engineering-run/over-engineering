@@ -1,10 +1,13 @@
 import os
 import json
+import re
 from typing import Callable
+from collections import Counter
 
 import sqlite3
 from bs4 import BeautifulSoup
 
+import utils
 
 # Preprocessing 1: Load Data from SQL
 def preprocessing_load_data_from_sql(db_path: str, sql_query: str, uid_name: str) -> dict:
@@ -34,7 +37,7 @@ def preprocessing_load_data_from_sql(db_path: str, sql_query: str, uid_name: str
 
 # Preprocessing 2: Extract Content from HTML
 # extract code block and content text from HTML
-def preprocessing_extract_html(info: dict, html: str) -> dict:
+def preprocessing_extract_html(info: dict, html: str, pro_lang_inv_syn_map: dict, pro_lang_rep: re.Pattern) -> dict:
 
     # parse html
     soup = BeautifulSoup(html, features="html.parser")
@@ -46,17 +49,46 @@ def preprocessing_extract_html(info: dict, html: str) -> dict:
         s_img.decompose()
 
     # extract codes from content
-    code_list = []
+    code_info_list = []
+    pro_lang_counter = Counter()
     for s_pre in soup('pre'):
         for s_code in s_pre('code'):
-            code_list.append(s_code.get_text())
+
+            if s_code.attrs.get('class') and len(s_code.attrs.get('class')) > 0:
+                raw_lang_str = s_code.attrs.get('class')[0]
+                lang_str = utils.parse_programming_language_from_code_attr(raw_lang_str, pro_lang_inv_syn_map)
+                pro_lang_counter[lang_str] += 1
+            else:
+                lang_str = 'unknown'
+
+            code_info_list.append(
+                {
+                    'language': lang_str,
+                    'content':  s_code.get_text()
+                }
+            )
             s_code.decompose()
+
+    # extract content text
+    content_text = soup.get_text().strip()
+
+    # extract programming language
+    pro_lang_list = []
+    if len(pro_lang_counter) > 0:
+        pro_lang_list += list(pro_lang_counter.keys())
+    else:
+        pro_lang_list = utils.extract_programming_language_from_content(
+            content_text,
+            pro_lang_rep,
+            pro_lang_inv_syn_map
+        )
 
     # result
     extracted_info = {
         'processed_content_html': str(soup),
-        'content_text':           soup.get_text().strip(),
-        'content_codes':          code_list,
+        'content_text':           content_text,
+        'content_code_info':      code_info_list,
+        'programming_languages':  pro_lang_list
     }
 
     return extracted_info
