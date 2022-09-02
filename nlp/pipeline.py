@@ -51,16 +51,24 @@ if __name__ == '__main__':
         ON a.author_href = u.href
         LEFT JOIN series s
         ON a.series_href = s.href
-        LIMIT 10;
+        LIMIT 100;
     """
 
     # load keyword extraction model
     kw_model = KeyBERT(model="paraphrase-multilingual-MiniLM-L12-v2")
 
+    # load programming language synonym json and build syn_map and inv_syn_map
+    pro_lang_syn_map, pro_lang_inv_syn_map = utils.load_syn_map(
+        os.path.join(nlp_root, "resources/programming_language.json")
+    )
+
+    # build programming language matching regex pattern
+    pro_lang_rep = utils.build_programming_language_matching_regex_pattern(pro_lang_syn_map)
+
 
     # ----- preprocessing pipeline
     # preprocessing_load_data_from_sql(db_path: str, sql_query: str, uid_name: str) -> dict
-    # preprocessing_extract_html(info: dict, html: str) -> dict
+    # preprocessing_extract_html(info: dict, html: str, pro_lang_inv_syn_map: dict, pro_lang_rep: re.Pattern) -> dict
     # preprocessing_content_text(info: dict, content_text: str, stopword_set: set) -> dict
     # preprocessing_keyword_extraction(info: dict, kw_extract_model: Callable, word_seg_processed_content_text: str) -> dict
 
@@ -71,12 +79,14 @@ if __name__ == '__main__':
     # start pipeline
     for info_i, k in enumerate(info_dict):
 
-        print("Preprocessing {} / {} ...".format(info_i, info_dict_n))
+        print("Preprocessing {} / {} ...".format(info_i+1, info_dict_n))
 
         # extract from html
         extracted_info = prepro.preprocessing_extract_html(
             info_dict[k],
-            info_dict[k]['content_html']
+            info_dict[k]['content_html'],
+            pro_lang_inv_syn_map,
+            pro_lang_rep
         )
         info_dict[k].update(extracted_info)
 
@@ -130,7 +140,7 @@ if __name__ == '__main__':
             'series_num':                 info_dict[k]['series_num'],
             'reading_time':               utils.count_chinese_tech_article_reading_time(
                                               info_dict[k]['content_text'],
-                                              info_dict[k]['content_codes']
+                                              info_dict[k]['content_code_info']
                                           )
         }
         doc_search_res_dict_list.append(doc_search_res_dict)
@@ -145,7 +155,11 @@ if __name__ == '__main__':
 
     # ----- output
 
-    # output to local for debug
+    # output nlp preprocessing result file for future reuse
+    with open(os.path.join(nlp_root, "testing/nlp_preprocessing_result_info.json"), 'w') as ofile:
+        ofile.write(json.dumps(info_dict, indent=4, ensure_ascii=False))
+
+    # output to local for meilisearch indexing and debugging
     with open(os.path.join(nlp_root, "testing/testing-meilisearch_docs_indexing.json"), 'w') as ofile:
         ofile.write(json.dumps(doc_search_res_dict_list, indent=4, ensure_ascii=False))
 
