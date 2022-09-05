@@ -240,3 +240,7 @@ cython_debug/
 
 ## NLP
 !nlp/testing/*.db
+
+## Fly.io
+fly-production.toml
+fly-staging.toml
