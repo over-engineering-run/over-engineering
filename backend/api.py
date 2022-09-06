@@ -146,6 +146,8 @@ class APIServer():
         )
 
 
+    # curl -XGET "https://over-engineering-backend-staging.fly.dev/docs/v1/search?q=api&page=0&limit=10" \
+    #      -H "Content-Type: application/json"
     def search_docs(self, params: dict):
 
         # parse and check request
