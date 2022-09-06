@@ -14,7 +14,7 @@ fi
 
 
 # run API server
-python "$BACKEND_ROOT/meilisearch_api.py" &
+python "$BACKEND_ROOT/api.py" &
 
 
 # wait for servers started
@@ -101,3 +101,4 @@ exit $?
 # https://docs.docker.com/config/containers/multi-service_container/
 # https://unix.stackexchange.com/questions/5277/how-do-i-tell-a-script-to-wait-for-a-process-to-start-accepting-requests-on-a-po
 # https://stackoverflow.com/questions/2220301/how-to-evaluate-http-response-codes-from-bash-shell-script
+# https://stackoverflow.com/questions/50471471/how-to-wait-for-response-code-201-via-curl
