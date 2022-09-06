@@ -75,28 +75,28 @@ class APIServer():
 
         # init API
         self.add_endpoint(
-            endpoint="/v1/index",
+            endpoint="/docs/v1/index",
             endpoint_name="index_docs",
             handler=self.index,
             handler_params={"index": self.ms_docs_index},
             req_methods=["POST"]
         )
         self.add_endpoint(
-            endpoint="/v1/search",
+            endpoint="/docs/v1/search",
             endpoint_name="search_docs",
             handler=self.search_docs,
             handler_params={"index": self.ms_docs_index},
             req_methods=["GET"]
         )
         self.add_endpoint(
-            endpoint="/v1/index/auto-complete",
+            endpoint="/docs/v1/index/auto-complete",
             endpoint_name="index_keywords",
             handler=self.index,
             handler_params={"index": self.ms_keywords_index},
             req_methods=["POST"]
         )
         self.add_endpoint(
-            endpoint="/v1/search/auto-complete",
+            endpoint="/docs/v1/search/auto-complete",
             endpoint_name="search_keywords",
             handler=self.search_keywords,
             handler_params={"index": self.ms_keywords_index},
