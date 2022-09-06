@@ -17,7 +17,7 @@ ENV MEILISEARCH_URL="http://$MEILISEARCH_HOST:$MEILISEARCH_PORT"
 ENV MEILI_HTTP_ADDR="$MEILISEARCH_HOST:$MEILISEARCH_PORT"
 ENV MEILI_DB_PATH="$MEILISEARCH_ROOT/data"
 ENV MEILI_LOG_LEVEL="info"
-ENV MEILI_ENV="development"
+# ENV MEILI_ENV="development"
 # ENV MEILI_MASTER_KEY=""
 
 ENV MEILISEARCH_DOCUMENTS_INDEX="og_docs_search"
@@ -52,10 +52,10 @@ RUN wget -O meilisearch "https://github.com/meilisearch/meilisearch/releases/dow
 
 
 # expose port for both meilisearch and flask
-# expose 5000 7700
+expose 5000 7700
 
 # expose port for flask
-expose 5000
+# expose 5000
 
 
 # add entrypoint script
