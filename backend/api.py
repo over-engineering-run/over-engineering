@@ -41,7 +41,6 @@ class APIServer():
         # init supabase
         url = os.getenv("SUPABASE_URL")
         api_key = os.getenv("SUPABASE_API_KEY")
-        articles_table_name = os.getenv("SUPABASE_ARTICLES_TABLE")
 
         if not url:
             self.app.logger.error("Missing env SUPABASE_URL while connecting to Supabase.")
@@ -49,14 +48,10 @@ class APIServer():
         elif not api_key:
             self.app.logger.error("Missing env SUPABASE_API_KEY while connecting to Supabase.")
             abort(500)
-        elif not articles_table_name:
-            self.app.logger.error("Missing env SUPABASE_ARTICLES_TABLE while connecting to Supabase.")
-            abort(500)
         else:
             self.supa_url = url
             self.supa_api_key = api_key
             self.supabase_client = create_client(self.supa_url, self.supa_api_key)
-            self.articles_table_name = articles_table_name
 
         # init meilisearch client
         url = os.getenv("MEILISEARCH_URL")
@@ -111,7 +106,14 @@ class APIServer():
             endpoint="/statistics/v1/prog_lang_count",
             endpoint_name="prog_lang_count",
             handler=self.programming_languages_count,
-            handler_params={"table_name": self.articles_table_name},
+            handler_params={},
+            req_methods=["GET"]
+        )
+        self.add_endpoint(
+            endpoint="/statistics/v1/count_by_genre",
+            endpoint_name="count_by_genre",
+            handler=self.count_by_genre,
+            handler_params={},
             req_methods=["GET"]
         )
 
@@ -305,6 +307,7 @@ class APIServer():
             headers={"Content-Type": "application/json"}
         )
 
+
     # curl -XGET "http://0.0.0.0:5000/statistics/v1/prog_lang_count?top_n=10" \
     #      -H "Content-Type: application/json"
     def programming_languages_count(self, params: dict):
@@ -319,7 +322,7 @@ class APIServer():
             ))
             return Response(status=400, headers={})
 
-        top_n = request.args.get('q', type=int)
+        top_n = request.args.get('top_n', type=int)
 
         # supabase rpc request
         try:
@@ -330,6 +333,46 @@ class APIServer():
 
         return Response(
             response=json.dumps(res_data.data),
+            status=200,
+            headers={"Content-Type": "application/json"}
+        )
+
+
+    # curl -XGET "http://0.0.0.0:5000/statistics/v1/count_by_genre?year=2020" \
+    #      -H "Content-Type: application/json"
+    def count_by_genre(self, params: dict):
+
+        # parse and check request
+        req_args_key_set = set(request.args.keys())
+        req_must_key_set = {'year'}
+
+        if (req_must_key_set - req_args_key_set) != set():
+            self.app.logger.error("Missing params {} in /statistics/v1/count_by_genre request.".format(
+                req_must_key_set - req_args_key_set
+            ))
+            return Response(status=400, headers={})
+
+        try:
+            year = request.args.get('year', type=int)
+        except Exception as e:
+            self.app.logger.error("Failed to parse args for /statistics/v1/prog_lang_count request.")
+            return Response(status=400, headers={})
+
+        # supabase rpc request
+        try:
+            raw_res_data = self.supabase_client.rpc('count_by_genre', {'year': str(year)}).execute()
+        except Exception as e:
+            self.app.logger.error("Failed to run /statistics/v1/prog_lang_count request on Supabase.")
+            return Response(status=500, headers={})
+
+        res_data = []
+        for data in raw_res_data.data:
+            genre = data.get('genre', '').strip()
+            count = data.get('count', 0)
+            res_data.append({'genre': genre, 'count': count})
+
+        return Response(
+            response=json.dumps(res_data),
             status=200,
             headers={"Content-Type": "application/json"}
         )
