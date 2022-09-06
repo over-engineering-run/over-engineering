@@ -8,6 +8,8 @@ import argparse
 
 from flask import Flask, request, Response, abort
 from waitress import serve
+
+from supabase import create_client, Client
 import meilisearch as ms
 
 
@@ -21,7 +23,7 @@ class EndpointAction():
         return self.action(self.action_params)
 
 
-class MeilisearchAPIServer():
+class APIServer():
 
     app = None
     ms_client = None
@@ -35,6 +37,26 @@ class MeilisearchAPIServer():
         self.port = port
         self.debug = debug
         self.app = Flask(name)
+
+        # init supabase
+        url = os.getenv("SUPABASE_URL")
+        api_key = os.getenv("SUPABASE_API_KEY")
+        articles_table_name = os.getenv("SUPABASE_ARTICLES_TABLE")
+
+        if not url:
+            self.app.logger.error("Missing env SUPABASE_URL while connecting to Supabase.")
+            abort(500)
+        elif not api_key:
+            self.app.logger.error("Missing env SUPABASE_API_KEY while connecting to Supabase.")
+            abort(500)
+        elif not articles_table_name:
+            self.app.logger.error("Missing env SUPABASE_ARTICLES_TABLE while connecting to Supabase.")
+            abort(500)
+        else:
+            self.supa_url = url
+            self.supa_api_key = api_key
+            self.supabase_client = create_client(self.supa_url, self.supa_api_key)
+            self.articles_table_name = articles_table_name
 
         # init meilisearch client
         url = os.getenv("MEILISEARCH_URL")
@@ -54,7 +76,7 @@ class MeilisearchAPIServer():
             self.ms_url = url
             self.ms_docs_index = docs_index
             self.ms_keywords_index = keywords_index
-            self.ms_client = ms.Client(url)
+            self.ms_client = ms.Client(self.ms_url)
 
         # init API
         self.add_endpoint(
@@ -83,6 +105,13 @@ class MeilisearchAPIServer():
             endpoint_name="search_keywords",
             handler=self.search_keywords,
             handler_params={"index": self.ms_keywords_index},
+            req_methods=["GET"]
+        )
+        self.add_endpoint(
+            endpoint="/statistics/v1/prog_lang_count",
+            endpoint_name="prog_lang_count",
+            handler=self.programming_languages_count,
+            handler_params={"table_name": self.articles_table_name},
             req_methods=["GET"]
         )
 
@@ -276,6 +305,35 @@ class MeilisearchAPIServer():
             headers={"Content-Type": "application/json"}
         )
 
+    # curl -XGET "http://0.0.0.0:5000/statistics/v1/prog_lang_count?top_n=10" \
+    #      -H "Content-Type: application/json"
+    def programming_languages_count(self, params: dict):
+
+        # parse and check request
+        req_args_key_set = set(request.args.keys())
+        req_must_key_set = {'top_n'}
+
+        if (req_must_key_set - req_args_key_set) != set():
+            self.app.logger.error("Missing params {} in /statistics/v1/prog_lang_count request.".format(
+                req_must_key_set - req_args_key_set
+            ))
+            return Response(status=400, headers={})
+
+        top_n = request.args.get('q', type=int)
+
+        # supabase rpc request
+        try:
+            res_data = self.supabase_client.rpc('prog_lang_count', {'top_n': top_n}).execute()
+        except Exception as e:
+            self.app.logger.error("Failed to run /statistics/v1/prog_lang_count request on Supabase.")
+            return Response(status=500, headers={})
+
+        return Response(
+            response=json.dumps(res_data.data),
+            status=200,
+            headers={"Content-Type": "application/json"}
+        )
+
 
 if __name__ == "__main__":
 
@@ -289,14 +347,14 @@ if __name__ == "__main__":
 
         logging.basicConfig(encoding='utf-8', level=logging.INFO)
 
-        ms_api_server = MeilisearchAPIServer(
-            name="meilisearch_api",
+        api_server = APIServer(
+            name="api",
             host=os.getenv("FLASK_HOST"),
             port=os.getenv("FLASK_PORT"),
             debug=False
         )
         serve(
-            ms_api_server.app,
+            api_server.app,
             host=os.getenv("FLASK_HOST"),
             port=os.getenv("FLASK_PORT"),
         )
@@ -305,10 +363,10 @@ if __name__ == "__main__":
 
         logging.basicConfig(encoding='utf-8', level=logging.DEBUG)
 
-        ms_api_server = MeilisearchAPIServer(
-            name="meilisearch_api",
+        api_server = APIServer(
+            name="api",
             host=os.getenv("FLASK_HOST"),
             port=os.getenv("FLASK_PORT"),
             debug=True
         )
-        ms_api_server.run()
+        api_server.run()
