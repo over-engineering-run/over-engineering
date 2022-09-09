@@ -1,15 +1,17 @@
+"""API Server for Meilisearch and Supabase"""
+
+
 import os
 import json
-import time
-import datetime
 import logging
 
 import argparse
 
 from flask import Flask, request, Response, abort
+from flask.logging import create_logger
 from waitress import serve
 
-from supabase import create_client, Client
+from supabase import create_client
 import meilisearch as ms
 
 
@@ -19,7 +21,7 @@ class EndpointAction():
         self.action = action
         self.action_params = action_params
 
-    def __call__(self, *args, **kwargs):
+    def __call__(self):
         return self.action(self.action_params)
 
 
@@ -37,16 +39,17 @@ class APIServer():
         self.port = port
         self.debug = debug
         self.app = Flask(name)
+        self.logger = create_logger(self.app)
 
         # init supabase
         url = os.getenv("SUPABASE_URL")
         api_key = os.getenv("SUPABASE_API_KEY")
 
         if not url:
-            self.app.logger.error("Missing env SUPABASE_URL while connecting to Supabase.")
+            self.logger.error("Missing env SUPABASE_URL while connecting to Supabase.")
             abort(500)
         elif not api_key:
-            self.app.logger.error("Missing env SUPABASE_API_KEY while connecting to Supabase.")
+            self.logger.error("Missing env SUPABASE_API_KEY while connecting to Supabase.")
             abort(500)
         else:
             self.supa_url = url
@@ -59,13 +62,13 @@ class APIServer():
         keywords_index = os.getenv("MEILISEARCH_KEYWORDS_INDEX")
 
         if not url:
-            self.app.logger.error("Missing env MEILISEARCH_URL while connecting to Meilisearch server.")
+            self.logger.error("Missing env MEILISEARCH_URL while connecting to Meilisearch server.")
             abort(500)
         elif not docs_index:
-            self.app.logger.error("Missing env MEILISEARCH_DOCUMENTS_INDEX while connecting to Meilisearch server.")
+            self.logger.error("Missing env MEILISEARCH_DOCUMENTS_INDEX while connecting to Meilisearch server.")
             abort(500)
         elif not keywords_index:
-            self.app.logger.error("Missing env MEILISEARCH_KEYWORDS_INDEX while connecting to Meilisearch server.")
+            self.logger.error("Missing env MEILISEARCH_KEYWORDS_INDEX while connecting to Meilisearch server.")
             abort(500)
         else:
             self.ms_url = url
@@ -100,6 +103,13 @@ class APIServer():
             endpoint_name="search_keywords",
             handler=self.search_keywords,
             handler_params={"index": self.ms_keywords_index},
+            req_methods=["GET"]
+        )
+        self.add_endpoint(
+            endpoint="/db/v1/articles",
+            endpoint_name="get_articles",
+            handler=self.get_articles,
+            handler_params={},
             req_methods=["GET"]
         )
         self.add_endpoint(
@@ -141,14 +151,13 @@ class APIServer():
     def index(self, params: dict):
 
         # parse and check request
-        req_json = request.get_json()
-        req_data = req_json.get("data")
+        req_data = request.get_json()
         if not req_data:
-            self.app.logger.error("Missing index request data.")
+            self.logger.error("Missing index request data.")
             return Response(status=400, headers={})
 
         # run index
-        ms_index = params.get('index') or req_json.get('index')
+        ms_index = params.get('index')
         if not ms_index:
             return Response(status=500, headers={})
 
@@ -160,7 +169,7 @@ class APIServer():
             headers={"Content-Type": "application/json"}
         )
 
-    # curl -XGET "https://0.0.0.0:5000/docs/v1/search?q=api&page=0&limit=10"
+    # curl -XGET "http://0.0.0.0:5000/docs/v1/search?q=api&page=0&limit=10"
     def search_docs(self, params: dict):
 
         # parse and check request
@@ -168,9 +177,10 @@ class APIServer():
         req_must_key_set = {'q', 'page', 'limit'}
 
         if (req_must_key_set - req_args_key_set) != set():
-            self.app.logger.error("Missing params {} in doc search request.".format(
-                req_must_key_set - req_args_key_set
-            ))
+            self.logger.error(
+                "Missing params %s in doc search request.",
+                ", ".join(req_must_key_set - req_args_key_set)
+            )
             return Response(status=400, headers={})
 
         query = request.args.get('q', type=str)
@@ -203,8 +213,8 @@ class APIServer():
 
         raw_filter = []
         if len(hashtags) > 0:
-            for h in hashtags:
-                raw_filter.append("hashtags = {}".format(h))
+            for h_tag in hashtags:
+                raw_filter.append(f"hashtags = {h_tag}")
         ms_request['filter'] = ' AND '.join(raw_filter)
 
         # run search
@@ -217,7 +227,7 @@ class APIServer():
             opt_params=ms_request
         )
         if not raw_resp:
-            self.app.logger.error("Failed to run search request on Meilisearch.")
+            self.logger.error("Failed to run search request on Meilisearch.")
             return Response(status=500, headers={})
 
         # parse raw search response
@@ -260,7 +270,7 @@ class APIServer():
             headers={"Content-Type": "application/json"}
         )
 
-    # curl -XGET "https://0.0.0.0:5000/docs/v1/search/auto-complete?q=stm&max=3"
+    # curl -XGET "http://0.0.0.0:5000/docs/v1/search/auto-complete?q=stm&max=3"
     def search_keywords(self, params: dict):
 
         # parse and check request
@@ -268,9 +278,10 @@ class APIServer():
         req_must_key_set = {'q'}
 
         if (req_must_key_set - req_args_key_set) != set():
-            self.app.logger.error("Missing params {} in keywords search request.".format(
-                req_must_key_set - req_args_key_set
-            ))
+            self.logger.error(
+                "Missing params %s in keywords search request.",
+                ", ".join(req_must_key_set - req_args_key_set)
+            )
             return Response(status=400, headers={})
 
         query = request.args.get('q', type=str)
@@ -292,7 +303,7 @@ class APIServer():
             opt_params=ms_request
         )
         if not raw_resp:
-            self.app.logger.error("Failed to run keywords search request on Meilisearch.")
+            self.logger.error("Failed to run keywords search request on Meilisearch.")
             return Response(status=500, headers={})
 
         # parse raw search response
@@ -302,13 +313,12 @@ class APIServer():
         }
 
         mem_set = set()
-        for i, raw_hit in enumerate(raw_resp['hits']):
+        for raw_hit in raw_resp['hits']:
 
             k_name = raw_hit['phrase']
             if k_name in mem_set:
                 continue
-            else:
-                mem_set.add(k_name)
+            mem_set.add(k_name)
 
             hit = {
                 "name": k_name,
@@ -322,14 +332,50 @@ class APIServer():
             headers={"Content-Type": "application/json"}
         )
 
-    # curl -XPATCH "https://0.0.0.0:5000/db/v1/articles" \
+    # curl -XGET "http://0.0.0.0:5000/db/v1/articles?offset=0&limit=10"
+    def get_articles(self, params: dict):
+
+        # parse and check request
+        req_args_key_set = set(request.args.keys())
+        req_must_key_set = {'offset', 'limit'}
+
+        if (req_must_key_set - req_args_key_set) != set():
+            self.logger.error("Missing params %s in /db/v1/get_articles request.",
+                ", ".join(req_must_key_set - req_args_key_set)
+            )
+            return Response(status=400, headers={})
+
+        try:
+            offset = request.args.get('offset', type=int)
+            limit = request.args.get('limit', type=int)
+        except Exception as exp:
+            self.logger.error("Failed to parse args for /db/v1/get_articles request.")
+            self.logger.error(exp)
+            return Response(status=400, headers={})
+
+        # supabase rpc request
+        try:
+            res_data = self.supabase_client.rpc(
+                'get_articles',
+                {'offset': str(offset), 'limit': limit}
+            ).execute()
+        except Exception as exp:
+            self.logger.error("Failed to run /db/v1/get_articles request on Supabase.")
+            self.logger.error(exp)
+            return Response(status=500, headers={})
+
+        return Response(
+            response=json.dumps(res_data.data),
+            status=200,
+            headers={"Content-Type": "application/json"}
+        )
+
+    # curl -XPATCH "http://0.0.0.0:5000/db/v1/articles" \
     #      -H "Content-Type: application/json" \
     #      -d '{"primary_key": "href", "primary_key_val": "https://ithelp.ithome.com.tw/articles/10282236", "data": {"programming_languages": ["javascript", "html"]}}'
     def update_supabase_table(self, params:dict):
 
         table_name = params['table_name']
-
-        print(table_name)
 
         # parse and check request
         req_json = request.get_json()
@@ -337,23 +383,22 @@ class APIServer():
         primary_key = req_json.get("primary_key")
         primary_key_val = req_json.get("primary_key_val")
         if (not primary_key) or (not primary_key_val):
-            self.app.logger.error("db update request missing primary_key or primary_key_val")
+            self.logger.error("db update request missing primary_key or primary_key_val")
             return Response(status=400, headers={})
 
         update_data = req_json.get("data")
         if not update_data:
-            self.app.logger.error("db update request missing data")
+            self.logger.error("db update request missing data")
             return Response(status=400, headers={})
-
-        print(primary_key, primary_key_val)
-        print(update_data)
 
         # run
         try:
-            res_data = self.supabase_client.table(table_name).update(update_data).eq(primary_key, primary_key_val).execute()
-        except Exception as e:
-            self.app.logger.error("Failed to run db update request")
-            self.app.logger.error(e)
+            self.supabase_client.table(table_name).update(update_data).eq(
+                primary_key, primary_key_val
+            ).execute()
+        except Exception as exp:
+            self.logger.error("Failed to run db update request")
+            self.logger.error(exp)
             return Response(status=500, headers={})
 
         return Response(
@@ -369,9 +414,9 @@ class APIServer():
         try:
             raw_res_data = self.supabase_client.rpc('count_articles', {}).execute()
             res_data = raw_res_data.data[0]
-        except Exception as e:
-            self.app.logger.error("Failed to run /statistics/v1/count_articles request on Supabase.")
-            self.app.logger.error(e)
+        except Exception as exp:
+            self.logger.error("Failed to run /statistics/v1/count_articles request on Supabase.")
+            self.logger.error(exp)
             return Response(status=500, headers={})
 
         return Response(
@@ -380,7 +425,7 @@ class APIServer():
             headers={"Content-Type": "application/json"}
         )
 
-    # curl -XGET "https://0.0.0.0:5000/statistics/v1/prog_lang_count?year=2021&top_n=3"
+    # curl -XGET "http://0.0.0.0:5000/statistics/v1/prog_lang_count?year=2021&top_n=3"
     def programming_languages_count(self, params: dict):
 
         # parse and check request
@@ -388,25 +433,29 @@ class APIServer():
         req_must_key_set = {'year'}
 
         if (req_must_key_set - req_args_key_set) != set():
-            self.app.logger.error("Missing params {} in /statistics/v1/prog_lang_count request.".format(
-                req_must_key_set - req_args_key_set
-            ))
+            self.logger.error(
+                "Missing params %s in /statistics/v1/prog_lang_count request.",
+                ", ".join(req_must_key_set - req_args_key_set)
+            )
             return Response(status=400, headers={})
 
         try:
             year = request.args.get('year', type=int)
             top_n = request.args.get('top_n', type=int)
-        except Exception as e:
-            self.app.logger.error("Failed to parse args for /statistics/v1/prog_lang_count request.")
-            self.app.logger.error(e)
+        except Exception as exp:
+            self.logger.error("Failed to parse args for /statistics/v1/prog_lang_count request.")
+            self.logger.error(exp)
             return Response(status=400, headers={})
 
         # supabase rpc request
         try:
-            res_data = self.supabase_client.rpc('prog_lang_count', {'year': str(year), 'top_n': top_n}).execute()
-        except Exception as e:
-            self.app.logger.error("Failed to run /statistics/v1/prog_lang_count request on Supabase.")
-            self.app.logger.error(e)
+            res_data = self.supabase_client.rpc(
+                'prog_lang_count',
+                {'year': str(year), 'top_n': top_n}
+            ).execute()
+        except Exception as exp:
+            self.logger.error("Failed to run /statistics/v1/prog_lang_count request on Supabase.")
+            self.logger.error(exp)
             return Response(status=500, headers={})
 
         return Response(
@@ -415,7 +464,7 @@ class APIServer():
             headers={"Content-Type": "application/json"}
         )
 
-    # curl -XGET "https://0.0.0.0:5000/statistics/v1/count_by_genre?year=2021&top_n=10"
+    # curl -XGET "http://0.0.0.0:5000/statistics/v1/count_by_genre?year=2021&top_n=10"
     def count_by_genre(self, params: dict):
 
         # parse and check request
@@ -423,25 +472,29 @@ class APIServer():
         req_must_key_set = {'year'}
 
         if (req_must_key_set - req_args_key_set) != set():
-            self.app.logger.error("Missing params {} in /statistics/v1/count_by_genre request.".format(
-                req_must_key_set - req_args_key_set
-            ))
+            self.logger.error(
+                "Missing params %s in /statistics/v1/count_by_genre request.",
+                ", ".join(req_must_key_set - req_args_key_set)
+            )
             return Response(status=400, headers={})
 
         try:
             year = request.args.get('year', type=int)
             top_n = request.args.get('top_n', type=int)
-        except Exception as e:
-            self.app.logger.error("Failed to parse args for /statistics/v1/count_by_genre request.")
-            self.app.logger.error(e)
+        except Exception as exp:
+            self.logger.error("Failed to parse args for /statistics/v1/count_by_genre request.")
+            self.logger.error(exp)
             return Response(status=400, headers={})
 
         # supabase rpc request
         try:
-            raw_res_data = self.supabase_client.rpc('count_by_genre', {'year': str(year), 'top_n': top_n}).execute()
-        except Exception as e:
-            self.app.logger.error("Failed to run /statistics/v1/count_by_genre request on Supabase.")
-            self.app.logger.error(e)
+            raw_res_data = self.supabase_client.rpc(
+                'count_by_genre',
+                {'year': str(year), 'top_n': top_n}
+            ).execute()
+        except Exception as exp:
+            self.logger.error("Failed to run /statistics/v1/count_by_genre request on Supabase.")
+            self.logger.error(exp)
             return Response(status=500, headers={})
 
         res_data = []
