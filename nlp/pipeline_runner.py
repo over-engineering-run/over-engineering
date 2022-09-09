@@ -94,22 +94,22 @@ if __name__ == '__main__':
     )
 
     # start nlp pipeline with multiprocessing
-    pool = Pool(processes=processes_n)
+    with Pool(processes=processes_n) as pool:
 
-    for process_i in range(processes_n):
+        for process_i in range(processes_n):
 
-        logging.info("starting %d / %d process for nlp pipeline", process_i, processes_n)
+            logging.info("starting %d / %d process for nlp pipeline", process_i, processes_n)
 
-        pipeline_params = {
-            "loglevel":           logging.INFO,
-            "api_server_url":     api_server_url,
-            "backlog_index_list": parallel_backlog_index_list[process_i]
-        }
+            pipeline_params = {
+                "loglevel":           logging.INFO,
+                "api_server_url":     api_server_url,
+                "backlog_index_list": parallel_backlog_index_list[process_i]
+            }
 
-        pool.apply_async(
-            func=pipeline.pipeline,
-            args=[pipeline_config, pipeline_params]
-        )
+            pool.apply_async(
+                func=pipeline.pipeline,
+                args=[pipeline_config, pipeline_params]
+            )
 
-    pool.close()
-    pool.join()
+        pool.close()
+        pool.join()
