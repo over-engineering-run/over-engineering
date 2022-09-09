@@ -1,0 +1,18 @@
+---
+# all resources should be relative path of nlp root dir
+
+resources:
+
+  # for nlp and jieba
+  jieba_dict:       "resources/jieba_dict.txt.big"
+  jieba_stop_words: "resources/jieba_stop_words.txt"
+  puntuation_mark:  "resources/puntuation_mark.list"
+
+  # for programming languages parsing
+  programming_languages: "resources/programming_language.json"
+
+
+models:
+
+  # for keyword extractions
+  keybert_model: "paraphrase-multilingual-MiniLM-L12-v2"
