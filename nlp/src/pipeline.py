@@ -4,6 +4,8 @@ import os
 import sys
 import logging
 import uuid
+import re
+import json
 import yaml
 
 import jieba
@@ -25,6 +27,10 @@ from src import search_engine
 #   - programming_languages
 # - models
 #   - keybert_model
+#
+# optional
+# - output
+#   - pipeline_info
 def load_pipeline_config(base_dir: str, config_path: str) -> dict:
 
     """
@@ -45,6 +51,10 @@ def load_pipeline_config(base_dir: str, config_path: str) -> dict:
         res_val = raw_config['resources'][res_key]
         raw_config['resources'][res_key] = os.path.join(base_dir, res_val)
 
+    for out_key in raw_config['output']:
+        out_val = raw_config['output'][out_key]
+        raw_config['output'][out_key] = os.path.join(base_dir, out_val)
+
     return raw_config
 
 
@@ -54,7 +64,6 @@ def init_pipeline_resources(config: dict) -> dict:
     load pipeline resource and resturn resource dict;
     depends on the config load by load_pipeline_config
     """
-
 
     # init jieba tokenizer
     jieba_tokenizer = jieba.Tokenizer(dictionary=config['resources']['jieba_dict'])
@@ -114,6 +123,10 @@ def pipeline_info_to_docs_search_indexing_info(pipeline_info: dict) -> dict:
 
     """ms indexing json for search from pipeline result"""
 
+    hashtags = []
+    for h_tag in pipeline_info['raw_tags_string']:
+        hashtags.append(re.sub(r'[\[\"\]]', '', h_tag))
+
     ms_indexing_info = {
         'uuid':                       str(uuid.uuid4()),
         'href':                       pipeline_info['href'],
@@ -121,7 +134,7 @@ def pipeline_info_to_docs_search_indexing_info(pipeline_info: dict) -> dict:
         'raw_hl_content':             pipeline_info['content_text'],
         'word_seg_processed_content': pipeline_info['word_seg_processed_content_text'],
         'keywords':                   pipeline_info['extracted_keywords'],
-        'hashtags':                   pipeline_info['raw_tags_string'].split(','),
+        'hashtags':                   hashtags,
         'genre':                      pipeline_info['genre'],
         'published_at':               pipeline_info['published_at'],
         'published_at_unix':          utils.date_str_to_unix_time(
@@ -142,16 +155,20 @@ def pipeline_info_to_docs_search_indexing_info(pipeline_info: dict) -> dict:
     return ms_indexing_info
 
 
-def pipeline_info_to_keywords_search_indexing_info(pipeline_info: dict) -> dict:
+def pipeline_info_to_keywords_search_indexing_info_list(pipeline_info: dict) -> list:
 
     """ms indexing json for auto fill from pipeline result"""
 
-    ms_indexing_info = {
-        'uuid':    str(uuid.uuid4()),
-        'phrase': pipeline_info['extracted_keywords_phrases']
-    }
+    ms_indexing_info_list = []
 
-    return ms_indexing_info
+    for kwp in pipeline_info['extracted_keywords_phrases']:
+        ms_indexing_info = {
+            'uuid':   str(uuid.uuid4()),
+            'phrase': kwp
+        }
+        ms_indexing_info_list.append(ms_indexing_info)
+
+    return ms_indexing_info_list
 
 
 def pipeline(config: dict, params: dict):
@@ -164,7 +181,7 @@ def pipeline(config: dict, params: dict):
     pipeline_resources = init_pipeline_resources(config)
 
     # pipeline process by batches
-    for head, rear in params['backlog_index_list']:
+    for batch_i, (head, rear) in enumerate(params['backlog_index_list']):
 
         # load raw data from db
         articles = db.get_articles(
@@ -179,8 +196,12 @@ def pipeline(config: dict, params: dict):
 
             if (articles_i % 10) == 0:
                 logging.info(
-                    "Preprocessing %d to %d: %d/%d",
-                    head, rear, articles_i, (rear-head)
+                    "Process %d, Batch: %d / %d, Task: %d / %d",
+                    params.get('process_i', 0),
+                    batch_i,
+                    len(params['backlog_index_list']),
+                    articles_i,
+                    (rear-head)
                 )
 
             # extract content text from html
@@ -216,29 +237,43 @@ def pipeline(config: dict, params: dict):
             # append result
             pipeline_info_list.append(pipeline_info)
 
-        # update db
-        for pipeline_info in pipeline_info_list:
-            db_update_info = pipeline_info_to_db_update_info(pipeline_info)
-            db.update_articles(
-                api_server_url=params['api_server_url'],
-                data=db_update_info,
-                primary_key_val=pipeline_info['href'],
-            )
+        # dump output
+        pipeline_info_out_path = config.get('output', {}).get('pipeline_info', None)
+        if pipeline_info_out_path:
 
-        # index search engine
-        docs_search_info_list = []
-        kws_search_info_list  = []
-        for pipeline_info in pipeline_info_list:
-            docs_search_info_list.append(
-                pipeline_info_to_docs_search_indexing_info(pipeline_info)
-            )
-            kws_search_info_list.append(
-                pipeline_info_to_keywords_search_indexing_info(pipeline_info)
-            )
+            pipeline_info_str_list = []
+            for pipeline_info in pipeline_info_list:
+                pipeline_info_str_list.append(
+                    json.dumps(pipeline_info, ensure_ascii=False)
+                )
 
-        search_engine.bulk_indexing_docs_search(
-            params['api_server_url'], docs_search_info_list
-        )
-        search_engine.bulk_index_keywords_search(
-            params['api_server_url'], kws_search_info_list
-        )
+            with open(pipeline_info_out_path, 'a') as out_file:
+                out_file.write('\n'.join(pipeline_info_str_list)+'\n')
+
+        # # update db
+        # for pipeline_info in pipeline_info_list:
+        #     db_update_info = pipeline_info_to_db_update_info(pipeline_info)
+        #     db.update_articles(
+        #         api_server_url=params['api_server_url'],
+        #         data=db_update_info,
+        #         primary_key_val=pipeline_info['href'],
+        #     )
+
+        # # index search engine
+        # docs_search_info_list = []
+        # kws_search_info_list  = []
+        # for pipeline_info in pipeline_info_list:
+        #     docs_search_info_list.append(
+        #         pipeline_info_to_docs_search_indexing_info(pipeline_info)
+        #     )
+
+        #     kws_search_info_list += pipeline_info_to_keywords_search_indexing_info_list(
+        #         pipeline_info
+        #     )
+
+        # search_engine.bulk_indexing_docs_search(
+        #     params['api_server_url'], docs_search_info_list
+        # )
+        # search_engine.bulk_index_keywords_search(
+        #     params['api_server_url'], kws_search_info_list
+        # )
