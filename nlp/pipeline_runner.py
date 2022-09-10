@@ -1,5 +1,6 @@
 """interface for starting nlp pipeline"""
 
+import sys
 import argparse
 import logging
 from multiprocessing import cpu_count, Pool
@@ -84,6 +85,13 @@ if __name__ == '__main__':
     # and generate index list for each process
     articles_n = db.get_articles_count(api_server_url)
     processes_n = min(cpu_count(), args.parallel_n)
+
+    if args.limit == 0:
+        logging.warning("request limit 0: nothing to run")
+        sys.exit(0)
+    elif args.limit < 0:
+        args.limit = articles_n
+
     parallel_backlog_index_list = parallel.generate_parallel_backlog_index_list(
         articles_n, processes_n, args.batch_size, args.start, args.limit
     )
@@ -102,6 +110,7 @@ if __name__ == '__main__':
 
             pipeline_params = {
                 "loglevel":           logging.INFO,
+                "process_i":          process_i,
                 "api_server_url":     api_server_url,
                 "backlog_index_list": parallel_backlog_index_list[process_i]
             }
