@@ -16,3 +16,9 @@ models:
 
   # for keyword extractions
   keybert_model: "paraphrase-multilingual-MiniLM-L12-v2"
+
+
+output:
+
+  # optional
+  pipeline_info: "output/pipeline_info.json"
