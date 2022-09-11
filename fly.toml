@@ -1,7 +1,7 @@
 app = "over-engineering-backend"
 
 [build]
-  image = "tainvecs/over_engineering-backend:v0.0.27"
+  image = "tainvecs/over_engineering-backend:v0.0.31-so"
 
 kill_signal = "SIGINT"
 kill_timeout = 5
