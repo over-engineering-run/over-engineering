@@ -124,8 +124,9 @@ def pipeline_info_to_docs_search_indexing_info(pipeline_info: dict) -> dict:
     """ms indexing json for search from pipeline result"""
 
     hashtags = []
-    for h_tag in pipeline_info['raw_tags_string']:
-        hashtags.append(re.sub(r'[\[\"\]]', '', h_tag))
+    tags_string = re.sub(r'[\[\"\]]', '', pipeline_info['raw_tags_string'])
+    for h_tag in tags_string.split(','):
+        hashtags.append(h_tag.strip())
 
     ms_indexing_info = {
         'uuid':                       str(uuid.uuid4()),
@@ -142,7 +143,7 @@ def pipeline_info_to_docs_search_indexing_info(pipeline_info: dict) -> dict:
                                           "%Y-%m-%d %H:%M:%S"
                                       ),
         'author_href':                pipeline_info['author_href'],
-        'author_name':                pipeline_info['author_name'],
+        'author_name':                pipeline_info['author_name'].strip(),
         'series_href':                pipeline_info['series_href'],
         'series_name':                pipeline_info['series_name'],
         'series_num':                 pipeline_info['series_num'],
@@ -250,30 +251,30 @@ def pipeline(config: dict, params: dict):
             with open(pipeline_info_out_path, 'a') as out_file:
                 out_file.write('\n'.join(pipeline_info_str_list)+'\n')
 
-        # # update db
-        # for pipeline_info in pipeline_info_list:
-        #     db_update_info = pipeline_info_to_db_update_info(pipeline_info)
-        #     db.update_articles(
-        #         api_server_url=params['api_server_url'],
-        #         data=db_update_info,
-        #         primary_key_val=pipeline_info['href'],
-        #     )
+        # update db
+        for pipeline_info in pipeline_info_list:
+            db_update_info = pipeline_info_to_db_update_info(pipeline_info)
+            db.update_articles(
+                api_server_url=params['api_server_url'],
+                data=db_update_info,
+                primary_key_val=pipeline_info['href'],
+            )
 
-        # # index search engine
-        # docs_search_info_list = []
-        # kws_search_info_list  = []
-        # for pipeline_info in pipeline_info_list:
-        #     docs_search_info_list.append(
-        #         pipeline_info_to_docs_search_indexing_info(pipeline_info)
-        #     )
+        # index search engine
+        docs_search_info_list = []
+        kws_search_info_list  = []
+        for pipeline_info in pipeline_info_list:
+            docs_search_info_list.append(
+                pipeline_info_to_docs_search_indexing_info(pipeline_info)
+            )
 
-        #     kws_search_info_list += pipeline_info_to_keywords_search_indexing_info_list(
-        #         pipeline_info
-        #     )
+            kws_search_info_list += pipeline_info_to_keywords_search_indexing_info_list(
+                pipeline_info
+            )
 
-        # search_engine.bulk_indexing_docs_search(
-        #     params['api_server_url'], docs_search_info_list
-        # )
-        # search_engine.bulk_index_keywords_search(
-        #     params['api_server_url'], kws_search_info_list
-        # )
+        search_engine.bulk_indexing_docs_search(
+            params['api_server_url'], docs_search_info_list
+        )
+        search_engine.bulk_index_keywords_search(
+            params['api_server_url'], kws_search_info_list
+        )
