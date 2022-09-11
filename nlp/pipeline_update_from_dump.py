@@ -83,7 +83,7 @@ if __name__ == '__main__':
 
     # index docs search
     head = 0
-    batch_size = 10000
+    batch_size = 1000
     total_n = len(docs_search_info_list)
     while head < total_n:
 
@@ -100,9 +100,10 @@ if __name__ == '__main__':
             args.flask_url, docs_search_info_list[head:rear]
         )
         head = rear
-        time.sleep(15)
 
-    # # index keywords search
+        time.sleep(30)
+
+    # index keywords search
     head = 0
     batch_size = 10000
     total_n = len(kws_search_info_list)
