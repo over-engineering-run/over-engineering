@@ -244,3 +244,7 @@ cython_debug/
 ## Fly.io
 fly-production.toml
 fly-staging.toml
+
+## Output
+nlp/output/*
+!nlp/output/.gitkeep
